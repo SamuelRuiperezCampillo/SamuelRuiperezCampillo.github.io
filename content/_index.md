@@ -13,7 +13,7 @@ sections:
         text: Download CV
         url: uploads/resume.pdf
       headings:
-        about: ''
+        about: 'Professional Summary — 🚧 Website in Progress!'
         education: ''
         interests: ''
     design:

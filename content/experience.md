@@ -32,23 +32,6 @@ sections:
 
   - block: markdown
     content:
-      title: 'Student Supervision'
-      text: |
-        Supervised master's theses, semester projects, and research internships at
-        ETH Zurich and partner institutions.
-
-        - **Lucia Pancorbo** — Harvard University, Master's Thesis (Harvard–ETH), *Fall 2025*. Deep-learned frameworks for standard neuroimaging analyses from single-hemispheric brain MRI.
-        - **Nikolay Kormushev** — ETH Zurich, Research Intern in Machine Learning, *Fall 2025*. Representation learning and signal processing for ECG P-wave analyses.
-        - **Alexandre Reol** — ETH Zurich & University of Zurich, MSc Thesis, *Fall 2025*. Software and outcome prediction model for hypothermic oxygenated organ perfusion.
-        - **Giuseppe Cianci** — University of Barcelona, MSc Thesis in AI, *Spring 2025*. Multimodal ML for risk-stratification of AF patients from ECGs.
-        - **Julian Heidenreich** — ETH Zurich, MSc Semester Project, Mechanical Engineering, *Spring 2025*. Deep echocardiogram models with transfer learning under domain shifts.
-        - **Basile Morel** — ETH Zurich, MSc Semester Project, Computer Science, *Spring 2025*. MAMBA models of cardiac time series.
-        - **Nils Ebeling** — ETH Zurich, MSc Semester Project, Computer Science, *Fall 2024*. Time- and spectral probabilistic diffusion models in time-series denoising.
-        - **Lucas Erlacher** — ETH Zurich, MSc Thesis, Computer Science, *Fall 2024*. Multimodal variational autoencoders for diagnosing pulmonary hypertension in newborns.
-        - **Moritz Rau** — ETH Zurich, MSc Thesis, Statistics, *Spring 2024*. Antithetic-sampling-enhanced diffusion models for denoising cardiac signals.
-
-  - block: markdown
-    content:
       title: 'Service & Outreach'
       text: |
         **Conference / Workshop Organization**
