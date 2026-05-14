@@ -23,21 +23,13 @@ bio: |
   Fellowship.
 
 affiliations:
-  - name: ETH Zurich
+  - name: ETH Zurich & MIT
     url: https://ethz.ch/
-  - name: MIT
-    url: https://www.mit.edu/
 
 links:
   - icon: at-symbol
-    url: mailto:sruipere@mit.edu
-    label: Email (MIT)
-  - icon: at-symbol
-    url: mailto:sruicam@stanford.edu
-    label: Email (Stanford)
-  - icon: at-symbol
-    url: mailto:sruiperez@inf.ethz.ch
-    label: Email (ETH)
+    url: mailto:samuel.ruiperezcampillo@inf.ethz.ch
+    label: Email
   - icon: brands/github
     url: https://github.com/SamuelRuiperezCampillo
   - icon: academicons/google-scholar
@@ -66,14 +58,7 @@ education:
       Generative AI, Explainable AI, and Machine Learning in Medicine. Research
       Associate at the Swiss AI Center and member of the Swiss AI Initiative,
       with research stays at MIT and Harvard Medical School.
-  - degree: Graduate Certificate in Applied Data Science
-    institution: UC Berkeley
-    start: 2022-08-01
-    end: 2023-05-31
-    summary: |
-      GPA 4.0 / 4.0. In-person coursework on Convex Optimization and Machine
-      Learning for Healthcare.
-  - degree: MEng in Bioinformatics and Computational Bioengineering
+  - degree: MEng in Computational Bioengineering
     institution: UC Berkeley
     start: 2022-08-01
     end: 2023-05-31
@@ -81,7 +66,7 @@ education:
       GPA 4.0 / 4.0 (top 1%). Master's thesis on Deep Learning in
       Bioinformatics; research project at Stanford on AI and Signal Theory in
       Cardiology.
-  - degree: MSc in Biomedical Engineering
+  - degree: MSc in Bioelectronics
     institution: ETH Zurich
     start: 2020-09-01
     end: 2022-09-30

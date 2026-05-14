@@ -21,10 +21,11 @@ sections:
         gradient_mesh:
           enable: true
       name:
-        size: md
+        size: sm
       avatar:
         size: medium
         shape: circle
+      date_format: '2006'
 
   - block: markdown
     content:
@@ -33,23 +34,8 @@ sections:
       text: |-
         My research applies machine learning and signal processing to
         cardiology and biomedical signals. I work on generative and
-        representation-learning models for intracardiac and surface
-        electrocardiographic signals, with the goal of denoising clinical
-        recordings, mapping arrhythmogenic substrates, and supporting
-        treatment decisions in atrial and ventricular arrhythmias. I also
-        work on multimodal models combining ECG, cardiac imaging, and
-        clinical text.
-
-        Recent and ongoing projects include diffusion- and VAE-based
-        denoising of intracardiac time series, equivariant representation
-        learning for cardiac MRI, contrastive multimodal models that enrich
-        ECG with cardiac MRI, large language and foundation models for
-        arrhythmia phenotyping, and AI-guided catheter mapping for atrial
-        fibrillation ablation.
-
-        I'm always happy to discuss collaborations on ML for medical time
-        series, cardiac electrophysiology, and multimodal foundation models
-        for healthcare.
+        representation-learning models for cardiac time series, mapping
+        arrhythmogenic substrates.
     design:
       columns: '1'
 

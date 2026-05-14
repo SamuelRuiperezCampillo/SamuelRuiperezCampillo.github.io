@@ -18,7 +18,7 @@ authors:
 - "M. Krauthammer"
 date: "2025-02-01T00:00:00Z"
 publishDate: "2025-02-01T00:00:00Z"
-publication_types: ["article"]
+publication_types: ["article-journal"]
 publication: "arXiv preprint arXiv:2502.03333 (under review in *Nature Digital Medicine*)"
 abstract: ""
 tags:
