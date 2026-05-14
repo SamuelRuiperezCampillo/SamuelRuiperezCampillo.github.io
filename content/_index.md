@@ -69,6 +69,7 @@ sections:
       filters:
         folders:
           - events
+      order: desc
     design:
-      view: card
+      view: compact
 ---
