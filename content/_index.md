@@ -57,6 +57,17 @@ sections:
             </div>
           </a>
 
+          <a href="/publications/2025-tonko-endo-epicardial/" class="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-900">
+            <img src="/featured/2025-tonko-endo-epicardial.jpg" alt="" loading="lazy" class="aspect-[16/9] w-full bg-gray-100 object-cover dark:bg-gray-800" />
+            <div class="flex flex-1 flex-col p-5">
+              <p class="mb-2 text-xs font-semibold uppercase tracking-wider text-primary-600 dark:text-primary-400">Cardiac Electrophysiology · Ventricular Arrhythmia</p>
+              <h3 class="mb-3 text-base font-semibold leading-snug">Endo-Epicardial Electrical Disarray in Arrhythmogenic Cardiomyopathy with Ventricular Arrhythmias</h3>
+              <p class="mb-1 text-sm text-gray-700 dark:text-gray-300">J. B. Tonko<sup>*</sup>, <strong>S. Ruipérez-Campillo</strong><sup>*</sup> et al.</p>
+              <p class="mb-4 text-xs text-gray-500 dark:text-gray-400">September 2025</p>
+              <span class="mt-auto text-sm font-medium text-primary-600 group-hover:underline dark:text-primary-400">Read more →</span>
+            </div>
+          </a>
+
           <a href="/publications/2024-pancorbo-vector-field/" class="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-900">
             <img src="/featured/2024-pancorbo-vector-field.jpg" alt="" loading="lazy" class="aspect-[16/9] w-full bg-gray-100 object-cover dark:bg-gray-800" />
             <div class="flex flex-1 flex-col p-5">
@@ -86,6 +97,17 @@ sections:
               <h3 class="mb-3 text-base font-semibold leading-snug">Evaluation and Assessment of Clique Arrangements for the Estimation of Omnipolar Electrograms in High-Density Electrode Arrays</h3>
               <p class="mb-1 text-sm text-gray-700 dark:text-gray-300"><strong>S. Ruipérez-Campillo</strong> et al.</p>
               <p class="mb-4 text-xs text-gray-500 dark:text-gray-400">June 2023</p>
+              <span class="mt-auto text-sm font-medium text-primary-600 group-hover:underline dark:text-primary-400">Read more →</span>
+            </div>
+          </a>
+
+          <a href="/publications/2023-castells-electrode-config/" class="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-900">
+            <img src="/featured/2023-castells-electrode-config.jpg" alt="" loading="lazy" class="aspect-[16/9] w-full bg-gray-100 object-cover dark:bg-gray-800" />
+            <div class="flex flex-1 flex-col p-5">
+              <p class="mb-2 text-xs font-semibold uppercase tracking-wider text-primary-600 dark:text-primary-400">Cardiac Electrophysiology · Signal Processing</p>
+              <h3 class="mb-3 text-base font-semibold leading-snug">Performance Assessment of Electrode Configurations for the Estimation of Omnipolar Electrograms from High-Density Arrays</h3>
+              <p class="mb-1 text-sm text-gray-700 dark:text-gray-300">F. Castells<sup>*</sup>, <strong>S. Ruipérez-Campillo</strong><sup>*</sup> et al.</p>
+              <p class="mb-4 text-xs text-gray-500 dark:text-gray-400">March 2023</p>
               <span class="mt-auto text-sm font-medium text-primary-600 group-hover:underline dark:text-primary-400">Read more →</span>
             </div>
           </a>

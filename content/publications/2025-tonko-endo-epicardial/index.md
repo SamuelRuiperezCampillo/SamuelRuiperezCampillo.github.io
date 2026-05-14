@@ -14,6 +14,20 @@ authors:
 - "J. Millet"
 - "F. Castells"
 - "P. D. Lambiase"
+author_notes:
+- "Equal contribution"
+- ""
+- "Equal contribution"
+- ""
+- ""
+- ""
+- ""
+- ""
+- ""
+- ""
+- ""
+- ""
+- ""
 date: "2025-09-01T00:00:00Z"
 publishDate: "2025-09-01T00:00:00Z"
 publication_types: ["article-journal"]
@@ -22,7 +36,7 @@ abstract: ""
 tags:
 - "Cardiac Electrophysiology"
 - "Ventricular Arrhythmia"
-featured: false
+featured: true
 hugoblox:
   ids:
     doi: "10.1016/j.hrthm.2025.09.012"

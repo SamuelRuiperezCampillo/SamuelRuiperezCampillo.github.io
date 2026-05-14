@@ -8,6 +8,14 @@ authors:
 - "R. Casado-Arroyo"
 - "J. L. Merino"
 - "J. Millet"
+author_notes:
+- "Equal contribution"
+- "Equal contribution"
+- ""
+- ""
+- ""
+- ""
+- ""
 date: "2023-03-01T00:00:00Z"
 publishDate: "2023-03-01T00:00:00Z"
 publication_types: ["article-journal"]
@@ -16,7 +24,7 @@ abstract: ""
 tags:
 - "Cardiac Electrophysiology"
 - "Signal Processing"
-featured: false
+featured: true
 hugoblox:
   ids:
     doi: "10.1016/j.compbiomed.2023.106604"
