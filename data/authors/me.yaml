@@ -251,6 +251,58 @@ awards:
     date: "2020-07-01"
     summary: One of the top 8 records (top <1%) at the Engineering Faculty.
     icon: hero/academic-cap
+  - title: Best Oral Presentation Award
+    awarder: Spanish National Society of General Medicine Congress (SEMG)
+    date: "2023-10-01"
+    icon: hero/trophy
+  - title: Young Investigator Award (co-author)
+    awarder: e-Cardiology, ESC Congress
+    date: "2023-08-01"
+    icon: hero/trophy
+  - title: HRS Travel Award
+    awarder: Heart Rhythm Society
+    date: "2022-04-01"
+    summary: Attendance grant for HRS, San Francisco ($1,500).
+    icon: hero/academic-cap
+  - title: First Prize "Ferrán Mocholí"
+    awarder: ITACA Institute, Polytechnic University of Valencia
+    date: "2022-06-01"
+    summary: Best Scientific Journal Article.
+    icon: hero/trophy
+  - title: First Prize "José María Ferrero Corral"
+    awarder: Spanish Society of Biomedical Engineering (SEIB)
+    date: "2020-11-01"
+    summary: €600 prize for outstanding undergraduate research.
+    icon: hero/trophy
+  - title: Best Poster Award
+    awarder: Spanish National Society of General Medicine Congress (SEMG)
+    date: "2019-10-01"
+    icon: hero/trophy
+  - title: National Research Fellow Grant
+    awarder: Spanish Ministry of Education
+    date: "2019-09-01"
+    summary: €2,000 research fellowship.
+    icon: hero/academic-cap
+  - title: Madrid Award for Academic Excellence
+    awarder: Region of Madrid
+    date: "2019-06-01"
+    summary: Awarded in 2017, 2018, and 2019 (€3,000).
+    icon: hero/academic-cap
+  - title: Scholarship for Excellent Academic Performance
+    awarder: International Exchange at Georgia Tech
+    date: "2018-08-01"
+    summary: $34,000 scholarship for one academic year.
+    icon: hero/academic-cap
+  - title: Honour Distinction and Grant
+    awarder: Pre-University Academic Performance
+    date: "2017-06-01"
+    summary: €3,000 grant for top secondary-school performance.
+    icon: hero/academic-cap
+  - title: Castilla-La Mancha Honours
+    awarder: Region of Castilla-La Mancha
+    date: "2016-06-01"
+    summary: €3,000 for excellence of records.
+    icon: hero/academic-cap
 
 skills:
   - name: Programming & Tooling
