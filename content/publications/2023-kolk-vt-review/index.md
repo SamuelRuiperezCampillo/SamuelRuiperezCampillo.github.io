@@ -18,7 +18,7 @@ abstract: ""
 tags:
 - "Review"
 - "Ventricular Arrhythmia"
-featured: true
+featured: false
 hugoblox:
   ids:
     doi: "10.1016/j.ebiom.2023.104462"

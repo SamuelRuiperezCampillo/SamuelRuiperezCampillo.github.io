@@ -19,7 +19,7 @@ abstract: ""
 tags:
 - "Cardiac Electrophysiology"
 - "Signal Processing"
-featured: false
+featured: true
 hugoblox:
   ids:
     doi: "10.1007/s13246-023-01287-8"

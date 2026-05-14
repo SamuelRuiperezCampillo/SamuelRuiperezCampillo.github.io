@@ -35,7 +35,7 @@ tags:
 - "Multimodal Learning"
 - "Representation Learning"
 - "Medical Imaging"
-featured: true
+featured: false
 hugoblox:
   ids:
     doi: "10.48550/arXiv.2511.22294"

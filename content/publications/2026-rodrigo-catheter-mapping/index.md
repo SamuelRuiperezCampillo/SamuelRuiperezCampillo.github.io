@@ -15,7 +15,7 @@ summary: "Editor in Chief's Featured Article of the Volume."
 tags:
 - "Cardiac Electrophysiology"
 - "Atrial Fibrillation"
-featured: true
+featured: false
 hugoblox:
   ids:
     doi: "10.1161/CIRCEP.125.014061"

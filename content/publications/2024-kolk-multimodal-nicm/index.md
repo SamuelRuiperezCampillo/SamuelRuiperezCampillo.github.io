@@ -17,7 +17,7 @@ tags:
 - "Multimodal Learning"
 - "Explainable AI"
 - "Cardiomyopathy"
-featured: true
+featured: false
 hugoblox:
   ids:
     doi: "10.1038/s41598-024-65357-x"

@@ -1,0 +1,17 @@
+<style>
+/* Bold the site owner's name wherever it appears in author lists */
+a[href*="/author/me/"],
+a[href*="/authors/me/"],
+.author-link[data-author="me"],
+[data-author-slug="me"] {
+  font-weight: 700;
+}
+
+/* Hide reading-time indicator on publication and event cards */
+.reading-time,
+[data-component="reading-time"],
+.read-time,
+.post-reading-time {
+  display: none !important;
+}
+</style>

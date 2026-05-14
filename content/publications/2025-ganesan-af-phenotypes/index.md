@@ -26,7 +26,7 @@ summary: "Editor in Chief's Featured Article of the Volume."
 tags:
 - "Atrial Fibrillation"
 - "Machine Learning"
-featured: true
+featured: false
 hugoblox:
   ids:
     doi: "10.1161/CIRCEP.124.012860"
