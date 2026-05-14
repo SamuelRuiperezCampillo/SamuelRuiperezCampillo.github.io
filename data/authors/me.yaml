@@ -212,12 +212,12 @@ awards:
   - title: Editor in Chief's Featured Article of the Month
     awarder: Circulation — Arrhythmia and Electrophysiology
     date: "2026-03-01"
-    summary: For "The Impact of Catheter Configuration on the Mapping of Atrial Fibrillation".
+    summary: 'For "The Impact of Catheter Configuration on the Mapping of Atrial Fibrillation".'
     icon: hero/star
   - title: Editor in Chief's Featured Article of the Month
     awarder: Circulation — Arrhythmia and Electrophysiology
     date: "2025-02-01"
-    summary: For "Comparing Phenotypes for Acute and Long-Term Response to AF Ablation Using Machine Learning".
+    summary: 'For "Comparing Phenotypes for Acute and Long-Term Response to AF Ablation Using Machine Learning".'
     icon: hero/star
   - title: Clinical Translation Award
     awarder: International Conference on Computing in Cardiology
@@ -232,8 +232,8 @@ awards:
     date: "2021-08-01"
     summary: $15,000 scholarship for the MEng programme.
     icon: hero/academic-cap
-  - title: "la Caixa" Excellence Fellowship
-    awarder: "\"la Caixa\" Foundation"
+  - title: '"la Caixa" Excellence Fellowship'
+    awarder: '"la Caixa" Foundation'
     date: "2020-05-01"
     summary: Full funding for the Master's at UC Berkeley ($100,000).
     icon: hero/academic-cap
@@ -264,12 +264,12 @@ awards:
     date: "2022-04-01"
     summary: Attendance grant for HRS, San Francisco ($1,500).
     icon: hero/academic-cap
-  - title: First Prize "Ferrán Mocholí"
+  - title: 'First Prize "Ferrán Mocholí"'
     awarder: ITACA Institute, Polytechnic University of Valencia
     date: "2022-06-01"
     summary: Best Scientific Journal Article.
     icon: hero/trophy
-  - title: First Prize "José María Ferrero Corral"
+  - title: 'First Prize "José María Ferrero Corral"'
     awarder: Spanish Society of Biomedical Engineering (SEIB)
     date: "2020-11-01"
     summary: €600 prize for outstanding undergraduate research.
