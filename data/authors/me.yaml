@@ -2,115 +2,293 @@ schema: hugoblox/author/v1
 slug: me
 is_owner: true
 name:
-  display: Dr. Alex Johnson
-  given: Alex
-  family: Johnson
-  alternate: ''  # Example: 王伟
-  pronunciation: ''  # Example: Wáng Wěi
-  pronouns: he/him
+  display: Samuel Ruipérez-Campillo
+  given: Samuel
+  family: Ruipérez-Campillo
 postnominals:
-  - PhD
-  - MIEEE
-status:
-  icon: "☕️"
-role: Senior AI Research Scientist
+  - MSc
+  - MEng
+role: Researcher
 bio: |
-  Alex Johnson is a Senior AI Research Scientist at Meta AI. His research
-  has been published in top conferences like NeurIPS and ICML, with over
-  10,000 citations. Alex is passionate about pushing the boundaries of AI
-  while ensuring ethical development.
+  Samuel Ruipérez-Campillo is an engineer and PhD candidate in Computer Science
+  at the Institute of Machine Learning, ETH Zurich, where his research focuses
+  on machine learning for cardiology. He is currently a visiting research fellow
+  at MIT's Institute for Medical Engineering and Science and Harvard Medical
+  School. Previously, he completed an MSc at ETH Zurich and an MEng at UC
+  Berkeley, worked at Stanford under Prof. Sanjiv Narayan, joined PhysCade Inc.,
+  a Stanford spin-off developing AI for electrophysiology, as its third
+  employee, and founded Swiift, a Berkeley SkyDeck startup. His studies have
+  been fully funded by several competitive fellowships, including the "la Caixa"
+  Fellowship, the Rafael del Pino Fellowship, and the UC Berkeley Fung Institute
+  Fellowship.
 
 affiliations:
-  - name: Meta AI
-    url: https://ai.meta.com/
+  - name: ETH Zurich
+    url: https://ethz.ch/
+  - name: MIT
+    url: https://www.mit.edu/
 
 links:
   - icon: at-symbol
-    url: mailto:alex.johnson@example.com
-    label: E-mail Me
-  - icon: brands/x
-    url: https://x.com/example
+    url: mailto:sruipere@mit.edu
+    label: Email (MIT)
+  - icon: at-symbol
+    url: mailto:sruicam@stanford.edu
+    label: Email (Stanford)
+  - icon: at-symbol
+    url: mailto:sruiperez@inf.ethz.ch
+    label: Email (ETH)
   - icon: brands/github
-    url: https://github.com/example
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/in/example/
+    url: https://github.com/SamuelRuiperezCampillo
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=example
+    url: https://scholar.google.com/citations?user=6iUDcQkAAAAJ&hl=en
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/samuel-ruiperez-campillo-8071a7177/
   - icon: academicons/orcid
-    url: https://orcid.org/0000-0002-1825-0097
+    url: https://orcid.org/0000-0002-5425-4175
+  - icon: academicons/researchgate
+    url: https://www.researchgate.net/profile/Samuel-Ruiperez-Campillo
 
 interests:
-  - Large Language Models
-  - Computer Vision
-  - Reinforcement Learning
-  - AI Ethics
+  - Signal Processing
+  - Time Series
+  - Multimodal AI
+  - Representation Learning
+  - Cardiac Electrophysiology
+  - ML for Medicine
 
 education:
-  - degree: PhD Computer Science
-    institution: Stanford University
-    start: 2015-09-01
-    end: 2019-06-30
+  - degree: PhD in Computer Science
+    institution: ETH Zurich
+    start: 2024-02-01
     summary: |
-      Thesis on scaling laws for neural language models. Published 5 papers in NeurIPS and ICML.
-    button:
-      text: Download dissertation
-      url: /resume.pdf
-      icon: hero/arrow-down-tray
-  - degree: MS Computer Science
-    institution: Carnegie Mellon University
-    start: 2013-09-01
-    end: 2015-05-31
-  - degree: BS Computer Science
-    institution: MIT
-    start: 2009-09-01
-    end: 2013-05-31
+      Institute of Machine Learning, Medical Data Science Group. Research on
+      Generative AI, Explainable AI, and Machine Learning in Medicine. Research
+      Associate at the Swiss AI Center and member of the Swiss AI Initiative,
+      with research stays at MIT and Harvard Medical School.
+  - degree: Graduate Certificate in Applied Data Science
+    institution: UC Berkeley
+    start: 2022-08-01
+    end: 2023-05-31
+    summary: |
+      GPA 4.0 / 4.0. In-person coursework on Convex Optimization and Machine
+      Learning for Healthcare.
+  - degree: MEng in Bioinformatics and Computational Bioengineering
+    institution: UC Berkeley
+    start: 2022-08-01
+    end: 2023-05-31
+    summary: |
+      GPA 4.0 / 4.0 (top 1%). Master's thesis on Deep Learning in
+      Bioinformatics; research project at Stanford on AI and Signal Theory in
+      Cardiology.
+  - degree: MSc in Biomedical Engineering
+    institution: ETH Zurich
+    start: 2020-09-01
+    end: 2022-09-30
+    summary: |
+      GPA 5.5 / 6.0. Master's thesis on Variational Autoencoders in Cardiology
+      (GPA 6.0 / 6.0). Focus on Bioelectronics and Machine Learning, with
+      internships at the Institute of Machine Learning and at Stanford.
+  - degree: BSc in Biomedical Engineering
+    institution: Carlos III University of Madrid
+    start: 2016-09-01
+    end: 2020-06-30
+    summary: |
+      GPA 9.2 / 10 (top 5%). Bachelor's thesis on Cardiac Multimodal Signal
+      Processing. Exchange at Georgia Tech (GPA 4.0 / 4.0) with focus on
+      Biophysics and Tissue Engineering.
 
 experience:
-  - role: Senior AI Research Scientist
-    org: Meta AI
-    start: 2020-01-01
+  - role: Research Fellow
+    org: MIT (Harvard-MIT Biomedical Engineering Center)
+    start: 2026-02-01
+    end: 2026-07-31
     summary: |
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models.
-    button:
-      text: View portfolio
-      url: /
-      icon: hero/arrow-down-tray
-  - role: AI Research Intern
-    org: OpenAI
+      Visiting research fellow working on Digital Health and AI for
+      Cardiovascular Care.
+  - role: Research Associate
+    org: Swiss AI Center
+    start: 2024-02-01
+    summary: |
+      Member of the Swiss AI Initiative — Foundational Models for Healthcare,
+      associated with the PhD position at the Institute of Machine Learning,
+      ETH Zurich.
+  - role: Machine Learning Consultant
+    org: Physcade Inc.
+    start: 2024-02-01
+    summary: |
+      Consulting for the software team of a multi-million-dollar funded
+      Stanford spin-off. Algorithm development, end-to-end ML pipelines, AI
+      safety and ethics, and regulatory compliance.
+  - role: Research Scientist Consultant
+    org: Stanford University
+    start: 2024-02-01
+    end: 2025-09-30
+    summary: |
+      Computational Arrhythmia Research Lab, Falk Cardiovascular Research
+      Center, Stanford Medicine. Machine learning for electrophysiology.
+  - role: Research Scientist
+    org: Stanford University
+    start: 2022-06-01
+    end: 2024-02-29
+    summary: |
+      Computational Arrhythmia Research Lab, Falk Cardiovascular Research
+      Center, Stanford Medicine. Machine learning for electrophysiology.
+  - role: Machine Learning Engineer
+    org: Physcade Inc.
+    start: 2022-06-01
+    end: 2024-02-29
+    summary: |
+      Third employee of a fast-growing Stanford spin-off in Silicon Valley.
+      Co-authored a patent on cardiac catheter technology, contributed to the
+      pre-submission of an FDA application (granted Jun 2025), and built ML
+      guidance software for clinicians.
+  - role: Co-founder
+    org: SWiiFT Inc.
+    start: 2022-01-01
+    end: 2022-06-30
+    summary: |
+      Co-founded SWiiFT Inc., selected for the elite 0.1% cohort of UC Berkeley
+      SkyDeck.
+  - role: Graduate Student Researcher (Capstone Project)
+    org: UC Berkeley
+    start: 2022-01-01
+    end: 2022-06-30
+    summary: |
+      Deep learning in bioinformatics at the Life Language Processing Lab.
+  - role: Graduate Student Researcher (Master Thesis)
+    org: ETH Zurich
+    start: 2021-08-01
+    end: 2021-12-31
+    summary: |
+      Generative models for health at the Institute of Machine Learning.
+  - role: Graduate Student Researcher
+    org: ETH Zurich
+    start: 2021-01-01
+    end: 2021-07-31
+    summary: |
+      Neural technologies and signal processing at the Institute of
+      Neuroinformatics.
+  - role: Research Intern
+    org: Polytechnic University of Valencia (ITACA Institute)
+    start: 2019-09-01
+    end: 2020-08-31
+    summary: |
+      Bio-signal processing at the ITACA Institute of Electrical Engineering.
+  - role: Research Fellow
+    org: Carlos III University of Madrid
+    start: 2019-09-01
+    end: 2020-08-31
+    summary: |
+      Biofluid mechanics at the Thermal & Fluids Engineering Department.
+  - role: Research Intern
+    org: Instituto Cajal, CSIC
     start: 2019-06-01
-    end: 2019-12-31
+    end: 2019-09-30
     summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
+      Microscopy and neuroengineering at the Research Centre of the Spanish
+      Government.
+  - role: Research Intern
+    org: Georgia Tech & Emory University
+    start: 2018-08-01
+    end: 2019-06-30
+    summary: |
+      Cancer immunotherapy and microfluidics at the Wallace H. Coulter
+      Department of Biomedical Engineering.
+
+awards:
+  - title: Paul Dudley White International Scholar Award
+    awarder: American Heart Association (AHA)
+    date: "2025-11-01"
+    icon: hero/trophy
+  - title: Best Oral Presentation on Multimodal AI and Foundational Models
+    awarder: European Society of Cardiology (Digital Health and AI Summit)
+    date: "2025-08-01"
+    icon: hero/trophy
+  - title: Best Oral Presentation — Physionet Challenge 2025
+    awarder: IEEE International Conference on Computing in Cardiology
+    date: "2025-09-01"
+    icon: hero/trophy
+  - title: Editor in Chief's Featured Article of the Month
+    awarder: Circulation — Arrhythmia and Electrophysiology
+    date: "2026-03-01"
+    summary: For "The Impact of Catheter Configuration on the Mapping of Atrial Fibrillation".
+    icon: hero/star
+  - title: Editor in Chief's Featured Article of the Month
+    awarder: Circulation — Arrhythmia and Electrophysiology
+    date: "2025-02-01"
+    summary: For "Comparing Phenotypes for Acute and Long-Term Response to AF Ablation Using Machine Learning".
+    icon: hero/star
+  - title: Clinical Translation Award
+    awarder: International Conference on Computing in Cardiology
+    date: "2024-09-01"
+    icon: hero/trophy
+  - title: Honorary Alumnus — one of five
+    awarder: University Carlos III of Madrid
+    date: "2024-06-01"
+    icon: hero/academic-cap
+  - title: Fung Excellence Scholarship
+    awarder: UC Berkeley
+    date: "2021-08-01"
+    summary: $15,000 scholarship for the MEng programme.
+    icon: hero/academic-cap
+  - title: "la Caixa" Excellence Fellowship
+    awarder: "\"la Caixa\" Foundation"
+    date: "2020-05-01"
+    summary: Full funding for the Master's at UC Berkeley ($100,000).
+    icon: hero/academic-cap
+  - title: Rafael del Pino Excellence Fellowship
+    awarder: Rafael del Pino Foundation
+    date: "2020-05-01"
+    summary: Full funding for the Master's at ETH Zurich (€48,000).
+    icon: hero/academic-cap
+  - title: "#1 Graduate in Bioengineering in Spain"
+    awarder: Spanish Society of Academic Excellence
+    date: "2020-07-01"
+    icon: hero/trophy
+  - title: Engineering Faculty Distinction
+    awarder: Carlos III University of Madrid
+    date: "2020-07-01"
+    summary: One of the top 8 records (top <1%) at the Engineering Faculty.
+    icon: hero/academic-cap
 
 skills:
-  - name: Technical Skills
+  - name: Programming & Tooling
     items:
       - label: Python
         level: 5
-      - label: Machine Learning
+      - label: PyTorch / Lightning
         level: 5
-      - label: Cloud Computing
-        level: 4
-  - name: Research & Communication
-    items:
-      - label: Academic Writing
+      - label: NumPy / Pandas / scikit-learn
         level: 5
-      - label: Conference Presentations
+      - label: MATLAB
+        level: 5
+      - label: R
+        level: 3
+      - label: Bash / Linux
         level: 4
-      - label: Grant Proposals
+      - label: SQL
+        level: 3
+      - label: Git / Docker
         level: 4
+      - label: HPC (Slurm, MPI)
+        level: 4
+      - label: LaTeX
+        level: 5
 
 languages:
-  - name: English
+  - name: Spanish
     level: 5
     label: Native
-  - name: Spanish
-    level: 4
-    label: Fluent
-
-awards:
-  - title: Best Paper Award
-    awarder: NeurIPS
-    date: "2022-12-01"
-    summary: Awarded for groundbreaking work on efficient training of large models.
-    icon: hero/trophy
+  - name: English
+    level: 5
+    label: Bilingual
+  - name: French
+    level: 3
+    label: B2–C1
+  - name: German
+    level: 2
+    label: A2
+  - name: Italian
+    level: 2
+    label: Basic
