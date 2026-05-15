@@ -52,7 +52,7 @@ interests:
 education:
   - degree: PhD in Computer Science
     institution: ETH Zurich
-    start: 2024-02-01
+    year: "2024–"
     summary: |
       Institute of Machine Learning, Medical Data Science Group. Research on
       Generative AI, Explainable AI, and Machine Learning in Medicine. Research
@@ -60,24 +60,21 @@ education:
       with research stays at MIT and Harvard Medical School.
   - degree: MEng in Computational Bioengineering
     institution: UC Berkeley
-    start: 2022-08-01
-    end: 2023-05-31
+    year: "2022–2023"
     summary: |
       GPA 4.0 / 4.0 (top 1%). Master's thesis on Deep Learning in
       Bioinformatics; research project at Stanford on AI and Signal Theory in
       Cardiology.
   - degree: MSc in Bioelectronics
     institution: ETH Zurich
-    start: 2020-09-01
-    end: 2022-09-30
+    year: "2020–2022"
     summary: |
       GPA 5.5 / 6.0. Master's thesis on Variational Autoencoders in Cardiology
       (GPA 6.0 / 6.0). Focus on Bioelectronics and Machine Learning, with
       internships at the Institute of Machine Learning and at Stanford.
   - degree: BSc in Biomedical Engineering
     institution: Carlos III University of Madrid
-    start: 2016-09-01
-    end: 2020-06-30
+    year: "2016–2020"
     summary: |
       GPA 9.2 / 10 (top 5%). Bachelor's thesis on Cardiac Multimodal Signal
       Processing. Exchange at Georgia Tech (GPA 4.0 / 4.0) with focus on
