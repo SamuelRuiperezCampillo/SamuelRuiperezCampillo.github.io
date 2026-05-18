@@ -1,10 +1,12 @@
 ---
-title: "Noise Reduction in Electrophysiological Signals Using Transfer Machine Learning"
-date: "2022-04-01T00:00:00Z"
-event_name: "European Heart Rhythm Association (EHRA)"
-location: "Copenhagen, Denmark"
-summary: "Talk at European Heart Rhythm Association (EHRA), Copenhagen, Denmark."
+title: Noise Reduction in Electrophysiological Signals Using Transfer Machine Learning
+date: 2022-04-01T00:00:00Z
+event_name: European Heart Rhythm Association (EHRA)
+location: Copenhagen, Denmark
+summary: Talk at European Heart Rhythm Association (EHRA), Copenhagen, Denmark.
 authors:
   - me
 featured: false
+event_start: 2022-04-01T00:00:00Z
 ---
+
