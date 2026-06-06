@@ -39,18 +39,19 @@ sections:
     design:
       columns: '1'
 
-  - block: collection
-    id: papers
-    content:
-      title: Featured Publications
-      count: 0
-      filters:
-        folders:
-          - publications
-        featured_only: true
-    design:
-      view: article-grid
-      columns: 2
+  # Featured Publications — temporarily disabled. Uncomment to restore.
+  # - block: collection
+  #   id: papers
+  #   content:
+  #     title: Featured Publications
+  #     count: 0
+  #     filters:
+  #       folders:
+  #         - publications
+  #       featured_only: true
+  #   design:
+  #     view: article-grid
+  #     columns: 2
 
   - block: collection
     content:
