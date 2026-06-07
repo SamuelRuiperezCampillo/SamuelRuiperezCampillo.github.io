@@ -19,7 +19,7 @@ authors:
 date: "2023-09-01T00:00:00Z"
 publishDate: "2023-09-01T00:00:00Z"
 publication_types: ["article-journal"]
-publication: "*Europace*, 25(9)"
+publication: "*Europace*"
 impact_factor: 7.9
 abstract: |-
   **Aims.** Left ventricular ejection fraction (LVEF) is suboptimal as a sole marker for predicting sudden cardiac death (SCD). Machine learning (ML) provides new opportunities for personalized predictions using complex, multimodal data. This study aimed to determine if risk stratification for implantable cardioverter-defibrillator (ICD) implantation can be improved by ML models that combine clinical variables with 12-lead electrocardiograms (ECG) time-series features.

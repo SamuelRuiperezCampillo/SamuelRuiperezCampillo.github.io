@@ -39,7 +39,7 @@ author_notes:
 date: "2025-01-01T00:00:00Z"
 publishDate: "2025-01-01T00:00:00Z"
 publication_types: ["article-journal"]
-publication: "*Circulation: Arrhythmia and Electrophysiology*, 18(1):e013023"
+publication: "*Circulation: Arrhythmia and Electrophysiology*"
 impact_factor: 9.8
 abstract: |-
   **Background.** Large language models (LLMs) such as Chat Generative Pre-trained Transformer (ChatGPT) excel at interpreting unstructured data from public sources, yet are limited when responding to queries on private repositories, such as electronic health records (EHRs). We hypothesized that prompt engineering could enhance the accuracy of LLMs for interpreting EHR data without requiring domain knowledge, thus expanding their utility for patients and personalized diagnostics.

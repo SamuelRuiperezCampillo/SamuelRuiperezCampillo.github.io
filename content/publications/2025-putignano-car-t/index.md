@@ -15,7 +15,7 @@ author_notes:
 date: "2025-08-01T00:00:00Z"
 publishDate: "2025-08-01T00:00:00Z"
 publication_types: ["article-journal"]
-publication: "*Frontiers in Immunology*, 16"
+publication: "*Frontiers in Immunology*"
 impact_factor: 5.9
 abstract: |-
   **Background.** The field of synthetic biology aims to engineer living organisms for specific therapeutic applications, with CAR-T cell therapy emerging as a groundbreaking approach in cancer treatment due to its potential for flexibility, specificity, predictability, and controllability. CAR-T cell therapies involve the genetic modification of T cells to target tumor-specific antigens. However, challenges persist because the limited spatio-temporal resolution in current models hinders the therapy's safety, cost-effectiveness, and overall potential, particularly for solid tumors.

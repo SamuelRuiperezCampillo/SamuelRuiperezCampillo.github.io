@@ -20,7 +20,7 @@ authors:
 date: "2025-03-01T00:00:00Z"
 publishDate: "2025-03-01T00:00:00Z"
 publication_types: ["article-journal"]
-publication: "*Circulation: Arrhythmia and Electrophysiology*, e012860"
+publication: "*Circulation: Arrhythmia and Electrophysiology*"
 impact_factor: 9.8
 abstract: |-
   **Background.** It is difficult to identify patients with atrial fibrillation (AF) most likely to respond to ablation. While any arrhythmia patient may recur after acutely successful ablation, AF is unusual in that patients may have long-term arrhythmia freedom despite a lack of acute success. We hypothesized that acute and chronic AF ablation outcomes may reflect distinct physiology and used machine learning of multimodal data to identify their phenotypes.

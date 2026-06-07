@@ -14,7 +14,7 @@ authors:
 date: "2026-05-01T00:00:00Z"
 publishDate: "2026-05-01T00:00:00Z"
 publication_types: ["article-journal"]
-publication: "*IEEE Journal of Translational Engineering in Health and Medicine*, pp. 248–262"
+publication: "*IEEE Journal of Translational Engineering in Health and Medicine*"
 impact_factor: 5.9
 abstract: ""
 tags:

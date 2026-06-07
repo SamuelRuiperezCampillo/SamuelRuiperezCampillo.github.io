@@ -16,7 +16,7 @@ authors:
 date: "2025-11-01T00:00:00Z"
 publishDate: "2025-11-01T00:00:00Z"
 publication_types: ["article-journal"]
-publication: "*Expert Systems with Applications*, 300:130185"
+publication: "*Expert Systems with Applications*"
 impact_factor: 7.5
 abstract: ""
 tags:

@@ -10,7 +10,7 @@ authors:
 date: "2024-09-01T00:00:00Z"
 publishDate: "2024-09-01T00:00:00Z"
 publication_types: ["article-journal"]
-publication: "*Biocybernetics and Biomedical Engineering*, 44(3), 521–533"
+publication: "*Biocybernetics and Biomedical Engineering*"
 impact_factor: 6.6
 abstract: ""
 tags:

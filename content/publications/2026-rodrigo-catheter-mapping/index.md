@@ -9,7 +9,7 @@ authors:
 date: "2026-03-01T00:00:00Z"
 publishDate: "2026-03-01T00:00:00Z"
 publication_types: ["article-journal"]
-publication: "*Circulation: Arrhythmia and Electrophysiology*, e014061"
+publication: "*Circulation: Arrhythmia and Electrophysiology*"
 impact_factor: 9.8
 abstract: |-
   **Background.** Mapping of heart rhythms is influenced by the size and configuration of the mapping electrodes. Whether a recorded electrogram represents near (local) or remote activity influences diagnosis and treatment, yet is affected by mapping characteristics that are often undefined.
