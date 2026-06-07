@@ -19,6 +19,7 @@ date: "2024-07-01T00:00:00Z"
 publishDate: "2024-07-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication: "*Diagnostics*"
+impact_factor: 3.3
 abstract: |-
   **Background.** Segmenting computed tomography (CT) is crucial in various clinical applications, such as tailoring personalized cardiac ablation for managing cardiac arrhythmias. Automating segmentation through machine learning (ML) is hindered by the necessity for large, labeled training data, which can be challenging to obtain. This article proposes a novel approach for automated, robust labeling using domain knowledge to achieve high-performance segmentation by ML from a small training set. The approach, the domain knowledge-encoding (DOKEN) algorithm, reduces the reliance on large training datasets by encoding cardiac geometry while automatically labeling the training set. The method was validated in a hold-out dataset of CT results from an atrial fibrillation (AF) ablation study.
 

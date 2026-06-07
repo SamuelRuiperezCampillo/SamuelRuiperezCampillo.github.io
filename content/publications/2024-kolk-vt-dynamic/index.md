@@ -18,6 +18,7 @@ date: "2024-01-01T00:00:00Z"
 publishDate: "2024-01-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication: "*Lancet eBioMedicine*, 99"
+impact_factor: 10.8
 abstract: |-
   **Background.** Risk stratification for ventricular arrhythmias currently relies on static measurements that fail to adequately capture dynamic interactions between arrhythmic substrate and triggers over time. We trained and internally validated a dynamic machine learning (ML) model and neural network that extracted features from longitudinally collected electrocardiograms (ECG), and used these to predict the risk of malignant ventricular arrhythmias.
 

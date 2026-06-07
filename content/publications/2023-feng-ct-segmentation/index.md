@@ -17,6 +17,7 @@ date: "2023-10-01T00:00:00Z"
 publishDate: "2023-10-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication: "*Frontiers in Cardiovascular Medicine*"
+impact_factor: 2.8
 abstract: |-
   **Background.** Segmentation of computed tomography (CT) is important for many clinical procedures including personalized cardiac ablation for the management of cardiac arrhythmias. While segmentation can be automated by machine learning (ML), it is limited by the need for large, labeled training data that may be difficult to obtain. We set out to combine ML of cardiac CT with domain knowledge, which reduces the need for large training datasets by encoding cardiac geometry, which we then tested in independent datasets and in a prospective study of atrial fibrillation (AF) ablation.
 

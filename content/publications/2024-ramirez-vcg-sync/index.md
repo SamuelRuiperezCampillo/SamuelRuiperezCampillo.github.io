@@ -10,6 +10,7 @@ date: "2024-09-01T00:00:00Z"
 publishDate: "2024-09-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication: "*Biomedical Signal Processing and Control*"
+impact_factor: 4.9
 abstract: ""
 tags:
 - "Signal Processing"

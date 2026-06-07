@@ -14,6 +14,7 @@ date: "2025-05-01T00:00:00Z"
 publishDate: "2025-05-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication: "*Heart Rhythm*"
+impact_factor: 5.7
 abstract: |-
   **Background.** Vector field heterogeneity (VFH) is a novel omnipolar metric to quantify local propagation heterogeneities that may identify functionally critical sites for ablation in scar-related ventricular tachycardia (VT).
 

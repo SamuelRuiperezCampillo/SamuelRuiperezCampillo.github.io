@@ -9,8 +9,6 @@
   {{ end }}
 {{ end }}
 
-{{ $pub := partial "functions/resolve_publication.html" . }}
-
 {{ $year := "" }}
 {{ with .Date }}{{ $year = .Format "2006" }}{{ end }}
 
@@ -38,11 +36,10 @@
         {{ partial "page_metadata_authors" . }}
       </div>
 
-      {{/* Venue line: Journal · Year · Type */}}
+      {{/* Venue line: Journal · Year · Type · IF */}}
       <div class="mt-2 text-sm text-slate-500 dark:text-slate-400 flex flex-wrap items-center gap-x-2 gap-y-1">
-        {{ if not $pub.is_empty }}
-          <span class="italic">{{ $pub.display | markdownify }}</span>
-          {{ with $pub.publisher }}<span>· {{ . | markdownify }}</span>{{ end }}
+        {{ with .Params.publication }}
+          <span>{{ . | markdownify }}</span>
         {{ end }}
         {{ with $year }}
           <span aria-hidden="true">·</span>

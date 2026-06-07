@@ -13,6 +13,7 @@ date: "2022-03-01T00:00:00Z"
 publishDate: "2022-03-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication: "*Computer Methods and Programs in Biomedicine*"
+impact_factor: 7.0
 abstract: ""
 tags:
 - "Vectorcardiogram"

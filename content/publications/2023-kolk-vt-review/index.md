@@ -14,6 +14,7 @@ date: "2023-02-01T00:00:00Z"
 publishDate: "2023-02-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication: "*Lancet eBioMedicine*"
+impact_factor: 9.7
 abstract: |-
   **Background.** Ventricular arrhythmia (VA) precipitating sudden cardiac arrest (SCD) is among the most frequent causes of death and pose a high burden on public health systems worldwide. The increasing availability of electrophysiological signals collected through conventional methods (e.g. electrocardiography (ECG)) and digital health technologies (e.g. wearable devices) in combination with novel predictive analytics using machine learning (ML) and deep learning (DL) hold potential for personalised predictions of arrhythmic events.
 

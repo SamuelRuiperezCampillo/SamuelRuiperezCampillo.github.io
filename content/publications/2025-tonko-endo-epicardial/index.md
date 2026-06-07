@@ -18,6 +18,7 @@ date: "2025-09-01T00:00:00Z"
 publishDate: "2025-09-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication: "*Heart Rhythm*"
+impact_factor: 5.7
 abstract: |-
   **Background.** Arrhythmogenic cardiomyopathy (ACM) is a hereditary condition frequently presenting with ventricular arrhythmias (VA). VA burden may be disproportionate to detectable structural alterations.
 

@@ -17,6 +17,7 @@ date: "2025-10-01T00:00:00Z"
 publishDate: "2025-10-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication: "*Frontiers in Cardiovascular Medicine*, 12"
+impact_factor: 2.8
 abstract: |-
   **Background.** Timely and accurate detection of arrhythmias from electrocardiograms (ECGs) is crucial for improving patient outcomes. While artificial intelligence (AI)-based ECG classification has shown promising results, limited transparency and interpretability often impede clinical adoption.
 

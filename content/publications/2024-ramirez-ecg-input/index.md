@@ -12,6 +12,7 @@ date: "2024-10-01T00:00:00Z"
 publishDate: "2024-10-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication: "*Frontiers in Physiology*"
+impact_factor: 3.4
 abstract: |-
   **Background and Objectives.** Accurate diagnosis of cardiovascular diseases often relies on the electrocardiogram (ECG). Since the cardiac vector is located within a three-dimensional space and the standard ECG comprises 12 projections or leads derived from it, redundant information is inherently present. This study aims to quantify this redundancy and its impact on classification tasks using Convolutional Neural Networks (CNNs) in cardiovascular diseases.
 
