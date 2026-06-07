@@ -30,7 +30,8 @@ date: "2026-04-01T00:00:00Z"
 publishDate: "2026-04-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication: "*Transactions on Machine Learning Research*"
-abstract: ""
+abstract: |-
+  Building medical AI requires pretraining methods that leverage clinical data's natural structure. Researchers introduce Multiview Masked Autoencoder (MVMAE), a framework exploiting radiology studies' multi-view organization to learn disease-relevant representations. The approach combines masked image reconstruction with cross-view alignment. An extended variant, MVMAE-V2T, incorporates radiology reports as supplementary text signals for semantic grounding while maintaining vision-only inference capability. Testing on MIMIC-CXR, CheXpert, and PadChest datasets shows MVMAE outperforms supervised and vision-language baselines. MVMAE-V2T provides additional improvements, especially with limited labeled data, demonstrating structural and textual supervision as complementary approaches for scalable, clinically grounded medical foundation models.
 tags:
 - "Multimodal Learning"
 - "Representation Learning"
