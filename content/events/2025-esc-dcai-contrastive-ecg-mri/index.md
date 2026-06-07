@@ -6,5 +6,5 @@ location: "Berlin, Germany"
 summary: "Talk at ESC Digital Health and AI Summit (ESC-DCAI), Berlin, Germany. Best Oral Presentation in Multimodal AI and Foundational Models."
 authors:
   - me
-featured: true
+talk_type: conference
 ---

@@ -6,5 +6,5 @@ location: "London, United Kingdom"
 summary: "Talk at European Society of Cardiology Congress (ESC), London, United Kingdom."
 authors:
   - me
-featured: false
+talk_type: conference
 ---

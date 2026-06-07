@@ -6,5 +6,5 @@ location: "Vienna, Austria"
 summary: "Talk at European Heart Rhythm Association (EHRA), Vienna, Austria."
 authors:
   - me
-featured: false
+talk_type: conference
 ---

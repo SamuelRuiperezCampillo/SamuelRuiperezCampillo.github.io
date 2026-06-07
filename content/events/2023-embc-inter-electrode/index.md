@@ -6,5 +6,5 @@ location: "Sydney, Australia"
 summary: "Talk at IEEE Engineering in Medicine & Biology Conference (EMBC), Sydney, Australia."
 authors:
   - me
-featured: false
+talk_type: conference
 ---

@@ -6,5 +6,5 @@ location: "Karlsruhe, Germany"
 summary: "Talk at IEEE Computing in Cardiology, Karlsruhe, Germany. Clinical Translation Award."
 authors:
   - me
-featured: true
+talk_type: conference
 ---

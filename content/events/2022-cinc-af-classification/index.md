@@ -6,5 +6,5 @@ location: "Tampere, Finland"
 summary: "Talk at IEEE Computing in Cardiology, Tampere, Finland."
 authors:
   - me
-featured: false
+talk_type: conference
 ---

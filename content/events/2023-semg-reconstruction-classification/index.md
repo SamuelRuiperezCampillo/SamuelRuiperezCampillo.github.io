@@ -6,5 +6,5 @@ location: "Cuenca, Spain"
 summary: "Talk at Spanish Society of General Medicine (SEMG), Cuenca, Spain. Best Oral Presentation Award."
 authors:
   - me
-featured: true
+talk_type: conference
 ---

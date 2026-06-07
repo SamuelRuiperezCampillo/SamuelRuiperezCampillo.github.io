@@ -6,5 +6,5 @@ location: "Vienna, Austria"
 summary: "Talk at ICLR Time-Series for Healthcare Workshop, Vienna, Austria."
 authors:
   - me
-featured: true
+talk_type: conference
 ---

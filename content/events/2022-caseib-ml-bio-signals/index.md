@@ -6,5 +6,5 @@ location: "Valladolid, Spain"
 summary: "Talk at Spanish Society of Biomedical Engineering (CASEIB), Valladolid, Spain."
 authors:
   - me
-featured: false
+talk_type: conference
 ---

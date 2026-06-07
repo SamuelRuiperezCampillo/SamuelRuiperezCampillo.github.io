@@ -6,5 +6,5 @@ location: "Singapore"
 summary: "Talk at World Congress on Biomedical Engineering & Medical Physics (IUPESM), Singapore."
 authors:
   - me
-featured: false
+talk_type: conference
 ---

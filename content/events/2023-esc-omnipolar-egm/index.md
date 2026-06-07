@@ -6,5 +6,5 @@ location: "Amsterdam, Netherlands"
 summary: "Talk at European Society of Cardiology Congress (ESC), Amsterdam, Netherlands."
 authors:
   - me
-featured: false
+talk_type: conference
 ---

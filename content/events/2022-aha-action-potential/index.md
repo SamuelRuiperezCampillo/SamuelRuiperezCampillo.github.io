@@ -6,5 +6,5 @@ location: "Chicago, USA"
 summary: "Talk at American Heart Association Scientific Sessions (AHA), Chicago, USA."
 authors:
   - me
-featured: false
+talk_type: conference
 ---

@@ -6,5 +6,5 @@ location: "New Orleans, USA"
 summary: "Talk at American Heart Association Scientific Sessions (AHA), New Orleans, USA."
 authors:
   - me
-featured: false
+talk_type: conference
 ---

@@ -6,5 +6,5 @@ location: "Online"
 summary: "Talk at Spanish Society of Biomedical Engineering (CASEIB), Online."
 authors:
   - me
-featured: false
+talk_type: conference
 ---

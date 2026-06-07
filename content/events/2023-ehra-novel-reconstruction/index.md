@@ -6,5 +6,5 @@ location: "Barcelona, Spain"
 summary: "Talk at European Heart Rhythm Association (EHRA), Barcelona, Spain."
 authors:
   - me
-featured: false
+talk_type: conference
 ---

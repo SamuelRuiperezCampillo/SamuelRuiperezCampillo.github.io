@@ -6,5 +6,5 @@ location: "New Orleans, USA"
 summary: "Talk at American Heart Association Scientific Sessions (AHA), New Orleans, USA. Paul Dudley White International Scholar Award."
 authors:
   - me
-featured: true
+talk_type: conference
 ---

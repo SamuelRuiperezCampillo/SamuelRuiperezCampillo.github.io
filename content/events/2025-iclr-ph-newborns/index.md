@@ -6,5 +6,5 @@ location: "Singapore"
 summary: "Talk at ICLR AI for Children Workshop, Singapore."
 authors:
   - me
-featured: false
+talk_type: conference
 ---

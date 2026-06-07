@@ -6,5 +6,5 @@ location: "Copenhagen, Denmark"
 summary: "Talk at European Heart Rhythm Association (EHRA), Copenhagen, Denmark."
 authors:
   - me
-featured: false
+talk_type: conference
 ---

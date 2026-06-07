@@ -6,5 +6,5 @@ location: "Orlando, USA"
 summary: "Talk at IEEE Engineering in Medicine & Biology Conference (EMBC), Orlando, USA."
 authors:
   - me
-featured: false
+talk_type: conference
 ---

@@ -6,5 +6,5 @@ location: "San Francisco, USA"
 summary: "Talk at Biophysical Society Annual Meeting (BPS), San Francisco, USA."
 authors:
   - me
-featured: false
+talk_type: conference
 ---

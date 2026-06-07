@@ -6,5 +6,5 @@ location: "Toledo, Spain"
 summary: "Talk at Spanish Society of General Medicine (SEMG), Toledo, Spain. Best Poster Award."
 authors:
   - me
-featured: true
+talk_type: conference
 ---

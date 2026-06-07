@@ -6,5 +6,5 @@ location: "Bordeaux, France"
 summary: "Talk at Atrial Signals, Bordeaux, France."
 authors:
   - me
-featured: false
+talk_type: conference
 ---

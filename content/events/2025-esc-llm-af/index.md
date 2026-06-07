@@ -6,5 +6,5 @@ location: "Madrid, Spain"
 summary: "Talk at European Society of Cardiology Congress (ESC), Madrid, Spain."
 authors:
   - me
-featured: false
+talk_type: conference
 ---

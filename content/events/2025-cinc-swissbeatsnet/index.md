@@ -6,5 +6,5 @@ location: "São Paulo, Brazil"
 summary: "Talk at IEEE Computing in Cardiology, São Paulo, Brazil. Best Oral Presentation Award — Physionet Challenge 2025."
 authors:
   - me
-featured: true
+talk_type: conference
 ---

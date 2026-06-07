@@ -6,5 +6,5 @@ location: "Berlin, Germany"
 summary: "Talk at ESC Digital Health and AI Summit (ESC-DCAI), Berlin, Germany."
 authors:
   - me
-featured: false
+talk_type: conference
 ---

@@ -6,5 +6,5 @@ location: "Rimini, Italy"
 summary: "Talk at IEEE Computing in Cardiology, Rimini, Italy."
 authors:
   - me
-featured: false
+talk_type: conference
 ---

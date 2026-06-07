@@ -6,5 +6,5 @@ location: "Berlin, Germany"
 summary: "Talk at European Heart Rhythm Association (EHRA), Berlin, Germany."
 authors:
   - me
-featured: false
+talk_type: conference
 ---

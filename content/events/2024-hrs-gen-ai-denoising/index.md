@@ -6,5 +6,5 @@ location: "Boston, USA"
 summary: "Talk at Heart Rhythm Society (HRS), Boston, USA."
 authors:
   - me
-featured: false
+talk_type: conference
 ---
