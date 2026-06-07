@@ -10,16 +10,6 @@ authors:
 - "F. J. Chorro"
 - "J. Millet"
 - "F. Castells"
-author_notes:
-- "Equal contribution"
-- "Equal contribution"
-- ""
-- ""
-- ""
-- ""
-- ""
-- ""
-- ""
 date: "2024-01-01T00:00:00Z"
 publishDate: "2024-01-01T00:00:00Z"
 publication_types: ["article-journal"]
