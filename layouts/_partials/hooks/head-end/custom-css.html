@@ -83,27 +83,24 @@ h3.text-2xl {
   font-family: inherit;
   line-height: 1.4;
 }
-/* "at ETH Zurich" — same row, default text colour (white-on-dark,
-   slate on light), not the primary blue. */
-.hb-role-base {
-  color: rgb(15 23 42);
-  font-weight: 500;
-}
-.dark .hb-role-base {
-  color: rgb(241 245 249);
-}
-/* "Research Fellow at MIT" — second line, indented a touch, smaller,
-   left-aligned, muted default-text colour. */
-.hb-role-sub {
+/* Role stack — two left-aligned rows, same size, each "<role> at
+   <institution>" with the institution flipped to default text. */
+.hb-role-stack {
   display: inline-block;
-  margin-left: 1.25rem;
-  margin-top: 0.15rem;
-  font-size: 0.95rem;
-  font-weight: 400;
-  color: rgb(15 23 42);
   text-align: left;
+  vertical-align: top;
 }
-.dark .hb-role-sub {
+.hb-role-line {
+  display: block;
+  /* colour inherited from parent <p> (primary blue accent) */
+  font-weight: 500;
+  line-height: 1.4;
+}
+.hb-role-aff {
+  color: rgb(15 23 42);
+  font-weight: 400;
+}
+.dark .hb-role-aff {
   color: rgb(241 245 249);
 }
 

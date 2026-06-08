@@ -8,7 +8,7 @@ name:
 postnominals:
   - MSc
   - MEng
-role: 'PhD Candidate <span class="hb-role-base">at ETH Zurich</span><br /><span class="hb-role-sub">Research Fellow at MIT</span>'
+role: '<span class="hb-role-stack"><span class="hb-role-line">PhD Candidate <span class="hb-role-aff">at ETH Zurich</span></span><span class="hb-role-line">Research Fellow <span class="hb-role-aff">at MIT</span></span></span>'
 bio: |
   Samuel Ruipérez-Campillo is an engineer and PhD candidate in Computer Science
   at the Institute of Machine Learning, ETH Zurich, where his research focuses
@@ -22,9 +22,7 @@ bio: |
   Fellowship, the Rafael del Pino Fellowship, and the UC Berkeley Fung Institute
   Fellowship.
 
-affiliations:
-  - name: ETH Zurich & MIT
-    url: https://ethz.ch/
+affiliations: []
 
 links:
   - icon: at-symbol
