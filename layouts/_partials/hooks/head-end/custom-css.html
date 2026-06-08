@@ -71,14 +71,40 @@ h3.text-2xl {
 }
 
 /* ---- Resume biography (home page hero) refinements ----------------- */
-/* Role line under the name ("Researcher") — was a chunky 2xl/600.
-   Drop to a calm subtitle weight, keep the accent colour. */
+/* Role line under the name — was a chunky 2xl/600. Drop to a calm
+   subtitle weight; "PhD Candidate" inherits the primary accent from
+   the wrapping <p>, the "at ETH Zurich" / "Research Fellow at MIT"
+   spans override colour and weight via their own classes. */
 .resume-biography p.text-2xl.font-semibold.text-primary-600,
 .resume-biography .text-2xl.font-semibold.text-primary-600 {
   font-size: 1.1rem;
   font-weight: 500;
   letter-spacing: 0;
   font-family: inherit;
+  line-height: 1.4;
+}
+/* "at ETH Zurich" — same row, default text colour (white-on-dark,
+   slate on light), not the primary blue. */
+.hb-role-base {
+  color: rgb(15 23 42);
+  font-weight: 500;
+}
+.dark .hb-role-base {
+  color: rgb(241 245 249);
+}
+/* "Research Fellow at MIT" — second line, indented a touch, smaller,
+   left-aligned, muted default-text colour. */
+.hb-role-sub {
+  display: inline-block;
+  margin-left: 1.25rem;
+  margin-top: 0.15rem;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: rgb(15 23 42);
+  text-align: left;
+}
+.dark .hb-role-sub {
+  color: rgb(241 245 249);
 }
 
 /* Download CV button — was a giant gradient pill (px-8 py-4 / font-bold
