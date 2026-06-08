@@ -8,7 +8,7 @@ name:
 postnominals:
   - MSc
   - MEng
-role: '<span class="hb-role-stack"><span class="hb-role-line">PhD Candidate <span class="hb-role-aff">at ETH Zurich</span></span><span class="hb-role-line">Research Fellow <span class="hb-role-aff">at MIT</span></span></span>'
+role: '<span class="hb-role-stack"><a href="https://mds.inf.ethz.ch/team/detail/samuel-ruiperez-campillo" target="_blank" rel="noopener" class="hb-role-line">PhD Candidate <span class="hb-role-aff">at ETH Zurich</span></a><a href="https://edelmanlab.mit.edu/samuel-ruiperez-campillo-2/" target="_blank" rel="noopener" class="hb-role-line">Research Fellow <span class="hb-role-aff">at MIT</span></a></span>'
 bio: |
   Samuel Ruipérez-Campillo is an engineer and PhD candidate in Computer Science
   at the Institute of Machine Learning, ETH Zurich, where his research focuses
@@ -50,6 +50,7 @@ interests:
 education:
   - degree: PhD in Computer Science
     institution: ETH Zurich
+    institution_url: https://mds.inf.ethz.ch/team/detail/samuel-ruiperez-campillo
     year: "2024–"
     summary: |
       Institute of Machine Learning, Medical Data Science Group. Research on
