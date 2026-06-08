@@ -132,4 +132,21 @@ h3.text-2xl {
 .resume-biography .group.bg-gradient-to-br .w-12.h-12.bg-white {
   display: none !important;
 }
+
+/* ---- Awards blocks (home Selected + full /awards/ page) ------------
+   Markdown blocks wrap content in max-w-prose, which is narrower than
+   the Highlighted Talks collection block. Let the inner list breathe
+   so the two sections sit on the same width. */
+#awards .max-w-prose,
+#awards-full .max-w-prose {
+  max-width: none !important;
+}
+#awards .prose,
+#awards-full .prose {
+  max-width: none !important;
+}
+#awards .container.max-w-3xl,
+#awards-full .container.max-w-3xl {
+  max-width: 48rem;   /* same target as talks list */
+}
 </style>

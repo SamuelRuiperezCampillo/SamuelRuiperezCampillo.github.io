@@ -81,13 +81,13 @@ sections:
     content:
       title: 'Selected Awards'
       text: |
-        <div class="container px-4 sm:px-8 mx-auto max-w-3xl py-2">
-          <ol class="space-y-4 list-none p-0">
+        <div class="container px-4 sm:px-6 mx-auto max-w-3xl py-2">
+          <ol class="space-y-3 list-none p-0">
             <li class="flex gap-3 items-baseline">
               <span class="text-slate-400 dark:text-slate-500 text-sm font-medium tabular-nums w-12 shrink-0">2026</span>
               <div class="flex-1">
                 <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Editor in Chief's Featured Article of the Month</span>
-                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Circulation: Arrhythmia and Electrophysiology</div>
+                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5"><a href="https://doi.org/10.1161/CIRCEP.125.014061" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400">Circulation: Arrhythmia and Electrophysiology</a></div>
               </div>
             </li>
             <li class="flex gap-3 items-baseline">
@@ -101,28 +101,21 @@ sections:
               <span class="text-slate-400 dark:text-slate-500 text-sm font-medium tabular-nums w-12 shrink-0">2025</span>
               <div class="flex-1">
                 <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Best Oral Presentation, Multimodal AI &amp; Foundational Models</span>
-                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">European Society of Cardiology — DCAI Summit</div>
+                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">European Society of Cardiology — Digital Health &amp; AI Summit</div>
               </div>
             </li>
             <li class="flex gap-3 items-baseline">
               <span class="text-slate-400 dark:text-slate-500 text-sm font-medium tabular-nums w-12 shrink-0">2025</span>
               <div class="flex-1">
                 <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Best Oral Presentation — Physionet Challenge 2025</span>
-                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">IEEE Computing in Cardiology</div>
-              </div>
-            </li>
-            <li class="flex gap-3 items-baseline">
-              <span class="text-slate-400 dark:text-slate-500 text-sm font-medium tabular-nums w-12 shrink-0">2025</span>
-              <div class="flex-1">
-                <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Editor in Chief's Featured Article of the Month</span>
-                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Circulation: Arrhythmia and Electrophysiology</div>
+                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5"><a href="https://physionetchallenges.org/2025/" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400">IEEE Computing in Cardiology</a><span class="ml-1 text-slate-400">· $300</span></div>
               </div>
             </li>
             <li class="flex gap-3 items-baseline">
               <span class="text-slate-400 dark:text-slate-500 text-sm font-medium tabular-nums w-12 shrink-0">2024</span>
               <div class="flex-1">
                 <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Clinical Translation Award</span>
-                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">IEEE Computing in Cardiology</div>
+                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">IEEE Computing in Cardiology<span class="ml-1 text-slate-400">· $1,000</span></div>
               </div>
             </li>
             <li class="flex gap-3 items-baseline">
@@ -136,18 +129,18 @@ sections:
               <span class="text-slate-400 dark:text-slate-500 text-sm font-medium tabular-nums w-12 shrink-0">2020</span>
               <div class="flex-1">
                 <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">"la Caixa" Excellence Fellowship</span>
-                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Full master's funding at UC Berkeley</div>
+                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5"><a href="https://fundacionlacaixa.org/en/scholarships-postgraduate-studies-north-america" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400">"la Caixa" Foundation</a> — full master's funding at UC Berkeley<span class="ml-1 text-slate-400">· $100,000</span></div>
               </div>
             </li>
             <li class="flex gap-3 items-baseline">
               <span class="text-slate-400 dark:text-slate-500 text-sm font-medium tabular-nums w-12 shrink-0">2020</span>
               <div class="flex-1">
                 <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Rafael del Pino Excellence Fellowship</span>
-                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Full master's funding at ETH Zurich</div>
+                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5"><a href="https://www.frdelpino.es/" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400">Rafael del Pino Foundation</a> — full master's funding at ETH Zurich<span class="ml-1 text-slate-400">· €48,000</span></div>
               </div>
             </li>
           </ol>
-          <p class="mt-6 text-sm"><a href="/awards/" class="text-primary-600 dark:text-primary-400 hover:underline">See the full list →</a></p>
+          <p class="mt-5 text-sm"><a href="/awards/" class="text-primary-600 dark:text-primary-400 hover:underline">See the full list →</a></p>
         </div>
     design:
       columns: '1'
