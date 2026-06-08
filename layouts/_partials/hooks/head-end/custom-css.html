@@ -69,4 +69,67 @@ h3.text-2xl {
   font-weight: 500;
   letter-spacing: -0.015em;
 }
+
+/* ---- Resume biography (home page hero) refinements ----------------- */
+/* Role line under the name ("Researcher") — was a chunky 2xl/600.
+   Drop to a calm subtitle weight, keep the accent colour. */
+.resume-biography p.text-2xl.font-semibold.text-primary-600,
+.resume-biography .text-2xl.font-semibold.text-primary-600 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  font-family: inherit;
+}
+
+/* Download CV button — was a giant gradient pill (px-8 py-4 / font-bold
+   text-lg / rounded-xl / shadow-lg / hover:scale-105). Trim it down. */
+.resume-biography a.inline-flex.bg-gradient-to-r {
+  padding: 0.55rem 1.1rem !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  border-radius: 0.5rem !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+.resume-biography a.inline-flex.bg-gradient-to-r:hover {
+  transform: none !important;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.08) !important;
+}
+.resume-biography a.inline-flex.bg-gradient-to-r svg {
+  width: 1rem !important;
+  height: 1rem !important;
+  margin-right: 0.5rem !important;
+}
+
+/* Education degree titles (PhD / MEng / MSc / BSc) — were text-xl
+   font-bold. Quieter, sentence-weight. */
+.resume-biography p.text-xl.font-bold {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  font-family: inherit;
+}
+
+/* Education cards: soften the gradient backdrops + rings so the
+   degrees read as a clean list rather than three coloured tiles. */
+.resume-biography .group.bg-gradient-to-br {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 1px solid rgb(226 232 240 / 0.7) !important;
+  border-radius: 0.5rem !important;
+}
+.dark .resume-biography .group.bg-gradient-to-br {
+  border-color: rgb(51 65 85 / 0.5) !important;
+}
+.resume-biography .group.bg-gradient-to-br:hover {
+  border-color: rgb(203 213 225) !important;
+  transform: none !important;
+}
+.dark .resume-biography .group.bg-gradient-to-br:hover {
+  border-color: rgb(71 85 105) !important;
+}
+/* Drop the round avatar/icon disc next to each degree — visual noise. */
+.resume-biography .group.bg-gradient-to-br .w-12.h-12.bg-white {
+  display: none !important;
+}
 </style>
