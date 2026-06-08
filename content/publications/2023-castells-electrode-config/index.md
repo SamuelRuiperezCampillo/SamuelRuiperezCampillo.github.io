@@ -29,7 +29,4 @@ featured: true
 hugoblox:
   ids:
     doi: "10.1016/j.compbiomed.2023.106604"
-links:
-  - type: doi
-    url: "https://doi.org/10.1016/j.compbiomed.2023.106604"
 ---

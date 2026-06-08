@@ -1,0 +1,40 @@
+{{ define "main" }}
+
+{{ $all := where .Pages "Section" "publications" }}
+{{ $sorted := sort $all "Date" "desc" }}
+{{ $total := len $sorted }}
+
+<div class="mx-auto flex max-w-screen-xl">
+  <article class="w-full break-words flex min-h-[calc(100vh-var(--navbar-height))] min-w-0 justify-center pb-12 pt-8">
+    <main class="w-full min-w-0 max-w-4xl px-6 md:px-12">
+
+      {{ with .Title }}
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">{{ . }}</h1>
+      {{ end }}
+
+      <ol class="mt-8 space-y-6 list-none p-0">
+        {{ range $i, $p := $sorted }}
+          {{ $marker := printf "J%d" (add $i 1) }}
+          {{ $year := "" }}
+          {{ with $p.Date }}{{ $year = .Format "2006" }}{{ end }}
+          <li class="flex gap-4 items-baseline">
+            <span class="text-slate-400 dark:text-slate-500 text-sm font-semibold tabular-nums w-10 shrink-0 text-right">[{{ $marker }}]</span>
+            <div class="flex-1 min-w-0">
+              <a href="{{ $p.RelPermalink }}" class="text-slate-900 dark:text-slate-100 hover:text-primary-600 dark:hover:text-primary-400 font-medium leading-snug">{{ $p.Title }}</a>
+              <div class="mt-1 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                {{ partial "page_metadata_authors" $p }}
+              </div>
+              <div class="mt-1 text-sm text-slate-500 dark:text-slate-400 flex flex-wrap items-center gap-x-2 gap-y-1">
+                {{ with $p.Params.publication }}<span>{{ . | markdownify }}</span>{{ end }}
+                {{ with $year }}<span aria-hidden="true">·</span><span>{{ . }}</span>{{ end }}
+                {{ with $p.Params.impact_factor }}<span aria-hidden="true">·</span><span><span class="font-medium text-slate-700 dark:text-slate-300">IF</span> {{ . }}</span>{{ end }}
+              </div>
+            </div>
+          </li>
+        {{ end }}
+      </ol>
+
+    </main>
+  </article>
+</div>
+{{ end }}

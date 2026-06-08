@@ -32,7 +32,4 @@ featured: false
 hugoblox:
   ids:
     doi: "10.1016/j.hrthm.2024.10.066"
-links:
-  - type: doi
-    url: "https://doi.org/10.1016/j.hrthm.2024.10.066"
 ---

@@ -40,7 +40,4 @@ featured: false
 hugoblox:
   ids:
     doi: "10.48550/arXiv.2511.22294"
-links:
-  - type: doi
-    url: "https://doi.org/10.48550/arXiv.2511.22294"
 ---

@@ -75,4 +75,22 @@ sections:
       order: desc
     design:
       view: compact
+
+  - block: markdown
+    id: awards
+    content:
+      title: 'Selected Awards'
+      text: |
+        - **Paul Dudley White International Scholar Award** — American Heart Association *(2025)*
+        - **Editor in Chief's Featured Article of the Month** — *Circulation: Arrhythmia and Electrophysiology* *(2026, 2025)*
+        - **Best Oral Presentation on Multimodal AI & Foundational Models** — European Society of Cardiology, DCAI Summit *(2025)*
+        - **Best Oral Presentation — Physionet Challenge 2025** — IEEE Computing in Cardiology *(2025)*
+        - **Clinical Translation Award** — IEEE Computing in Cardiology *(2024)*
+        - **Honorary Alumnus (one of five)** — Universidad Carlos III de Madrid *(2024)*
+        - **"la Caixa" Excellence Fellowship** — full master's funding at UC Berkeley *(2020)*
+        - **Rafael del Pino Excellence Fellowship** — full master's funding at ETH Zurich *(2020)*
+
+        [See the full list →](/awards/)
+    design:
+      columns: '1'
 ---

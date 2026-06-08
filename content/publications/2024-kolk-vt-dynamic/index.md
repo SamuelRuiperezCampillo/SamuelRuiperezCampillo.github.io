@@ -35,7 +35,4 @@ featured: true
 hugoblox:
   ids:
     doi: "10.1016/j.ebiom.2023.104937"
-links:
-  - type: doi
-    url: "https://doi.org/10.1016/j.ebiom.2023.104937"
 ---

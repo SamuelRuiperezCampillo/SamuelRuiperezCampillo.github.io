@@ -21,7 +21,4 @@ featured: false
 hugoblox:
   ids:
     doi: "10.1016/j.bbe.2024.07.005"
-links:
-  - type: doi
-    url: "https://doi.org/10.1016/j.bbe.2024.07.005"
 ---

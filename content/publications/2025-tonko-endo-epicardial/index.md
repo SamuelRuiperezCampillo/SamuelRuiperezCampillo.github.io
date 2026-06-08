@@ -36,7 +36,4 @@ featured: true
 hugoblox:
   ids:
     doi: "10.1016/j.hrthm.2025.09.012"
-links:
-  - type: doi
-    url: "https://doi.org/10.1016/j.hrthm.2025.09.012"
 ---

@@ -28,7 +28,4 @@ featured: false
 hugoblox:
   ids:
     doi: "10.3389/fphys.2024.1452829"
-links:
-  - type: doi
-    url: "https://doi.org/10.3389/fphys.2024.1452829"
 ---

@@ -33,7 +33,4 @@ featured: false
 hugoblox:
   ids:
     doi: "10.3389/fcvm.2023.1189293"
-links:
-  - type: doi
-    url: "https://doi.org/10.3389/fcvm.2023.1189293"
 ---

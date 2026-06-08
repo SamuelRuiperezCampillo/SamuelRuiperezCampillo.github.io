@@ -31,7 +31,4 @@ hugoblox:
   ids:
     doi: "10.48550/arXiv.2502.03333"
     arxiv: "2502.03333"
-links:
-  - type: doi
-    url: "https://doi.org/10.48550/arXiv.2502.03333"
 ---

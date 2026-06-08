@@ -24,7 +24,4 @@ featured: false
 hugoblox:
   ids:
     doi: "10.1016/j.compbiomed.2025.111399"
-links:
-  - type: doi
-    url: "https://doi.org/10.1016/j.compbiomed.2025.111399"
 ---

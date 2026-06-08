@@ -38,7 +38,4 @@ featured: false
 hugoblox:
   ids:
     doi: "10.1161/CIRCEP.124.012860"
-links:
-  - type: doi
-    url: "https://doi.org/10.1161/CIRCEP.124.012860"
 ---

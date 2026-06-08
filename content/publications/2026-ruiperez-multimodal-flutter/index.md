@@ -26,7 +26,4 @@ featured: false
 hugoblox:
   ids:
     doi: "10.1109/JTEHM.2026.3694616"
-links:
-  - type: doi
-    url: "https://doi.org/10.1109/JTEHM.2026.3694616"
 ---

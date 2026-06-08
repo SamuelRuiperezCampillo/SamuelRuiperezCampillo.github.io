@@ -19,7 +19,4 @@ featured: false
 hugoblox:
   ids:
     doi: "10.1016/j.bspc.2024.106027"
-links:
-  - type: doi
-    url: "https://doi.org/10.1016/j.bspc.2024.106027"
 ---

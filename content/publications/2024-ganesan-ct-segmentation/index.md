@@ -36,7 +36,4 @@ featured: false
 hugoblox:
   ids:
     doi: "10.3390/diagnostics14141538"
-links:
-  - type: doi
-    url: "https://doi.org/10.3390/diagnostics14141538"
 ---

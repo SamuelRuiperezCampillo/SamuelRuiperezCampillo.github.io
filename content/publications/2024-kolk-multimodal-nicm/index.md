@@ -23,7 +23,4 @@ featured: false
 hugoblox:
   ids:
     doi: "10.1038/s41598-024-65357-x"
-links:
-  - type: doi
-    url: "https://doi.org/10.1038/s41598-024-65357-x"
 ---

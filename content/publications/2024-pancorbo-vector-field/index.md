@@ -33,7 +33,4 @@ featured: true
 hugoblox:
   ids:
     doi: "10.1109/OJEMB.2023.3344349"
-links:
-  - type: doi
-    url: "https://doi.org/10.1109/OJEMB.2023.3344349"
 ---

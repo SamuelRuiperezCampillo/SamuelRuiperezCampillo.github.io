@@ -27,7 +27,4 @@ featured: false
 hugoblox:
   ids:
     doi: "10.1161/CIRCEP.125.014061"
-links:
-  - type: doi
-    url: "https://doi.org/10.1161/CIRCEP.125.014061"
 ---

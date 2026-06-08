@@ -12,23 +12,7 @@ sections:
       username: me
     design:
       date_format: '2006'
-      is_education_first: false
-
-  - block: markdown
-    content:
-      title: 'Teaching'
-      text: |
-        **ETH Zurich** — Teaching Assistant, Department of Computer Science.
-
-        | Course | Credits | Term |
-        | --- | --- | --- |
-        | Machine Learning for Healthcare | 6 ECTS | Spring 2026 |
-        | Seminar Topics in ML Research | 2 ECTS | Fall 2025 |
-        | Advanced Machine Learning | 10 ECTS | Fall 2025 |
-        | Machine Learning for Healthcare | 6 ECTS | Spring 2025 |
-        | Seminar Topics in ML Research | 2 ECTS | Fall 2024 |
-        | Advanced Machine Learning | 10 ECTS | Fall 2024 |
-        | Data Science for Medicine | 4 ECTS | Spring 2024 |
+      is_education_first: true
 
   - block: markdown
     content:
@@ -69,29 +53,6 @@ sections:
       text: |
         - **PERSPICATH** — Project member, funded by the Spanish Ministry of Science and Innovation (€121,000). *2023–2026*.
         - **Q-Substrate** — Project member, funded by the Spanish Ministry of Science and Innovation (€73,000). *2020–2023*.
-
-  - block: markdown
-    content:
-      title: 'Invited Talks & Visits'
-      text: |
-        - **Machine Learning Summer School (MLSS) 2023** — invited attendee, Arequipa, Peru (2023). Presented poster.
-        - **Rafael del Pino Foundation, ELI Workshop** — invited speaker on Entrepreneurship, Leadership and Innovation, Madrid, Spain (2023 and 2024).
-        - **Computational Genomics Summer Institute** — invited presentation at UCLA, Los Angeles, USA (2024).
-        - **From Science to Society Conference, University of Cambridge** — Honorary Guest and Session Chair, Cambridge, UK (2022).
-        - **International Conference on Logistics in Industry** — invited delegate (BEST Europe), Yekaterinburg, Russia (2020).
-        - **Madrid Engineering Week — IBM Case Study** — invited participant (BEST Europe), Madrid, Spain (2019).
-        - **International Conference on Computer Programming** — invited delegate (BEST Europe), Istanbul, Türkiye (2019).
-        - **International Conference on Tissue Engineering** — invited delegate (BEST Europe), Bucharest, Romania (2018).
-
-  - block: resume-skills
-    content:
-      title: Skills
-      username: me
-
-  - block: resume-awards
-    content:
-      title: Awards & Distinctions
-      username: me
 
   - block: resume-languages
     content:
