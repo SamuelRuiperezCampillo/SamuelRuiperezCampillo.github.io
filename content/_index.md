@@ -81,16 +81,74 @@ sections:
     content:
       title: 'Selected Awards'
       text: |
-        - **Paul Dudley White International Scholar Award** — American Heart Association *(2025)*
-        - **Editor in Chief's Featured Article of the Month** — *Circulation: Arrhythmia and Electrophysiology* *(2026, 2025)*
-        - **Best Oral Presentation on Multimodal AI & Foundational Models** — European Society of Cardiology, DCAI Summit *(2025)*
-        - **Best Oral Presentation — Physionet Challenge 2025** — IEEE Computing in Cardiology *(2025)*
-        - **Clinical Translation Award** — IEEE Computing in Cardiology *(2024)*
-        - **Honorary Alumnus (one of five)** — Universidad Carlos III de Madrid *(2024)*
-        - **"la Caixa" Excellence Fellowship** — full master's funding at UC Berkeley *(2020)*
-        - **Rafael del Pino Excellence Fellowship** — full master's funding at ETH Zurich *(2020)*
-
-        [See the full list →](/awards/)
+        <div class="container px-4 sm:px-8 mx-auto max-w-3xl py-2">
+          <ol class="space-y-4 list-none p-0">
+            <li class="flex gap-3 items-baseline">
+              <span class="text-slate-400 dark:text-slate-500 text-sm font-medium tabular-nums w-12 shrink-0">2026</span>
+              <div class="flex-1">
+                <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Editor in Chief's Featured Article of the Month</span>
+                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Circulation: Arrhythmia and Electrophysiology</div>
+              </div>
+            </li>
+            <li class="flex gap-3 items-baseline">
+              <span class="text-slate-400 dark:text-slate-500 text-sm font-medium tabular-nums w-12 shrink-0">2025</span>
+              <div class="flex-1">
+                <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Paul Dudley White International Scholar Award</span>
+                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">American Heart Association</div>
+              </div>
+            </li>
+            <li class="flex gap-3 items-baseline">
+              <span class="text-slate-400 dark:text-slate-500 text-sm font-medium tabular-nums w-12 shrink-0">2025</span>
+              <div class="flex-1">
+                <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Best Oral Presentation, Multimodal AI &amp; Foundational Models</span>
+                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">European Society of Cardiology — DCAI Summit</div>
+              </div>
+            </li>
+            <li class="flex gap-3 items-baseline">
+              <span class="text-slate-400 dark:text-slate-500 text-sm font-medium tabular-nums w-12 shrink-0">2025</span>
+              <div class="flex-1">
+                <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Best Oral Presentation — Physionet Challenge 2025</span>
+                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">IEEE Computing in Cardiology</div>
+              </div>
+            </li>
+            <li class="flex gap-3 items-baseline">
+              <span class="text-slate-400 dark:text-slate-500 text-sm font-medium tabular-nums w-12 shrink-0">2025</span>
+              <div class="flex-1">
+                <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Editor in Chief's Featured Article of the Month</span>
+                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Circulation: Arrhythmia and Electrophysiology</div>
+              </div>
+            </li>
+            <li class="flex gap-3 items-baseline">
+              <span class="text-slate-400 dark:text-slate-500 text-sm font-medium tabular-nums w-12 shrink-0">2024</span>
+              <div class="flex-1">
+                <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Clinical Translation Award</span>
+                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">IEEE Computing in Cardiology</div>
+              </div>
+            </li>
+            <li class="flex gap-3 items-baseline">
+              <span class="text-slate-400 dark:text-slate-500 text-sm font-medium tabular-nums w-12 shrink-0">2024</span>
+              <div class="flex-1">
+                <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Honorary Alumnus (one of five)</span>
+                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Universidad Carlos III de Madrid</div>
+              </div>
+            </li>
+            <li class="flex gap-3 items-baseline">
+              <span class="text-slate-400 dark:text-slate-500 text-sm font-medium tabular-nums w-12 shrink-0">2020</span>
+              <div class="flex-1">
+                <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">"la Caixa" Excellence Fellowship</span>
+                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Full master's funding at UC Berkeley</div>
+              </div>
+            </li>
+            <li class="flex gap-3 items-baseline">
+              <span class="text-slate-400 dark:text-slate-500 text-sm font-medium tabular-nums w-12 shrink-0">2020</span>
+              <div class="flex-1">
+                <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Rafael del Pino Excellence Fellowship</span>
+                <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Full master's funding at ETH Zurich</div>
+              </div>
+            </li>
+          </ol>
+          <p class="mt-6 text-sm"><a href="/awards/" class="text-primary-600 dark:text-primary-400 hover:underline">See the full list →</a></p>
+        </div>
     design:
       columns: '1'
 ---

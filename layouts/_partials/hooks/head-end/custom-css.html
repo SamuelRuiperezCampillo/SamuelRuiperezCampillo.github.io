@@ -14,4 +14,59 @@ a[href*="/authors/me/"],
 .post-reading-time {
   display: none !important;
 }
+
+/* ---- Restrained, academic-style headings ---------------------------- */
+/* Refined serif stack — feels closer to a journal page than a marketing
+   site — with a modest weight, slightly tighter tracking, and smaller
+   sizes than the theme defaults. */
+h1, h2, h3, h4 {
+  font-family: 'Charter', 'Iowan Old Style', 'Source Serif Pro',
+               'Source Serif 4', 'Lora', Georgia, 'Times New Roman',
+               serif;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+}
+
+/* Soften the giant page-level headlines the theme ships with.
+   Override the Tailwind utility classes the theme set on h1/h2 so the
+   refined serif + lighter weight wins. */
+h1.text-4xl,
+h1.text-3xl,
+h1.lg\:text-6xl,
+.text-4xl.font-bold,
+.text-3xl.font-bold {
+  font-size: 1.75rem;         /* ~28px instead of 30–36px */
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+/* Section headers (block titles like "Recent Publications", "Highlighted
+   Talks", "Selected Awards") feel less shouty. */
+.bbloxh2,
+h2.text-3xl,
+h2.text-2xl,
+h2.text-xl {
+  font-size: 1.4rem;          /* ~22px */
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+/* Sub-section headings (e.g. block titles in Experience). */
+h3.text-xl,
+h3.text-2xl {
+  font-size: 1.1rem;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+/* Hugo Blox block titles often live in <h2 class="..."> wrappers from
+   the markdown block component — catch those too. */
+.bbloxh1, .bbloxh2, .bbloxh3 {
+  font-family: 'Charter', 'Iowan Old Style', 'Source Serif Pro',
+               'Source Serif 4', 'Lora', Georgia, 'Times New Roman',
+               serif;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
 </style>
