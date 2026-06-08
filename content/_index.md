@@ -67,7 +67,8 @@ sections:
   - block: collection
     id: talks
     content:
-      title: Recent & Upcoming Talks
+      title: Highlighted Talks
+      count: 6
       filters:
         folders:
           - events
