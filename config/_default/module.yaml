@@ -23,6 +23,12 @@ mounts:
     target: assets/dist/community/blox/
     files:
       - '**.css'
+  # Local custom blocks (blox/<name>/block.html) — mounted into the
+  # hbx/blocks namespace so Hugo Blox's block lookup resolves them.
+  - source: blox
+    target: layouts/_partials/hbx/blocks
+    files:
+      - '**/block.html'
   - source: layouts
     target: layouts
   - source: assets

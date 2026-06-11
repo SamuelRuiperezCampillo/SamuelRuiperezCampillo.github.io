@@ -1,0 +1,10 @@
+{
+  "id": "selected-talks",
+  "name": "Selected Talks",
+  "version": "1.0.0",
+  "license": "MIT",
+  "category": "content",
+  "tags": ["talks", "events", "list"],
+  "description": "Selected talks split into Invited Talks and Scientific Conference Talks subsections",
+  "author": "Samuel Ruipérez-Campillo"
+}

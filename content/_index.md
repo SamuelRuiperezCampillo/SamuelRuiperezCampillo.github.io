@@ -64,18 +64,10 @@ sections:
     design:
       view: citation
 
-  - block: collection
+  - block: selected-talks
     id: talks
     content:
-      title: Highlighted Talks
-      count: 0
-      filters:
-        folders:
-          - events
-        featured_only: true
-      order: desc
-    design:
-      view: compact
+      title: Selected Talks
 
   - block: markdown
     id: awards
