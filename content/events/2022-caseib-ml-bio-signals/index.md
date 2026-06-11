@@ -7,4 +7,5 @@ summary: "Talk at Spanish Society of Biomedical Engineering (CASEIB), Valladolid
 authors:
   - me
 talk_type: conference
+featured: false
 ---

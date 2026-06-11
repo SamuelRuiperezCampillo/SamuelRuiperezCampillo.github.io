@@ -7,4 +7,5 @@ summary: "Talk at IEEE Computing in Cardiology, Rimini, Italy."
 authors:
   - me
 talk_type: conference
+featured: true
 ---

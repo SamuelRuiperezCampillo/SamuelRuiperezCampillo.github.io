@@ -7,4 +7,5 @@ summary: "Talk at World Congress on Biomedical Engineering & Medical Physics (IU
 authors:
   - me
 talk_type: conference
+featured: true
 ---

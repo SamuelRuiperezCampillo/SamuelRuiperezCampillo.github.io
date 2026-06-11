@@ -7,4 +7,5 @@ summary: "Talk at ESC Digital Health and AI Summit (ESC-DCAI), Berlin, Germany."
 authors:
   - me
 talk_type: conference
+featured: false
 ---

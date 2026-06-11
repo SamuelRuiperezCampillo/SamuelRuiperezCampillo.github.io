@@ -7,4 +7,5 @@ summary: "Talk at American Heart Association Scientific Sessions (AHA), New Orle
 authors:
   - me
 talk_type: conference
+featured: true
 ---

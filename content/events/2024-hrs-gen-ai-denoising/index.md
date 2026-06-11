@@ -7,4 +7,5 @@ summary: "Talk at Heart Rhythm Society (HRS), Boston, USA."
 authors:
   - me
 talk_type: conference
+featured: true
 ---

@@ -7,4 +7,5 @@ summary: "Talk at European Society of Cardiology Congress (ESC), London, United 
 authors:
   - me
 talk_type: conference
+featured: true
 ---

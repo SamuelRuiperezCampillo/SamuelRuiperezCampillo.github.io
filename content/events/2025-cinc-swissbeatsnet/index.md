@@ -7,4 +7,5 @@ summary: "Talk at IEEE Computing in Cardiology, São Paulo, Brazil. Best Oral Pr
 authors:
   - me
 talk_type: conference
+featured: true
 ---

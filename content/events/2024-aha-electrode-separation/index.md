@@ -7,4 +7,5 @@ summary: "Talk at American Heart Association Scientific Sessions (AHA), Chicago,
 authors:
   - me
 talk_type: conference
+featured: false
 ---

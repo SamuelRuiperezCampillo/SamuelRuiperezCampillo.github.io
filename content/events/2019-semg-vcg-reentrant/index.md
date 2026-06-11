@@ -7,4 +7,5 @@ summary: "Talk at Spanish Society of General Medicine (SEMG), Toledo, Spain. Bes
 authors:
   - me
 talk_type: conference
+featured: false
 ---

@@ -7,4 +7,5 @@ summary: "Talk at IEEE Computing in Cardiology, Tampere, Finland."
 authors:
   - me
 talk_type: conference
+featured: false
 ---

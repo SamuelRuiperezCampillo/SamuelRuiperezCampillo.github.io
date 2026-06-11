@@ -7,4 +7,5 @@ summary: "Talk at Biophysical Society Annual Meeting (BPS), San Francisco, USA."
 authors:
   - me
 talk_type: conference
+featured: true
 ---

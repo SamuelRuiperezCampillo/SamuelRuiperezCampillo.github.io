@@ -7,4 +7,5 @@ summary: "Talk at ICLR AI for Children Workshop, Singapore."
 authors:
   - me
 talk_type: conference
+featured: true
 ---

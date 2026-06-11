@@ -7,4 +7,5 @@ summary: "Talk at Atrial Signals, Bordeaux, France."
 authors:
   - me
 talk_type: conference
+featured: true
 ---

@@ -68,10 +68,11 @@ sections:
     id: talks
     content:
       title: Highlighted Talks
-      count: 6
+      count: 0
       filters:
         folders:
           - events
+        featured_only: true
       order: desc
     design:
       view: compact

@@ -7,4 +7,5 @@ summary: "Talk at European Heart Rhythm Association (EHRA), Copenhagen, Denmark.
 authors:
   - me
 talk_type: conference
+featured: true
 ---

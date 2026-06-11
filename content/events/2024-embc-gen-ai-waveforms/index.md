@@ -7,4 +7,5 @@ summary: "Talk at IEEE Engineering in Medicine & Biology Conference (EMBC), Orla
 authors:
   - me
 talk_type: conference
+featured: true
 ---
