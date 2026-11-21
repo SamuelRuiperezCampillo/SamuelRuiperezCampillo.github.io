@@ -18,7 +18,7 @@
           {{ $year := "" }}
           {{ with $p.Date }}{{ $year = .Format "2006" }}{{ end }}
           <li class="flex gap-4 items-baseline">
-            <span class="text-slate-400 dark:text-slate-500 text-sm font-semibold tabular-nums w-10 shrink-0 text-right">[{{ $marker }}]</span>
+            <span class="text-slate-500 dark:text-slate-400 text-sm font-semibold tabular-nums w-10 shrink-0">[{{ $marker }}]</span>
             <div class="flex-1 min-w-0">
               <a href="{{ $p.RelPermalink }}" class="text-slate-900 dark:text-slate-100 hover:text-primary-600 dark:hover:text-primary-400 font-medium leading-snug">{{ $p.Title }}</a>
               <div class="mt-1 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">

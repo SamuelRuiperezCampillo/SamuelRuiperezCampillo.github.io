@@ -82,13 +82,15 @@
   {{ end }}
 {{ end }}
 
-<div class="resume-biography py-8 px-4 sm:py-12 md:py-16 lg:py-24 xl:py-32 relative overflow-hidden">
-  {{/* Add subtle top gradient for navbar transition */}}
-  <div class="max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-start">
-      
-      {{/* Left Column: Flexible span */}}
-      <div class="md:col-span-4 flex flex-col items-center text-center space-y-6 md:space-y-8">
+<div class="resume-biography pt-10 pb-3 sm:pt-12 sm:pb-4 lg:pt-14 lg:pb-4 relative overflow-hidden">
+  {{/* One flush left edge: below xl the hero stacks on the same 48rem rail as
+       the sections beneath it; at xl+ a 1fr/48rem/1fr grid keeps the content
+       column exactly on that rail with the avatar column in the left gutter.
+       Rail CSS lives in assets/css/custom.css (.hb-hero-rail). */}}
+  <div class="hb-hero-rail">
+
+      {{/* Aside: avatar, name, roles, social icons */}}
+      <div class="hb-hero-aside flex flex-col items-center text-center space-y-6">
         
         {{/* Banner Image */}}
         {{ $img := "" }}
@@ -182,7 +184,7 @@
         {{ if $avatar }}
         <div class="avatar-wrapper {{ if $img }}-mt-24{{else}}mb-4{{end}}" style="width: {{$display_size}}px; height: {{$display_size}}px;">
           {{ $avatar_image := $avatar.Fill (printf "%sx%s Center" $generation_size $generation_size) }}
-          <img class="avatar {{$shape_class}} border-4 border-white shadow-2xl" 
+          <img class="avatar {{$shape_class}} ring-1 ring-slate-200 dark:ring-slate-700 shadow-sm"
                src="{{ $avatar_image.RelPermalink }}" 
                alt="{{$profile.title}}"
                width="{{$display_size}}" 
@@ -204,11 +206,11 @@
 
           {{/* Name with optional ruby pronunciation */}}
           {{ if and $profile.title $name_pronunciation }}
-            <h1 class="{{ $name_class }} font-black text-gray-900 dark:text-white leading-tight">
+            <h1 class="{{ $name_class }} hb-hero-name font-semibold text-slate-900 dark:text-slate-100 leading-tight">
               <ruby class="hb-ruby-name">{{ $profile.title }}<rt>{{ $name_pronunciation }}</rt></ruby>
             </h1>
           {{ else }}
-            <h1 class="{{ $name_class }} font-black text-gray-900 dark:text-white leading-tight">
+            <h1 class="{{ $name_class }} hb-hero-name font-semibold text-slate-900 dark:text-slate-100 leading-tight">
               {{ $profile.title }}
             </h1>
           {{ end }}
@@ -230,7 +232,7 @@
             {{ end }}
           {{ end }}
           {{ with $role_text }}
-            <p class="text-2xl font-semibold text-primary-600 dark:text-primary-400">{{ . | markdownify | emojify }}</p>
+            <p class="hb-hero-role text-2xl font-semibold text-primary-600 dark:text-primary-400">{{ . | markdownify | emojify }}</p>
           {{ end }}
           
           {{ $affiliations_raw := $profile.affiliations }}
@@ -289,7 +291,7 @@
           {{ $links = slice $links_raw }}
         {{ end }}
         {{ if gt (len $links) 0 }}
-        <div class="flex flex-wrap justify-center gap-4">
+        <div class="hb-social-row flex flex-nowrap justify-center gap-2">
           {{ range $links }}
           {{ $linkUrl := "" }}
           {{ $iconName := "hero/link" }}
@@ -322,13 +324,12 @@
             {{ else if in (slice "http" "https") $scheme }}
               {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
             {{ end }}
-            <a href="{{ $linkUrl | safeURL }}" {{ $target | safeHTMLAttr }} 
+            <a href="{{ $linkUrl | safeURL }}" {{ $target | safeHTMLAttr }}
                aria-label="{{ $iconName }}"
                {{ if $linkLabel }} title="{{ $linkLabel }}"{{ end }}
-               class="w-12 h-12 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 
-                      shadow-md hover:shadow-xl hover:scale-110 hover:-translate-y-1 
-                      transition-all duration-300 border border-gray-200 dark:border-gray-700">
-              {{ partial "functions/get_icon" (dict "name" $iconName "attributes" "class=\"w-6 h-6\"")  }}
+               class="w-8 h-8 flex items-center justify-center text-slate-500 dark:text-slate-400
+                      hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
+              {{ partial "functions/get_icon" (dict "name" $iconName "attributes" "class=\"w-4 h-4\"")  }}
             </a>
           {{ end }}
           {{ end }}
@@ -336,8 +337,8 @@
         {{ end }}
       </div>
 
-      {{/* Right Column: Flexible span */}}
-      <div class="md:col-span-8">
+      {{/* Main column: bio, CV, education, interests — on the 48rem rail */}}
+      <div class="hb-hero-main">
         
         {{/* Bio Section */}}
         {{ $bio_content := "" }}
@@ -349,23 +350,18 @@
           {{ with $profile.bio }}{{ $bio_content = printf "%v" . | emojify | $page.RenderString }}{{ end }}
         {{ end }}
         {{ with $bio_content }}
-        <div class="mb-12">
-          <div class="flex items-center gap-4 mb-8">
-            <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
-              {{ partial "functions/get_icon" (dict "name" "identification" "attributes" "class='w-6 h-6 text-primary-600 dark:text-primary-400'") }}
-            </div>
-            {{ $i18n_about := i18n "about_me" }}
-            {{ $about_default := cond (eq $i18n_about "about_me") "Professional Summary" $i18n_about }}
-            {{ $about_heading := $about_default }}
-            {{ $about_heading_raw := index $headings "about" }}
-            {{ if eq (printf "%T" $about_heading_raw) "string" }}
-              {{ $about_heading_raw = strings.TrimSpace $about_heading_raw }}
-              {{ if ne $about_heading_raw "" }}
-                {{ $about_heading = $about_heading_raw }}
-              {{ end }}
+        <div class="mb-10">
+          {{ $i18n_about := i18n "about_me" }}
+          {{ $about_default := cond (eq $i18n_about "about_me") "Professional Summary" $i18n_about }}
+          {{ $about_heading := $about_default }}
+          {{ $about_heading_raw := index $headings "about" }}
+          {{ if eq (printf "%T" $about_heading_raw) "string" }}
+            {{ $about_heading_raw = strings.TrimSpace $about_heading_raw }}
+            {{ if ne $about_heading_raw "" }}
+              {{ $about_heading = $about_heading_raw }}
             {{ end }}
-            <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white tracking-tight">{{ $about_heading }}</h2>
-          </div>
+          {{ end }}
+          <h2 class="bbloxh2 hb-section-title text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">{{ $about_heading }}</h2>
           <div class="prose prose-lg dark:prose-invert text-gray-800 dark:text-gray-200 text-base sm:text-lg leading-relaxed">
             <div class="bio-text" {{ if $bio_style }}{{ (printf "style=\"%s\"" $bio_style) | safeHTMLAttr }}{{ end }}>
               {{ . }}
@@ -395,10 +391,10 @@
             {{ else if in (slice "http" "https") $scheme }}
               {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
             {{ end }}
-            <div class="mb-16">
+            <div class="mb-12">
               <a href="{{ $button_link | safeURL }}" {{ $target | safeHTMLAttr }}
-                 class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-                {{ partial "functions/get_icon" (dict "name" "document-arrow-down" "attributes" "class='w-5 h-5 mr-3'") }}
+                 class="hb-cv-button inline-flex items-center gap-2 px-4 py-2 rounded-md border border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-100 text-sm font-medium hover:border-primary-600 hover:text-primary-700 dark:hover:border-primary-400 dark:hover:text-primary-300 transition-colors">
+                {{ partial "functions/get_icon" (dict "name" "document-arrow-down" "attributes" "class='w-4 h-4'") }}
                 {{ $button_text }}
               </a>
             </div>
@@ -412,22 +408,19 @@
           {{ $education = $education_raw }}
         {{ end }}
         {{ if gt (len $education) 0 }}
-        <div class="mb-16">
-          <div class="flex items-center gap-4 mb-8">
-            <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
-              {{ partial "functions/get_icon" (dict "name" "academic-cap" "attributes" "class='w-6 h-6 text-primary-600 dark:text-primary-400'") }}
-            </div>
-            {{ $education_heading := i18n "education" }}
-            {{ $education_heading_raw := index $headings "education" }}
-            {{ if eq (printf "%T" $education_heading_raw) "string" }}
-              {{ $education_heading_raw = strings.TrimSpace $education_heading_raw }}
-              {{ if ne $education_heading_raw "" }}
-                {{ $education_heading = $education_heading_raw }}
-              {{ end }}
+        <div class="mb-12">
+          {{ $education_heading := i18n "education" }}
+          {{ $education_heading_raw := index $headings "education" }}
+          {{ if eq (printf "%T" $education_heading_raw) "string" }}
+            {{ $education_heading_raw = strings.TrimSpace $education_heading_raw }}
+            {{ if ne $education_heading_raw "" }}
+              {{ $education_heading = $education_heading_raw }}
             {{ end }}
-            <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white tracking-tight">{{ $education_heading | markdownify }}</h3>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          {{ end }}
+          <h2 class="bbloxh2 hb-section-title text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">{{ $education_heading | markdownify }}</h2>
+          {{/* Tabular year-gutter list: year in muted tabular figures |
+               degree semibold | institution muted, hairline separators. */}}
+          <ol class="list-none p-0 m-0 mt-2">
             {{ range $education }}
             {{ if reflect.IsMap . }}
             {{ $degree := "" }}
@@ -439,53 +432,33 @@
             {{ with index . "start" }}{{ $start = printf "%v" . }}{{ end }}
             {{ $end := "" }}
             {{ with index . "end" }}{{ $end = printf "%v" . }}{{ end }}
+            {{ if and (not $year) $start }}
+              {{ $year = printf "%s%s" $start (cond (ne $end "") (printf "–%s" $end) "–") }}
+            {{ end }}
             {{ $institution := "" }}
             {{ with index . "institution" }}{{ $institution = printf "%v" . }}{{ end }}
             {{ $institution_url := "" }}
             {{ with index . "institution_url" }}{{ $institution_url = printf "%v" . }}{{ end }}
-            {{ $icon := "" }}
-            {{ $iconRaw := index . "icon" }}
-            {{ if eq (printf "%T" $iconRaw) "string" }}
-              {{ $icon = $iconRaw }}
-            {{ end }}
-            <div class="group h-full flex flex-col bg-gradient-to-br from-white/90 to-primary-50/30 dark:from-gray-800/90 dark:to-primary-900/20 rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-transparent hover:border-primary-200 dark:hover:border-primary-800 backdrop-blur-md">
-              <div class="flex gap-4">
-                <div class="flex-shrink-0 w-12 h-12 bg-white dark:bg-gray-800 ring-1 ring-gray-200 dark:ring-gray-700 rounded-full flex items-center justify-center shadow-md">
-                  {{ if $icon }}
-                    {{ partial "functions/get_icon" (dict "name" $icon "attributes" "class='w-6 h-6 text-primary-600 dark:text-primary-400'") }}
+            <li class="flex gap-4 items-baseline py-3 border-b border-slate-200/80 dark:border-slate-700/60 last:border-b-0">
+              <span class="w-24 shrink-0 text-sm tabular-nums text-slate-500 dark:text-slate-400">{{ $year }}</span>
+              <div class="flex-1 min-w-0">
+                {{ if $degree }}
+                <p class="text-base font-semibold text-slate-900 dark:text-slate-100 leading-snug m-0">{{ $degree }}</p>
+                {{ end }}
+                {{ if $institution }}
+                <p class="text-sm text-slate-600 dark:text-slate-300 mt-0.5 leading-snug m-0">
+                  {{ if $institution_url }}
+                    <a href="{{ $institution_url }}" target="_blank" rel="noopener" class="hover:text-primary-700 dark:hover:text-primary-300">{{ $institution }}</a>
                   {{ else }}
-                    {{ partial "functions/get_icon" (dict "name" "academic-cap" "attributes" "class='w-6 h-6 text-primary-600 dark:text-primary-400'") }}
+                    {{ $institution }}
                   {{ end }}
-                </div>
-                <div class="flex-1 flex-grow">
-                  {{ if $degree }}
-                  <p class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                    {{ $degree }}
-                  </p>
-                  {{ end }}
-                  {{ if $year }}
-                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">{{ $year }}</p>
-                  {{ else if $start }}
-                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">
-                      {{ $start }}
-                      {{ if $end }}<br>{{ $end }}{{ end }}
-                    </p>
-                  {{ end }}
-                  {{ if $institution }}
-                    <p class="text-gray-700 dark:text-gray-300 text-base">
-                      {{ if $institution_url }}
-                        <a href="{{ $institution_url }}" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400">{{ $institution }}</a>
-                      {{ else }}
-                        {{ $institution }}
-                      {{ end }}
-                    </p>
-                  {{ end }}
-                </div>
+                </p>
+                {{ end }}
               </div>
-            </div>
+            </li>
             {{ end }}
             {{ end }}
-          </div>
+          </ol>
         </div>
         {{ end }}
 
@@ -499,28 +472,22 @@
         {{ end }}
         {{ if gt (len $interests) 0 }}
         <div>
-          <div class="flex items-center gap-4 mb-8">
-            <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
-              {{ partial "functions/get_icon" (dict "name" "sparkles" "attributes" "class='w-6 h-6 text-primary-600 dark:text-primary-400'") }}
-            </div>
-            {{ $interests_heading := i18n "interests" }}
-            {{ $interests_heading_raw := index $headings "interests" }}
-            {{ if eq (printf "%T" $interests_heading_raw) "string" }}
-              {{ $interests_heading_raw = strings.TrimSpace $interests_heading_raw }}
-              {{ if ne $interests_heading_raw "" }}
-                {{ $interests_heading = $interests_heading_raw }}
-              {{ end }}
+          {{ $interests_heading := i18n "interests" }}
+          {{ $interests_heading_raw := index $headings "interests" }}
+          {{ if eq (printf "%T" $interests_heading_raw) "string" }}
+            {{ $interests_heading_raw = strings.TrimSpace $interests_heading_raw }}
+            {{ if ne $interests_heading_raw "" }}
+              {{ $interests_heading = $interests_heading_raw }}
             {{ end }}
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white tracking-tight">{{ $interests_heading | markdownify }}</h3>
-          </div>
-          <div class="flex flex-wrap gap-3">
+          {{ end }}
+          <h2 class="bbloxh2 hb-section-title text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">{{ $interests_heading | markdownify }}</h2>
+          <div class="mt-4 flex flex-wrap gap-2">
             {{ range $interests }}
             {{ $interest := strings.TrimSpace (printf "%v" .) }}
             {{ if $interest }}
-            <span class="inline-block bg-primary-50 dark:bg-gray-800 text-primary-800 dark:text-primary-200 text-base font-medium px-4 py-2 rounded-full border border-primary-200/50 dark:border-primary-800/50
-                           hover:bg-primary-100 
-                           dark:hover:bg-primary-500 dark:hover:text-gray-900 dark:hover:border-primary-500
-                           transition-all duration-200 cursor-default">
+            <span class="inline-block text-sm font-medium px-3 py-1 rounded-full border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300
+                           hover:border-slate-300 dark:hover:border-slate-600
+                           transition-colors cursor-default">
               {{ $interest | markdownify | emojify }}
             </span>
             {{ end }}
@@ -529,6 +496,5 @@
         </div>
         {{ end }}
       </div>
-    </div>
   </div>
 </div>

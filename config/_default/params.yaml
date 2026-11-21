@@ -72,7 +72,9 @@ hugoblox:
     # Border radius: 'none', 'sm', 'md', 'lg', or 'full'
     radius: "sm"
     # Spacing density: 'compact', 'comfortable', or 'spacious'
-    spacing: "spacious"
+    # 'comfortable' (4rem section padding) closes the dead vertical bands the
+    # design judges flagged; the hero compensates with its own local padding.
+    spacing: "comfortable"
     # Avatar shape in author profiles
     avatar_shape: circle # circle | square | rounded
 

@@ -1,6 +1,9 @@
 {{ define "main" }}
 
 {{ $all := where .Pages "Section" "events" }}
+{{ $sorted := sort $all "Date" "desc" }}
+{{ $invited := where $sorted "Params.talk_type" "invited" }}
+{{ $conference := where $sorted "Params.talk_type" "!=" "invited" }}
 
 <div class="mx-auto flex max-w-screen-xl">
   <article class="w-full break-words flex min-h-[calc(100vh-var(--navbar-height))] min-w-0 justify-center pb-12 pt-8">
@@ -10,36 +13,47 @@
         <h1 class="mt-2 text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">{{ . }}</h1>
       {{ end }}
 
-      {{ if gt (len $all) 0 }}
+      {{ if gt (len $invited) 0 }}
         <section class="mt-10">
-          <ol class="space-y-4 list-none p-0">
-            {{ range (sort $all "Date" "desc") }}
-              {{ $year := "" }}
-              {{ with .Date }}{{ $year = .Format "2006" }}{{ end }}
-              <li class="flex gap-3 items-baseline">
-                <span class="text-slate-400 dark:text-slate-500 text-sm font-medium tabular-nums w-12 shrink-0">{{ $year }}</span>
-                <div class="flex-1">
-                  <a href="{{ .RelPermalink }}" class="text-slate-900 dark:text-slate-100 hover:text-primary-600 dark:hover:text-primary-400 font-medium leading-snug">{{ .Title }}</a>
-                  <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
-                    {{ with .Params.event_name }}<span>{{ . }}</span>{{ end }}
-                    {{ with .Params.location }}<span aria-hidden="true"> · </span><span>{{ . }}</span>{{ end }}
-                    {{ if eq .Params.talk_type "invited" }}<span aria-hidden="true"> · </span><span>Invited talk</span>{{ end }}
-                  </div>
-                  {{ with .Params.awards }}
-                    <div class="mt-1 flex flex-wrap gap-1.5">
-                      {{ range . }}
-                        <span class="inline-block text-[11px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 dark:bg-amber-900/40 dark:text-amber-200 ring-1 ring-amber-500/30">{{ if reflect.IsMap . }}{{ .title }}{{ else }}{{ . }}{{ end }}</span>
-                      {{ end }}
-                    </div>
-                  {{ end }}
-                </div>
-              </li>
-            {{ end }}
-          </ol>
+          <h2 class="bbloxh2 hb-section-title text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Invited Talks</h2>
+          {{ partial "talks-group-list.html" $invited }}
+        </section>
+      {{ end }}
+
+      {{ if gt (len $conference) 0 }}
+        <section class="mt-12">
+          <h2 class="bbloxh2 hb-section-title text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Scientific Conference Talks</h2>
+          {{ partial "talks-group-list.html" $conference }}
         </section>
       {{ end }}
 
     </main>
   </article>
 </div>
+{{ end }}
+
+{{ define "partials/talks-group-list.html" }}
+  <ol class="mt-5 space-y-4 list-none p-0">
+    {{ range . }}
+      {{ $year := "" }}
+      {{ with .Date }}{{ $year = .Format "2006" }}{{ end }}
+      <li class="flex gap-3 items-baseline">
+        <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums w-12 shrink-0">{{ $year }}</span>
+        <div class="flex-1">
+          <a href="{{ .RelPermalink }}" class="text-slate-900 dark:text-slate-100 hover:text-primary-600 dark:hover:text-primary-400 font-medium leading-snug">{{ .Title }}</a>
+          <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
+            {{ with .Params.event_name }}<span>{{ . }}</span>{{ end }}
+            {{ with .Params.location }}<span aria-hidden="true"> · </span><span>{{ . }}</span>{{ end }}
+          </div>
+          {{ with .Params.awards }}
+            <div class="mt-1 flex flex-wrap gap-1.5">
+              {{ range . }}
+                <span class="hb-badge">{{ if reflect.IsMap . }}{{ .title }}{{ else }}{{ . }}{{ end }}</span>
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+      </li>
+    {{ end }}
+  </ol>
 {{ end }}

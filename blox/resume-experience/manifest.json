@@ -1,0 +1,10 @@
+{
+  "id": "resume-experience",
+  "name": "Resume Experience (tabular list)",
+  "version": "1.0.0",
+  "license": "MIT",
+  "category": "content",
+  "tags": ["experience", "education", "resume", "list"],
+  "description": "Education and experience as tabular year-gutter hairline lists, matching the site's list language",
+  "author": "Samuel Ruipérez-Campillo"
+}

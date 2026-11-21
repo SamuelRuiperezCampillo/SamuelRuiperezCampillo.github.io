@@ -1,102 +1,146 @@
-/* Site-wide custom styles.
-   Auto-loaded (minified + fingerprinted) by the Hugo Blox module via
-   assets/css/custom.css. Headings inherit the typography pack fonts
-   (Lora) — no font-family overrides here, so all platforms render
+/* ════════════════════════════════════════════════════════════════════
+   Refined Scholar — quiet academic restyle.
+   Palette: one blue (primary), slate neutrals. Fonts come from the
+   "academic" typography pack (Lora headings / Source Serif 4 body);
+   no font-family overrides for content here so all platforms render
    identically. Accent color comes from theme.colors (blue/slate) in
-   config/_default/params.yaml; hardcoded values below are slate only. */
+   config/_default/params.yaml; hardcoded values below are slate only.
 
-/* Bold the site owner's name wherever it appears in author lists */
-a[href*="/author/me/"],
-a[href*="/authors/me/"],
-.author-link[data-author="me"],
-[data-author-slug="me"] {
-  font-weight: 700;
+   WCAG contrast (checked 2026-11, on their actual backgrounds):
+     light: blue-700 links 6.7:1, slate-600 body 7.6:1, slate-500 muted 4.8:1
+     dark (#0f172a bg): primary-300 9.3:1, primary-400 7.2:1,
+       slate-400 muted 7.0:1, slate-200 body 14.5:1
+   ════════════════════════════════════════════════════════════════════ */
+
+/* ---- Dark mode: desaturated blue accent on dark slate --------------- */
+/* Tailwind's blue-300/400/500 are vivid against #0f172a; pull the
+   chroma down ~40% so links and accents read calm, not neon.
+   Resolved sRGB + contrast on #0f172a:
+     300 → #9cbee4 (9.3:1) · 400 → #7da8d9 (7.2:1) · 500 → #5890cd (5.3:1) */
+.dark {
+  --color-primary-300: oklch(0.79 0.065 251);
+  --color-primary-400: oklch(0.72 0.085 252);
+  --color-primary-500: oklch(0.64 0.11 252);
 }
 
-/* Hide reading-time indicator on publication and event cards.
-   Kept as CSS: the blox module only honors the page-level
-   `reading_time` front-matter param, so the site-level
-   content.reading_time.enable toggle has no effect. */
-.reading-time,
-[data-component="reading-time"],
-.read-time,
-.post-reading-time {
-  display: none !important;
+/* ---- Header: flat bar with a hairline rule, set in the body face ---- */
+/* Keeps the chrome quieter than the content: Lora stays reserved for
+   headings, the nav uses Source Serif 4 via the module's body-font var. */
+:root {
+  --hb-color-header-bg: #ffffff;
+}
+.dark {
+  --hb-color-header-bg: #0f172a;
+}
+#site-header {
+  border-bottom: 1px solid rgb(226 232 240);
+  box-shadow: none;
+  font-family: var(--hb-font-body);
+}
+.dark #site-header {
+  border-bottom-color: rgb(51 65 85 / 0.6);
 }
 
-/* ---- Restrained, academic-style headings ---------------------------- */
-/* Modest weight, slightly tighter tracking, and smaller sizes than the
-   theme defaults; typeface comes from the "academic" typography pack. */
-h1, h2, h3, h4 {
-  font-weight: 500;
-  letter-spacing: -0.015em;
+/* ---- Base typography ------------------------------------------------ */
+/* Headings: modest weight, gently tightened; typeface from the pack. */
+h1, h2, h3, h4,
+.bbloxh1, .bbloxh2, .bbloxh3 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
   font-feature-settings: 'kern' 1, 'liga' 1;
 }
 
-/* Soften the giant page-level headlines the theme ships with.
-   Override the Tailwind utility classes the theme set on h1/h2 so the
-   lighter weight wins. */
-h1.text-4xl,
-h1.text-3xl,
-h1.lg\:text-6xl,
-.text-4xl.font-bold,
-.text-3xl.font-bold {
-  font-size: 1.75rem;         /* ~28px instead of 30–36px */
-  line-height: 1.2;
-  font-weight: 500;
-}
-
-/* Section headers (block titles like "Selected Publications", "Selected
-   Talks", "Selected Awards") feel less shouty. */
-.bbloxh2,
-h2.text-3xl,
-h2.text-2xl,
-h2.text-xl {
-  font-size: 1.4rem;          /* ~22px */
+/* Page-level h1s (Publications, Talks, article titles): calm, not giant.
+   h1-only on purpose: section h2s (which also carry text-3xl utilities)
+   must stay at the single 1.375rem section-heading size below. */
+h1.text-4xl, h1.text-3xl, h1.lg\:text-6xl {
+  font-size: 1.75rem;           /* ~28px */
   line-height: 1.25;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-/* Sub-section headings (e.g. block titles in Experience). */
-h3.text-xl,
-h3.text-2xl {
-  font-size: 1.1rem;
+/* Section headings (block titles + list-page h2s). */
+.bbloxh2, h2.text-3xl, h2.text-2xl, h2.text-xl {
+  font-size: 1.375rem;          /* ~22px */
   line-height: 1.3;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-/* Hugo Blox block titles often live in <h2 class="..."> wrappers from
-   the markdown block component — catch those too. */
-.bbloxh1, .bbloxh2, .bbloxh3 {
-  font-weight: 500;
+/* Sub-section headings. */
+h3.text-xl, h3.text-2xl {
+  font-size: 1.1rem;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+/* ---- Hero (resume biography) ---------------------------------------- */
+/* One flush left edge: below xl the hero stacks on the 48rem rail used
+   by every section beneath it; at xl+ a 1fr/48rem/1fr grid keeps the
+   content column exactly on that rail and hangs the avatar column in
+   the left gutter. Companion markup in blox/resume-biography-3. */
+.hb-hero-rail {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 48rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 640px) {
+  .hb-hero-rail { padding-inline: 1.5rem; }
+}
+@media (min-width: 1280px) {
+  .hb-hero-rail {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 48rem) 1fr;
+    align-items: start;
+    max-width: none;
+    padding-inline: 0;
+  }
+  .hb-hero-aside {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: end;
+    width: 15rem;
+    margin-right: 1rem;
+  }
+  .hb-hero-main {
+    grid-column: 2;
+    grid-row: 1;
+    padding-inline: 1.5rem;
+  }
+}
+
+/* The hero carries its own vertical padding (py-10 lg:py-16 in the
+   block markup); zero the generic section padding so the page starts
+   right under the header rule. */
+#hero.hbb-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Name: the largest thing on the page, but only just. */
+.resume-biography h1.hb-hero-name {
+  font-size: 1.9rem;
+  line-height: 1.2;
+  font-weight: 600;
   letter-spacing: -0.015em;
 }
-
-/* Collection block titles ("Selected Publications") render as a
-   <div class="text-3xl font-bold"> in the module template, not an h2.
-   Match the 1.4rem section-heading size used by the markdown-block
-   h2s (News, Research, Selected Awards) and selected-talks. */
-#papers .text-3xl.font-bold {
-  font-size: 1.4rem;
-  line-height: 1.25;
-  font-weight: 500;
+@media (min-width: 640px) {
+  .resume-biography h1.hb-hero-name { font-size: 2.1rem; }
 }
 
-/* ---- Resume biography (home page hero) refinements ----------------- */
-/* Role line under the name — was a chunky 2xl/600. Drop to a calm
-   subtitle weight; "PhD Candidate" inherits the primary accent from
-   the wrapping <p>, the "at ETH Zurich" / "Research Fellow at MIT"
-   spans override colour and weight via their own classes. */
-.resume-biography p.text-2xl.font-semibold.text-primary-600,
-.resume-biography .text-2xl.font-semibold.text-primary-600 {
-  font-size: 1.1rem;
+/* Role lines under the name: subtitle weight, not display size. */
+.resume-biography .hb-hero-role {
+  font-size: 1.05rem;
   font-weight: 500;
   letter-spacing: 0;
+  line-height: 1.45;
   font-family: inherit;
-  line-height: 1.4;
 }
-/* Role stack — two left-aligned rows, same size, each "<role> at
-   <institution>" with the institution flipped to default text. */
+
+/* Role stack — two left-aligned rows, "<role> at <institution>". */
 .hb-role-stack {
   display: inline-block;
   text-align: left;
@@ -104,90 +148,268 @@ h3.text-2xl {
 }
 .hb-role-line {
   display: block;
-  /* colour inherited from parent <p> (primary blue accent) */
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.45;
 }
 .hb-role-aff {
   color: rgb(15 23 42);
   font-weight: 400;
 }
 .dark .hb-role-aff {
-  color: rgb(241 245 249);
+  color: rgb(226 232 240);
 }
 
-/* Download CV button — was a giant gradient pill (px-8 py-4 / font-bold
-   text-lg / rounded-xl / shadow-lg / hover:scale-105). Trim it down. */
-.resume-biography a.inline-flex.bg-gradient-to-r {
-  padding: 0.55rem 1.1rem !important;
-  font-size: 0.9rem !important;
-  font-weight: 500 !important;
-  border-radius: 0.5rem !important;
-  box-shadow: none !important;
-  transform: none !important;
+/* Hero social icons: one quiet row, identical in both modes — no ring,
+   no wrap (6 × 2rem + gaps fits the 15rem aside column). */
+.hb-social-row {
+  flex-wrap: nowrap;
 }
-.resume-biography a.inline-flex.bg-gradient-to-r:hover {
-  transform: none !important;
-  box-shadow: 0 1px 2px rgb(0 0 0 / 0.08) !important;
+.hb-social-row a {
+  width: 2rem;
+  height: 2rem;
 }
-.resume-biography a.inline-flex.bg-gradient-to-r svg {
-  width: 1rem !important;
-  height: 1rem !important;
-  margin-right: 0.5rem !important;
+.hb-social-row a svg {
+  width: 1rem;
+  height: 1rem;
 }
 
-/* Education degree titles (PhD / MEng / MSc / BSc) — were text-xl
-   font-bold. Quieter, sentence-weight. */
-.resume-biography p.text-xl.font-bold {
+/* Bio prose: drop the lg bump so hero text matches list typography. */
+.resume-biography .prose.prose-lg {
   font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: -0.005em;
-  font-family: inherit;
+  line-height: 1.75;
 }
 
-/* Education cards: soften the gradient backdrops + rings so the
-   degrees read as a clean list rather than three coloured tiles. */
-.resume-biography .group.bg-gradient-to-br {
-  background: transparent !important;
-  box-shadow: none !important;
-  border: 1px solid rgb(226 232 240 / 0.7) !important;
-  border-radius: 0.5rem !important;
+/* ---- Homepage/section rhythm ---------------------------------------- */
+/* layout.spacing "comfortable" gives 4rem section padding; tighten the
+   gap between sibling sections a touch more. */
+.hbb-section + .hbb-section {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
-.dark .resume-biography .group.bg-gradient-to-br {
-  border-color: rgb(51 65 85 / 0.5) !important;
+
+/* The Selected Publications group is three stacked blocks (heading
+   markdown / citation collection / "see all" link); collapse the
+   section padding between them so they read as one section. */
+#papers-heading.hbb-section {
+  padding-bottom: 0;
 }
-.resume-biography .group.bg-gradient-to-br:hover {
-  border-color: rgb(203 213 225) !important;
-  transform: none !important;
+#papers.hbb-section {
+  padding-top: 0;
+  padding-bottom: 0.5rem;
 }
-.dark .resume-biography .group.bg-gradient-to-br:hover {
-  border-color: rgb(71 85 105) !important;
+#papers-link.hbb-section {
+  padding-top: 0;
 }
-/* Drop the round avatar/icon disc next to each degree — visual noise. */
-.resume-biography .group.bg-gradient-to-br .w-12.h-12.bg-white {
+
+/* Page-title blocks (Experience / Teaching): keep the H1 close to the
+   first section beneath it instead of leaving a dead band. */
+#page-title.hbb-section {
+  padding-bottom: 0;
+}
+#page-title + .hbb-section {
+  padding-top: 1.5rem;
+}
+
+/* Section titles: the one post-hero heading device — a left-aligned
+   1.375rem label sitting on a full-width hairline rule, contained to the
+   48rem content rail. Used by every section heading: the hero's About /
+   Education / Interests, the homepage markdown/collection headings, the
+   Selected Talks block, and the Talks page group headings.
+   margin-top: 0 also neutralizes the prose h2 top margin inside the
+   markdown blocks (spacing comes from section padding instead). */
+.hb-section-title {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-top: 0;
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.25rem;
+  border-bottom: 1px solid rgb(226 232 240);
+}
+.dark .hb-section-title {
+  border-bottom-color: rgb(51 65 85 / 0.6);
+}
+
+/* Award badges (talks lists + talk pages): flat outlined chips — hairline
+   border, small radius, muted ink, no fill; one treatment for all award
+   types. */
+.hb-badge {
+  display: inline-block;
+  font-size: 11px;
+  line-height: 1.5;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid rgb(203 213 225);
+  border-radius: 0.25rem;
+  color: rgb(71 85 105);
+}
+.dark .hb-badge {
+  border-color: rgb(71 85 105 / 0.7);
+  color: rgb(148 163 184);
+}
+
+/* ---- Links: one blue, subtle hover underline ------------------------ */
+.prose a,
+.pub-list-item a,
+#news a, #awards a, #awards-full a,
+.hb-role-stack a {
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.prose a:hover,
+.pub-list-item a:hover,
+#news a:hover, #awards a:hover, #awards-full a:hover,
+.hb-role-stack a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgb(37 99 235 / 0.4);
+}
+.dark .prose a:hover,
+.dark .pub-list-item a:hover,
+.dark #news a:hover, .dark #awards a:hover, .dark #awards-full a:hover,
+.dark .hb-role-stack a:hover {
+  text-decoration-color: rgb(147 197 253 / 0.4);
+}
+
+/* Prose links (bio, research blurb): quiet blue, no bold. */
+.prose a {
+  color: rgb(29 78 216);        /* blue-700 — 6.7:1 on white */
+  font-weight: inherit;
+}
+.dark .prose a {
+  color: var(--color-primary-300);
+}
+
+/* ---- Citation list (Selected Publications) -------------------------- */
+.pub-list-item .pub-icon {
+  display: none;                /* drop the Font Awesome file icon */
+}
+/* Author names: muted; site owner bolded via the rule below. */
+.pub-list-item .article-metadata a {
+  color: inherit;
+}
+
+/* Bold the site owner's name wherever it appears in author lists. */
+a[href*="/author/me/"],
+a[href*="/authors/me/"],
+.author-link[data-author="me"],
+[data-author-slug="me"] {
+  font-weight: 600;
+}
+
+/* ---- Date-led lists (talks, awards): muted tabular years ------------ */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Prose indents list-none lists (News / Selected Awards markdown blocks),
+   pushing their date gutters off the shared rail; strip the indent so
+   every date gutter sits flush on the same left edge as Education's. */
+.prose ol.list-none,
+.prose ul.list-none,
+.prose ol.list-none > li,
+.prose ul.list-none > li {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* ---- Mobile header: one row --------------------------------------- */
+/* Shrink the brand below lg so name + search + theme toggle + hamburger
+   share a single top-bar row at phone widths instead of wrapping the
+   menu toggle onto its own line. */
+@media (max-width: 1023.98px) {
+  #site-header .navbar-brand {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+}
+
+/* ---- Hide reading-time indicators ----------------------------------- */
+/* Kept as CSS: the blox module only honors the page-level `reading_time`
+   front-matter param, so the site-level toggle has no effect. */
+.reading-time,
+[data-component="reading-time"],
+.read-time,
+.post-reading-time {
   display: none !important;
 }
 
-/* ---- List-style markdown blocks (home News / Selected Awards /
-   publications link, full /awards/ page) -----------------------------
+/* ---- List-style markdown blocks (home News / Research / Selected
+   Awards / publications link, full /awards/ page) ---------------------
    Markdown blocks wrap content in max-w-prose, which is narrower than
-   the talks collection block. Let the inner list breathe so all the
-   homepage sections sit on the same width. */
+   the talks collection block. Neutralize it; the inner HTML carries its
+   own 48rem rail containers so all sections share one left edge. */
 #news .max-w-prose,
+#research .max-w-prose,
+#papers-heading .max-w-prose,
 #papers-link .max-w-prose,
 #awards .max-w-prose,
 #awards-full .max-w-prose {
   max-width: none !important;
 }
 #news .prose,
+#research .prose,
+#papers-heading .prose,
 #papers-link .prose,
 #awards .prose,
 #awards-full .prose {
   max-width: none !important;
 }
 #news .container.max-w-3xl,
+#research .container.max-w-3xl,
+#papers-heading .container.max-w-3xl,
 #papers-link .container.max-w-3xl,
 #awards .container.max-w-3xl,
 #awards-full .container.max-w-3xl {
-  max-width: 48rem;   /* same target as talks list */
+  max-width: 48rem;   /* same rail as the talks list */
 }
+
+/* ════════════════════════════════════════════════════════════════════
+   FRAGILE: selectors into Hugo Blox module internals.
+   These reach into markup owned by the blox module (pinned in go.mod at
+   v0.0.0-20260502203050); a module bump may silently break them — if a
+   page's section titles or widths regress after an update, look here.
+   ════════════════════════════════════════════════════════════════════ */
+
+/* Markdown/collection block inner wrapper: re-rail onto 48rem, left-
+   aligned (Experience / Teaching service sections and block titles).
+   The id rules above (max-width:none !important) still win on the
+   homepage blocks that carry their own rail containers. */
+.hbb-section > .flex.flex-col.items-center.max-w-prose {
+  max-width: 48rem;
+  width: 100%;
+  align-items: stretch;
+  text-align: left;
+}
+.hbb-section > .flex.flex-col.items-center.max-w-prose > .prose {
+  max-width: none;
+  width: 100%;
+}
+
+/* Markdown-block titles (Experience/Teaching sections) get the same
+   label-over-rule treatment as .hb-section-title. */
+.hbb-section .mb-6.text-3xl.font-bold {
+  font-size: 1.375rem;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  width: 100%;
+  text-align: left;
+  padding-bottom: 0.6rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgb(226 232 240);
+}
+.dark .hbb-section .mb-6.text-3xl.font-bold {
+  border-bottom-color: rgb(51 65 85 / 0.6);
+}
+
+/* Markdown-block prose: body size, not lg:prose-xl. */
+.hbb-section .prose.lg\:prose-xl {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* Resume-experience (Experience page) is a local block override
+   (blox/resume-experience/block.html) rendering the same tabular
+   year-gutter hairline lists as the home-page Education section, so it
+   needs no module-internal selectors here. */

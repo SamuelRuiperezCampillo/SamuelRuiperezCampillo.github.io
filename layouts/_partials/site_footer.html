@@ -1,0 +1,19 @@
+{{/* Quiet footer — local override of the Hugo Blox site_footer.
+     One muted line: copyright, CC license as a plain text link (no icon
+     row), and a plain-text Hugo Blox attribution (no promo button). */}}
+
+{{ $branding := partialCached "functions/get_branding" . "branding" }}
+
+<footer class="container mx-auto mt-24 mb-8 px-6 text-sm leading-6 text-slate-500 dark:text-slate-400">
+
+  {{ partial "functions/get_hook" (dict "hook" "footer-start" "context" .) }}
+
+  <p class="text-center m-0">
+    © {{ now.Year }} {{ $branding.organization | default $branding.name }}
+    <span aria-hidden="true"> · </span>
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="license noopener noreferrer" target="_blank" class="hover:text-slate-700 dark:hover:text-slate-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">CC BY-NC-ND 4.0</a>
+    <span aria-hidden="true"> · </span>
+    Made with <a href="https://hugoblox.com" rel="noopener noreferrer" target="_blank" data-hbx="poweredby_brand" class="hover:text-slate-700 dark:hover:text-slate-200 underline decoration-slate-300 dark:decoration-slate-600 underline-offset-2">Hugo Blox</a>
+  </p>
+
+</footer>

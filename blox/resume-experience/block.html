@@ -1,0 +1,118 @@
+{{/* Resume Experience — local override of the Hugo Blox block.
+     Renders education and work experience as the same tabular year-gutter
+     hairline list used for Education on the home page: muted tabular year
+     column, semibold role/degree, muted institution, hairline separators.
+     No timeline spine, icon discs, cards, or calendar glyphs. Dates are
+     static years computed at build time (no JS date widget). */}}
+
+{{ $block := .wcBlock }}
+{{ $content := $block.content }}
+{{ if not (reflect.IsMap $content) }}{{ $content = dict }}{{ end }}
+{{ $design := $block.design }}
+{{ if not (reflect.IsMap $design) }}{{ $design = dict }}{{ end }}
+
+{{ $username := "me" }}
+{{ $username_raw := index $content "username" }}
+{{ if eq (printf "%T" $username_raw) "string" }}
+  {{ $username = strings.TrimSpace $username_raw }}
+{{ end }}
+{{ $profile := partial "functions/get_author_profile" $username }}
+
+{{ $is_education_first := partial "functions/coerce_bool" (dict "value" (index $design "is_education_first") "default" false) }}
+
+{{/* ---- Normalize education entries -------------------------------- */}}
+{{ $education := slice }}
+{{ $education_raw := $profile.education }}
+{{ if reflect.IsSlice $education_raw }}
+  {{ range $education_raw }}
+    {{ if reflect.IsMap . }}
+      {{ $primary := "" }}
+      {{ with index . "degree" }}{{ $primary = strings.TrimSpace (printf "%v" .) }}{{ end }}
+      {{ if not $primary }}{{ with index . "area" }}{{ $primary = strings.TrimSpace (printf "%v" .) }}{{ end }}{{ end }}
+      {{ $secondary := "" }}
+      {{ with index . "institution" }}{{ $secondary = strings.TrimSpace (printf "%v" .) }}{{ end }}
+      {{ $secondary_url := "" }}
+      {{ with index . "institution_url" }}{{ $secondary_url = strings.TrimSpace (printf "%v" .) }}{{ end }}
+      {{ $summary := "" }}
+      {{ with index . "summary" }}{{ $summary = strings.TrimSpace (printf "%v" .) }}{{ end }}
+      {{/* Year range: prefer the explicit `year` string, else derive from dates. */}}
+      {{ $range := "" }}
+      {{ with index . "year" }}{{ $range = strings.TrimSpace (printf "%v" .) }}{{ end }}
+      {{ if not $range }}
+        {{ $sy := "" }}{{ $ey := "" }}
+        {{ with index . "start" }}{{ $p := try (time .) }}{{ if not $p.Err }}{{ $sy = $p.Value.Format "2006" }}{{ end }}{{ end }}
+        {{ with index . "end" }}{{ $p := try (time .) }}{{ if not $p.Err }}{{ $ey = $p.Value.Format "2006" }}{{ end }}{{ end }}
+        {{ if and $sy $ey }}{{ $range = cond (eq $sy $ey) $sy (printf "%s–%s" $sy $ey) }}{{ else if $sy }}{{ $range = printf "%s–" $sy }}{{ end }}
+      {{ end }}
+      {{ if or $primary $secondary }}
+        {{ $education = $education | append (dict "primary" $primary "secondary" $secondary "secondary_url" $secondary_url "range" $range "summary" $summary) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* ---- Normalize experience entries -------------------------------- */}}
+{{ $experience := slice }}
+{{ $experience_raw := or $profile.experience $profile.work }}
+{{ if reflect.IsSlice $experience_raw }}
+  {{ range $experience_raw }}
+    {{ if reflect.IsMap . }}
+      {{ $primary := "" }}
+      {{ with index . "role" }}{{ $primary = strings.TrimSpace (printf "%v" .) }}{{ end }}
+      {{ if not $primary }}{{ with index . "position" }}{{ $primary = strings.TrimSpace (printf "%v" .) }}{{ end }}{{ end }}
+      {{ $secondary := "" }}
+      {{ with index . "org" }}{{ $secondary = strings.TrimSpace (printf "%v" .) }}{{ end }}
+      {{ if not $secondary }}{{ with index . "company_name" }}{{ $secondary = strings.TrimSpace (printf "%v" .) }}{{ end }}{{ end }}
+      {{ $summary := "" }}
+      {{ with index . "summary" }}{{ $summary = strings.TrimSpace (printf "%v" .) }}{{ end }}
+      {{ $sy := "" }}{{ $ey := "" }}
+      {{ with index . "start" }}{{ $p := try (time .) }}{{ if not $p.Err }}{{ $sy = $p.Value.Format "2006" }}{{ end }}{{ end }}
+      {{ with index . "end" }}{{ $p := try (time .) }}{{ if not $p.Err }}{{ $ey = $p.Value.Format "2006" }}{{ end }}{{ end }}
+      {{ $range := "" }}
+      {{ if and $sy $ey }}{{ $range = cond (eq $sy $ey) $sy (printf "%s–%s" $sy $ey) }}{{ else if $sy }}{{ $range = printf "%s–" $sy }}{{ end }}
+      {{ if or $primary $secondary }}
+        {{ $experience = $experience | append (dict "primary" $primary "secondary" $secondary "secondary_url" "" "range" $range "summary" $summary) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $edu_section := dict "title" (i18n "education" | default "Education") "items" $education }}
+{{ $exp_section := dict "title" (i18n "experience" | default "Experience") "items" $experience }}
+{{ $ordered := cond $is_education_first (slice $edu_section $exp_section) (slice $exp_section $edu_section) }}
+
+<div class="mx-auto w-full max-w-3xl px-6">
+  <div class="flex flex-col gap-12">
+    {{ range $ordered }}
+      {{ if gt (len .items) 0 }}
+      <section class="w-full">
+        <h2 class="bbloxh2 hb-section-title text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">{{ .title }}</h2>
+        <ol class="list-none p-0 m-0 mt-2">
+          {{ range .items }}
+          <li class="flex gap-4 items-baseline py-3 border-b border-slate-200/80 dark:border-slate-700/60 last:border-b-0">
+            <span class="w-24 shrink-0 text-sm tabular-nums text-slate-500 dark:text-slate-400">{{ .range }}</span>
+            <div class="flex-1 min-w-0">
+              {{ with .primary }}
+              <p class="text-base font-semibold text-slate-900 dark:text-slate-100 leading-snug m-0">{{ . }}</p>
+              {{ end }}
+              {{ if .secondary }}
+              <p class="text-sm text-slate-600 dark:text-slate-300 mt-0.5 leading-snug m-0">
+                {{ if .secondary_url }}
+                  <a href="{{ .secondary_url }}" target="_blank" rel="noopener" class="hover:text-primary-700 dark:hover:text-primary-300">{{ .secondary }}</a>
+                {{ else }}
+                  {{ .secondary }}
+                {{ end }}
+              </p>
+              {{ end }}
+              {{ with .summary }}
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1 leading-relaxed m-0">{{ . | markdownify }}</p>
+              {{ end }}
+            </div>
+          </li>
+          {{ end }}
+        </ol>
+      </section>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
