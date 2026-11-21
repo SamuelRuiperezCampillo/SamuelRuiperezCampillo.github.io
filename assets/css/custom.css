@@ -74,10 +74,13 @@ h3.text-xl, h3.text-2xl {
 }
 
 /* ---- Hero (resume biography) ---------------------------------------- */
-/* One flush left edge: below xl the hero stacks on the 48rem rail used
-   by every section beneath it; at xl+ a 1fr/48rem/1fr grid keeps the
-   content column exactly on that rail and hangs the avatar column in
-   the left gutter. Companion markup in blox/resume-biography-3. */
+/* One flush left edge: below the hero breakpoint the hero stacks on the
+   48rem rail used by every section beneath it; above it a 1fr/48rem/1fr
+   grid keeps the content column exactly on that rail and hangs the avatar
+   column in the left gutter. The grid kicks in at 1360px (not 1280px):
+   at exactly 1280px the 15rem aside + 1rem gap consumes the whole 16rem
+   side column, leaving the avatar flush against the viewport edge.
+   Companion markup in blox/resume-biography-3. */
 .hb-hero-rail {
   display: flex;
   flex-direction: column;
@@ -90,7 +93,7 @@ h3.text-xl, h3.text-2xl {
 @media (min-width: 640px) {
   .hb-hero-rail { padding-inline: 1.5rem; }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1360px) {
   .hb-hero-rail {
     display: grid;
     grid-template-columns: 1fr minmax(0, 48rem) 1fr;
@@ -380,6 +383,17 @@ a[href*="/authors/me/"],
   width: 100%;
   align-items: stretch;
   text-align: left;
+}
+/* Interior-page rail alignment: the canonical rail is the Talks page
+   (48rem main with 3rem side padding at md+ → text at the same x as
+   /events/). The module wrapper ships px-6 (1.5rem), which lands these
+   sections 1.5rem left of that rail; bump it to 3rem at md+. Homepage
+   blocks are unaffected: their id rules kill this wrapper's max-width and
+   their inner containers re-center symmetrically. */
+@media (min-width: 768px) {
+  .hbb-section > .flex.flex-col.items-center.max-w-prose {
+    padding-inline: 3rem;
+  }
 }
 .hbb-section > .flex.flex-col.items-center.max-w-prose > .prose {
   max-width: none;

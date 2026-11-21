@@ -30,7 +30,7 @@ abstract: |-
   **Results.** The 1-year success rate was 69.5%, and the acute termination rate was 49.6%, which correlated poorly on a patient-by-patient basis (φ coefficient = 0.08). The best model for acute termination (area under the curve = 0.86, Random Forest) was more predictive than for long-term outcomes (area under the curve = 0.67, logistic regression; P < 0.001). Phenotypes for long-term success reflected clinical and lifestyle features, while phenotypes for AF termination reflected electrical features. The need for AF induction predicted both phenotypes. The external validation cohort showed similar results (area under the curve = 0.81 and 0.64, respectively) with similar phenotypes.
 
   **Conclusions.** Long-term and acute responses to AF ablation reflect distinct clinical and electrical physiology, respectively. This de-linking of phenotypes raises the question of whether long-term success operates through factors such as attenuated AF progression. There remains an urgent need to develop procedural predictors of long-term AF ablation success.
-summary: "Editor in Chief's Featured Article of the Month."
+summary: "Editor-in-Chief's Featured Article of the Month."
 tags:
 - "Atrial Fibrillation"
 - "Machine Learning"

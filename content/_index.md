@@ -42,19 +42,19 @@ sections:
             </li>
             <li class="flex gap-3 items-baseline">
               <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums w-20 shrink-0">Mar 2026</span>
-              <div class="flex-1 leading-snug"><a href="/publications/2026-rodrigo-catheter-mapping/" class="hover:text-primary-600 dark:hover:text-primary-400 font-medium">Our paper on catheter configuration in AF mapping</a> is the Editor in Chief's Featured Article of the Month in <em>Circulation: Arrhythmia and Electrophysiology</em>.</div>
+              <div class="flex-1 leading-snug"><a href="/publications/2026-rodrigo-catheter-mapping/" class="hover:text-primary-600 dark:hover:text-primary-400 font-medium">Our paper on catheter configuration in AF mapping</a> is the Editor-in-Chief's Featured Article of the Month in <em>Circulation: Arrhythmia and Electrophysiology</em>.</div>
             </li>
             <li class="flex gap-3 items-baseline">
               <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums w-20 shrink-0">Nov 2025</span>
               <div class="flex-1 leading-snug">Awarded the <a href="/awards/" class="hover:text-primary-600 dark:hover:text-primary-400 font-medium">Paul Dudley White International Scholar Award</a> by the American Heart Association.</div>
             </li>
             <li class="flex gap-3 items-baseline">
-              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums w-20 shrink-0">Sep 2025</span>
-              <div class="flex-1 leading-snug"><a href="/events/2025-cinc-swissbeatsnet/" class="hover:text-primary-600 dark:hover:text-primary-400 font-medium">SwissBeatsNet</a> wins the Best Oral Presentation Award, Physionet Challenge 2025, at IEEE Computing in Cardiology.</div>
+              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums w-20 shrink-0">Nov 2025</span>
+              <div class="flex-1 leading-snug">Best Oral Presentation in Multimodal AI &amp; Foundational Models at the <a href="/events/2025-esc-dcai-contrastive-ecg-mri/" class="hover:text-primary-600 dark:hover:text-primary-400 font-medium">ESC Digital Health &amp; AI Summit</a>.</div>
             </li>
             <li class="flex gap-3 items-baseline">
-              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums w-20 shrink-0">2025</span>
-              <div class="flex-1 leading-snug">Best Oral Presentation in Multimodal AI &amp; Foundational Models at the <a href="/events/2025-esc-dcai-contrastive-ecg-mri/" class="hover:text-primary-600 dark:hover:text-primary-400 font-medium">ESC Digital Health &amp; AI Summit</a>.</div>
+              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums w-20 shrink-0">Sep 2025</span>
+              <div class="flex-1 leading-snug"><a href="/events/2025-cinc-swissbeatsnet/" class="hover:text-primary-600 dark:hover:text-primary-400 font-medium">SwissBeatsNet</a> wins the Best Oral Presentation Award, Physionet Challenge 2025, at IEEE Computing in Cardiology.</div>
             </li>
             <li class="flex gap-3 items-baseline">
               <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums w-20 shrink-0">Sep 2024</span>
@@ -133,63 +133,63 @@ sections:
         <div class="container px-4 sm:px-6 mx-auto max-w-3xl py-2">
           <ol class="space-y-3 list-none p-0">
             <li class="flex gap-3 items-baseline">
-              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums w-12 shrink-0">2026</span>
+              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums whitespace-nowrap w-12 shrink-0">2026</span>
               <div class="flex-1">
-                <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Editor in Chief's Featured Article of the Month</span>
+                <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Editor-in-Chief's Featured Article of the Month</span>
                 <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5"><a href="https://doi.org/10.1161/CIRCEP.125.014061" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400">Circulation: Arrhythmia and Electrophysiology</a></div>
               </div>
             </li>
             <li class="flex gap-3 items-baseline">
-              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums w-12 shrink-0">2025</span>
+              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums whitespace-nowrap w-12 shrink-0">2025</span>
               <div class="flex-1">
                 <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Paul Dudley White International Scholar Award</span>
                 <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">American Heart Association</div>
               </div>
             </li>
             <li class="flex gap-3 items-baseline">
-              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums w-12 shrink-0">2025</span>
+              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums whitespace-nowrap w-12 shrink-0">2025</span>
               <div class="flex-1">
                 <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Best Oral Presentation in Multimodal AI &amp; Foundational Models</span>
                 <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">European Society of Cardiology — Digital Health &amp; AI Summit</div>
               </div>
             </li>
             <li class="flex gap-3 items-baseline">
-              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums w-12 shrink-0">2025</span>
+              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums whitespace-nowrap w-12 shrink-0">2025</span>
               <div class="flex-1">
                 <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Best Oral Presentation — Physionet Challenge 2025</span>
                 <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5"><a href="https://physionetchallenges.org/2025/" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400">IEEE Computing in Cardiology</a></div>
               </div>
             </li>
             <li class="flex gap-3 items-baseline">
-              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums w-12 shrink-0">2025</span>
+              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums whitespace-nowrap w-12 shrink-0">2025</span>
               <div class="flex-1">
-                <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Editor in Chief's Featured Article of the Month</span>
+                <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Editor-in-Chief's Featured Article of the Month</span>
                 <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5"><a href="https://doi.org/10.1161/CIRCEP.124.012860" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400">Circulation: Arrhythmia and Electrophysiology</a></div>
               </div>
             </li>
             <li class="flex gap-3 items-baseline">
-              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums w-12 shrink-0">2024</span>
+              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums whitespace-nowrap w-12 shrink-0">2024</span>
               <div class="flex-1">
                 <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Clinical Translation Award</span>
                 <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">IEEE Computing in Cardiology</div>
               </div>
             </li>
             <li class="flex gap-3 items-baseline">
-              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums w-12 shrink-0">2024</span>
+              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums whitespace-nowrap w-12 shrink-0">2024</span>
               <div class="flex-1">
                 <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Honorary Alumnus (one of five)</span>
                 <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Universidad Carlos III de Madrid</div>
               </div>
             </li>
             <li class="flex gap-3 items-baseline">
-              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums w-12 shrink-0">2020</span>
+              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums whitespace-nowrap w-12 shrink-0">2020</span>
               <div class="flex-1">
                 <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">"la Caixa" Excellence Fellowship</span>
                 <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5"><a href="https://fundacionlacaixa.org/en/scholarships-postgraduate-studies-north-america" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400">"la Caixa" Foundation</a> — full master's funding at UC Berkeley<span class="ml-1 text-slate-500 dark:text-slate-400">· $100,000</span></div>
               </div>
             </li>
             <li class="flex gap-3 items-baseline">
-              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums w-12 shrink-0">2020</span>
+              <span class="text-slate-500 dark:text-slate-400 text-sm font-medium tabular-nums whitespace-nowrap w-12 shrink-0">2020</span>
               <div class="flex-1">
                 <span class="text-slate-900 dark:text-slate-100 font-medium leading-snug">Rafael del Pino Excellence Fellowship</span>
                 <div class="text-sm text-slate-500 dark:text-slate-400 mt-0.5"><a href="https://www.frdelpino.es/" target="_blank" rel="noopener" class="hover:text-primary-600 dark:hover:text-primary-400">Rafael del Pino Foundation</a> — full master's funding at ETH Zurich<span class="ml-1 text-slate-500 dark:text-slate-400">· €48,000</span></div>

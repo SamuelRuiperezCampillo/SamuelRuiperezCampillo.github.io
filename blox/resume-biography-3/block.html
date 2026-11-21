@@ -313,6 +313,17 @@
             {{ $linkUrl = . }}
           {{ end }}
           {{ $linkUrl = strings.TrimSpace $linkUrl }}
+          {{/* Unify the social row to one visual register: solid marks only.
+               The outline at-symbol and the thin letterform Scholar/RG glyphs
+               read as a different family next to the solid GitHub/LinkedIn/
+               ORCID marks; swap them for the solid envelope and the
+               Academicons square variants. Mapped here (not in
+               data/authors/me.yaml) so profile data keeps canonical names. */}}
+          {{ $solid_icon_map := dict
+              "at-symbol" "hero/envelope-solid"
+              "academicons/google-scholar" "academicons/google-scholar-square"
+              "academicons/researchgate" "academicons/researchgate-square" }}
+          {{ with index $solid_icon_map $iconName }}{{ $iconName = . }}{{ end }}
           {{ if $linkUrl }}
             {{ $scheme := (urls.Parse $linkUrl).Scheme }}
             {{ $target := "" }}
@@ -440,7 +451,7 @@
             {{ $institution_url := "" }}
             {{ with index . "institution_url" }}{{ $institution_url = printf "%v" . }}{{ end }}
             <li class="flex gap-4 items-baseline py-3 border-b border-slate-200/80 dark:border-slate-700/60 last:border-b-0">
-              <span class="w-24 shrink-0 text-sm tabular-nums text-slate-500 dark:text-slate-400">{{ $year }}</span>
+              <span class="w-24 shrink-0 text-sm tabular-nums whitespace-nowrap text-slate-500 dark:text-slate-400">{{ $year }}</span>
               <div class="flex-1 min-w-0">
                 {{ if $degree }}
                 <p class="text-base font-semibold text-slate-900 dark:text-slate-100 leading-snug m-0">{{ $degree }}</p>

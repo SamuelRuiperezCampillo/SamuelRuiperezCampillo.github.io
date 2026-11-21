@@ -18,6 +18,7 @@ sections:
   - block: resume-experience
     content:
       username: me
+      experience_title: 'Positions'
     design:
       date_format: '2006'
       is_education_first: true
