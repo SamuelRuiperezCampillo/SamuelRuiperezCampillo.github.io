@@ -3,7 +3,7 @@ title: "Slow Conduction Regions as a Valuable Vectorcardiographic Parameter for 
 date: "2020-09-01T00:00:00Z"
 event_name: "IEEE Computing in Cardiology"
 location: "Rimini, Italy"
-summary: "Talk at IEEE Computing in Cardiology, Rimini, Italy."
+summary: "Slow-conduction regions as a vectorcardiographic parameter for the non-invasive identification of atrial flutter types."
 authors:
   - me
 talk_type: conference

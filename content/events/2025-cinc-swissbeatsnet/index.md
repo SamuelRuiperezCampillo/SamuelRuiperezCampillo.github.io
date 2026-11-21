@@ -3,7 +3,9 @@ title: "SwissBeatsNet: A Multilead Masked Autoencoder for Chagas Disease Detecti
 date: "2025-09-01T00:00:00Z"
 event_name: "IEEE Computing in Cardiology"
 location: "São Paulo, Brazil"
-summary: "Talk at IEEE Computing in Cardiology, São Paulo, Brazil. Best Oral Presentation Award — Physionet Challenge 2025."
+summary: "SwissBeatsNet, a multilead masked autoencoder for Chagas disease detection, presented at the Physionet Challenge 2025."
+awards:
+  - "Best Oral Presentation Award — Physionet Challenge 2025"
 authors:
   - me
 talk_type: conference

@@ -3,7 +3,7 @@ title: "Classification of Atrial Tachycardia Types via Dimensional Transforms & 
 date: "2022-09-01T00:00:00Z"
 event_name: "IEEE Computing in Cardiology"
 location: "Tampere, Finland"
-summary: "Talk at IEEE Computing in Cardiology, Tampere, Finland."
+summary: "Classification of atrial tachycardia types combining dimensional transforms of ECG signals with machine learning."
 authors:
   - me
 talk_type: conference

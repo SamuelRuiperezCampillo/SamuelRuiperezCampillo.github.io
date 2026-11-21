@@ -3,7 +3,9 @@ title: "Identification of Potential Ablation Targets for Ventricular Tachycardia
 date: "2024-09-01T00:00:00Z"
 event_name: "IEEE Computing in Cardiology"
 location: "Karlsruhe, Germany"
-summary: "Talk at IEEE Computing in Cardiology, Karlsruhe, Germany. Clinical Translation Award."
+summary: "A novel omnipolar-based propagation organization metric for identifying potential ablation targets in ventricular tachycardia."
+awards:
+  - "Clinical Translation Award"
 authors:
   - me
 talk_type: conference

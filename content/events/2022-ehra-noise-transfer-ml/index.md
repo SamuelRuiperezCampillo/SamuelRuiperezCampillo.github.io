@@ -3,7 +3,6 @@ title: "Noise Reduction in Electrophysiological Signals Using Transfer Machine L
 date: "2022-04-01T00:00:00Z"
 event_name: "European Heart Rhythm Association (EHRA)"
 location: "Copenhagen, Denmark"
-summary: "Talk at European Heart Rhythm Association (EHRA), Copenhagen, Denmark."
 authors:
   - me
 talk_type: conference

@@ -5,6 +5,6 @@
   "license": "MIT",
   "category": "content",
   "tags": ["talks", "events", "list"],
-  "description": "Selected talks split into Invited Talks and Scientific Conference Talks subsections",
+  "description": "Featured talks in a single reverse-chronological list",
   "author": "Samuel Ruipérez-Campillo"
 }
