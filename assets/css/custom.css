@@ -1,4 +1,10 @@
-<style>
+/* Site-wide custom styles.
+   Auto-loaded (minified + fingerprinted) by the Hugo Blox module via
+   assets/css/custom.css. Headings inherit the typography pack fonts
+   (Lora) — no font-family overrides here, so all platforms render
+   identically. Accent color comes from theme.colors (blue/slate) in
+   config/_default/params.yaml; hardcoded values below are slate only. */
+
 /* Bold the site owner's name wherever it appears in author lists */
 a[href*="/author/me/"],
 a[href*="/authors/me/"],
@@ -7,7 +13,10 @@ a[href*="/authors/me/"],
   font-weight: 700;
 }
 
-/* Hide reading-time indicator on publication and event cards */
+/* Hide reading-time indicator on publication and event cards.
+   Kept as CSS: the blox module only honors the page-level
+   `reading_time` front-matter param, so the site-level
+   content.reading_time.enable toggle has no effect. */
 .reading-time,
 [data-component="reading-time"],
 .read-time,
@@ -16,13 +25,9 @@ a[href*="/authors/me/"],
 }
 
 /* ---- Restrained, academic-style headings ---------------------------- */
-/* Refined serif stack — feels closer to a journal page than a marketing
-   site — with a modest weight, slightly tighter tracking, and smaller
-   sizes than the theme defaults. */
+/* Modest weight, slightly tighter tracking, and smaller sizes than the
+   theme defaults; typeface comes from the "academic" typography pack. */
 h1, h2, h3, h4 {
-  font-family: 'Charter', 'Iowan Old Style', 'Source Serif Pro',
-               'Source Serif 4', 'Lora', Georgia, 'Times New Roman',
-               serif;
   font-weight: 500;
   letter-spacing: -0.015em;
   font-feature-settings: 'kern' 1, 'liga' 1;
@@ -30,7 +35,7 @@ h1, h2, h3, h4 {
 
 /* Soften the giant page-level headlines the theme ships with.
    Override the Tailwind utility classes the theme set on h1/h2 so the
-   refined serif + lighter weight wins. */
+   lighter weight wins. */
 h1.text-4xl,
 h1.text-3xl,
 h1.lg\:text-6xl,
@@ -41,7 +46,7 @@ h1.lg\:text-6xl,
   font-weight: 500;
 }
 
-/* Section headers (block titles like "Recent Publications", "Highlighted
+/* Section headers (block titles like "Selected Publications", "Selected
    Talks", "Selected Awards") feel less shouty. */
 .bbloxh2,
 h2.text-3xl,
@@ -63,30 +68,18 @@ h3.text-2xl {
 /* Hugo Blox block titles often live in <h2 class="..."> wrappers from
    the markdown block component — catch those too. */
 .bbloxh1, .bbloxh2, .bbloxh3 {
-  font-family: 'Charter', 'Iowan Old Style', 'Source Serif Pro',
-               'Source Serif 4', 'Lora', Georgia, 'Times New Roman',
-               serif;
   font-weight: 500;
   letter-spacing: -0.015em;
 }
 
-/* Sub-section headings inside Selected Talks ("Invited Talks",
-   "Scientific Conference Talks") — italic, left-aligned, a step
-   larger than body text, restrained colour. */
-.hb-talks-subhead {
-  font-family: 'Charter', 'Iowan Old Style', 'Source Serif Pro',
-               'Source Serif 4', 'Lora', Georgia, 'Times New Roman',
-               serif;
-  font-style: italic;
+/* Collection block titles ("Selected Publications") render as a
+   <div class="text-3xl font-bold"> in the module template, not an h2.
+   Match the 1.4rem section-heading size used by the markdown-block
+   h2s (News, Research, Selected Awards) and selected-talks. */
+#papers .text-3xl.font-bold {
+  font-size: 1.4rem;
+  line-height: 1.25;
   font-weight: 500;
-  font-size: 1.15rem;
-  line-height: 1.3;
-  text-align: left;
-  color: rgb(51 65 85);
-  letter-spacing: -0.005em;
-}
-.dark .hb-talks-subhead {
-  color: rgb(203 213 225);
 }
 
 /* ---- Resume biography (home page hero) refinements ----------------- */
@@ -175,20 +168,26 @@ h3.text-2xl {
   display: none !important;
 }
 
-/* ---- Awards blocks (home Selected + full /awards/ page) ------------
+/* ---- List-style markdown blocks (home News / Selected Awards /
+   publications link, full /awards/ page) -----------------------------
    Markdown blocks wrap content in max-w-prose, which is narrower than
-   the Highlighted Talks collection block. Let the inner list breathe
-   so the two sections sit on the same width. */
+   the talks collection block. Let the inner list breathe so all the
+   homepage sections sit on the same width. */
+#news .max-w-prose,
+#papers-link .max-w-prose,
 #awards .max-w-prose,
 #awards-full .max-w-prose {
   max-width: none !important;
 }
+#news .prose,
+#papers-link .prose,
 #awards .prose,
 #awards-full .prose {
   max-width: none !important;
 }
+#news .container.max-w-3xl,
+#papers-link .container.max-w-3xl,
 #awards .container.max-w-3xl,
 #awards-full .container.max-w-3xl {
   max-width: 48rem;   /* same target as talks list */
 }
-</style>
