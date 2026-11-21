@@ -19,7 +19,7 @@ abstract: |-
   **Results.** Biophysical computational models demonstrated the ability to quantify and visualize the recording antennae for different electrode configurations. Our results show that unipolar electrograms reflected a recording antenna within 3-dimensional ellipsoids of radius 8 mm across-tissue and 2.7 mm transmurally. Bipolar electrogram antennae align with propagation direction in ellipsoids of long axis radius 1.7, 5.7, and 8.3 mm for 2, 5, and 10 mm spacing, respectively, and often extend beyond the physical extent of electrodes. Notably, omnipolar electrograms, constructed from orthogonal bipoles in a triangular configuration, retained some directional preferences of bipolar electrograms, with a complex relationship between electrode orientation and wave direction. When tested clinically on high-resolution, narrow field (grid) catheters and moderate-to-low resolution, global (basket) catheters, antennae varied more with electrode type and spacing than the precise electrode size.
 
   **Conclusions.** This novel computational-clinical system approach enabled us to systematically compare electrode configurations. This work may help interpret signals in complex biological rhythms, such as atrial fibrillation, and may influence the design of novel catheter configurations and signal processing approaches to identify local tissue signals.
-summary: "Editor in Chief's Featured Article of the Volume."
+summary: "Editor in Chief's Featured Article of the Month."
 tags:
 - "Cardiac Electrophysiology"
 - "Atrial Fibrillation"

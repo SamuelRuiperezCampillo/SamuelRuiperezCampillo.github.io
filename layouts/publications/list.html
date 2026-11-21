@@ -27,7 +27,6 @@
               <div class="mt-1 text-sm text-slate-500 dark:text-slate-400 flex flex-wrap items-center gap-x-2 gap-y-1">
                 {{ with $p.Params.publication }}<span>{{ . | markdownify }}</span>{{ end }}
                 {{ with $year }}<span aria-hidden="true">·</span><span>{{ . }}</span>{{ end }}
-                {{ with $p.Params.impact_factor }}<span aria-hidden="true">·</span><span><span class="font-medium text-slate-700 dark:text-slate-300">IF</span> {{ . }}</span>{{ end }}
               </div>
             </div>
           </li>
