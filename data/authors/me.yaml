@@ -17,7 +17,7 @@ bio: |
   School. Previously, he completed an MSc at ETH Zurich and an MEng at UC
   Berkeley, worked at Stanford under Prof. Sanjiv Narayan, joined PhysCade Inc.,
   a Stanford spin-off developing AI for electrophysiology, as its third
-  employee, and founded Swiift, a Berkeley SkyDeck startup. His studies have
+  employee, and founded SWiiFT Inc., a Berkeley SkyDeck startup. His studies have
   been fully funded by several competitive fellowships, including the "la Caixa"
   Fellowship, the Rafael del Pino Fellowship, and the UC Berkeley Fung Institute
   Fellowship.
@@ -72,7 +72,7 @@ education:
       (GPA 6.0 / 6.0). Focus on Bioelectronics and Machine Learning, with
       internships at the Institute of Machine Learning and at Stanford.
   - degree: BSc in Biomedical Engineering
-    institution: Carlos III University of Madrid
+    institution: Universidad Carlos III de Madrid
     year: "2016–2020"
     summary: |
       GPA 9.2 / 10 (top 5%). Bachelor's thesis on Cardiac Multimodal Signal
@@ -95,7 +95,7 @@ experience:
       associated with the PhD position at the Institute of Machine Learning,
       ETH Zurich.
   - role: Machine Learning Consultant
-    org: Physcade Inc.
+    org: PhysCade Inc.
     start: 2024-02-01
     summary: |
       Consulting for the software team of a multi-million-dollar funded
@@ -116,7 +116,7 @@ experience:
       Computational Arrhythmia Research Lab, Falk Cardiovascular Research
       Center, Stanford Medicine. Machine learning for electrophysiology.
   - role: Machine Learning Engineer
-    org: Physcade Inc.
+    org: PhysCade Inc.
     start: 2022-06-01
     end: 2024-02-29
     summary: |
@@ -157,7 +157,7 @@ experience:
     summary: |
       Bio-signal processing at the ITACA Institute of Electrical Engineering.
   - role: Research Fellow
-    org: Carlos III University of Madrid
+    org: Universidad Carlos III de Madrid
     start: 2019-09-01
     end: 2020-08-31
     summary: |
@@ -176,114 +176,6 @@ experience:
     summary: |
       Cancer immunotherapy and microfluidics at the Wallace H. Coulter
       Department of Biomedical Engineering.
-
-awards:
-  - title: Paul Dudley White International Scholar Award
-    awarder: American Heart Association (AHA)
-    date: "2025-11-01"
-    icon: hero/trophy
-  - title: Best Oral Presentation on Multimodal AI and Foundational Models
-    awarder: European Society of Cardiology (Digital Health and AI Summit)
-    date: "2025-08-01"
-    icon: hero/trophy
-  - title: Best Oral Presentation — Physionet Challenge 2025
-    awarder: IEEE International Conference on Computing in Cardiology
-    date: "2025-09-01"
-    icon: hero/trophy
-  - title: Editor in Chief's Featured Article of the Month
-    awarder: Circulation — Arrhythmia and Electrophysiology
-    date: "2026-03-01"
-    summary: 'For "The Impact of Catheter Configuration on the Mapping of Atrial Fibrillation".'
-    icon: hero/star
-  - title: Editor in Chief's Featured Article of the Month
-    awarder: Circulation — Arrhythmia and Electrophysiology
-    date: "2025-02-01"
-    summary: 'For "Comparing Phenotypes for Acute and Long-Term Response to AF Ablation Using Machine Learning".'
-    icon: hero/star
-  - title: Clinical Translation Award
-    awarder: International Conference on Computing in Cardiology
-    date: "2024-09-01"
-    icon: hero/trophy
-  - title: Honorary Alumnus — one of five
-    awarder: University Carlos III of Madrid
-    date: "2024-06-01"
-    icon: hero/academic-cap
-  - title: Fung Excellence Scholarship
-    awarder: UC Berkeley
-    date: "2021-08-01"
-    summary: $15,000 scholarship for the MEng programme.
-    icon: hero/academic-cap
-  - title: '"la Caixa" Excellence Fellowship'
-    awarder: '"la Caixa" Foundation'
-    date: "2020-05-01"
-    summary: Full funding for the Master's at UC Berkeley ($100,000).
-    icon: hero/academic-cap
-  - title: Rafael del Pino Excellence Fellowship
-    awarder: Rafael del Pino Foundation
-    date: "2020-05-01"
-    summary: Full funding for the Master's at ETH Zurich (€48,000).
-    icon: hero/academic-cap
-  - title: "#1 Graduate in Bioengineering in Spain"
-    awarder: Spanish Society of Academic Excellence
-    date: "2020-07-01"
-    icon: hero/trophy
-  - title: Engineering Faculty Distinction
-    awarder: Carlos III University of Madrid
-    date: "2020-07-01"
-    summary: One of the top 8 records (top <1%) at the Engineering Faculty.
-    icon: hero/academic-cap
-  - title: Best Oral Presentation Award
-    awarder: Spanish National Society of General Medicine Congress (SEMG)
-    date: "2023-10-01"
-    icon: hero/trophy
-  - title: Young Investigator Award (co-author)
-    awarder: e-Cardiology, ESC Congress
-    date: "2023-08-01"
-    icon: hero/trophy
-  - title: HRS Travel Award
-    awarder: Heart Rhythm Society
-    date: "2022-04-01"
-    summary: Attendance grant for HRS, San Francisco ($1,500).
-    icon: hero/academic-cap
-  - title: 'First Prize "Ferrán Mocholí"'
-    awarder: ITACA Institute, Polytechnic University of Valencia
-    date: "2022-06-01"
-    summary: Best Scientific Journal Article.
-    icon: hero/trophy
-  - title: 'First Prize "José María Ferrero Corral"'
-    awarder: Spanish Society of Biomedical Engineering (SEIB)
-    date: "2020-11-01"
-    summary: €600 prize for outstanding undergraduate research.
-    icon: hero/trophy
-  - title: Best Poster Award
-    awarder: Spanish National Society of General Medicine Congress (SEMG)
-    date: "2019-10-01"
-    icon: hero/trophy
-  - title: National Research Fellow Grant
-    awarder: Spanish Ministry of Education
-    date: "2019-09-01"
-    summary: €2,000 research fellowship.
-    icon: hero/academic-cap
-  - title: Madrid Award for Academic Excellence
-    awarder: Region of Madrid
-    date: "2019-06-01"
-    summary: Awarded in 2017, 2018, and 2019 (€3,000).
-    icon: hero/academic-cap
-  - title: Scholarship for Excellent Academic Performance
-    awarder: International Exchange at Georgia Tech
-    date: "2018-08-01"
-    summary: $34,000 scholarship for one academic year.
-    icon: hero/academic-cap
-  - title: Honour Distinction and Grant
-    awarder: Pre-University Academic Performance
-    date: "2017-06-01"
-    summary: €3,000 grant for top secondary-school performance.
-    icon: hero/academic-cap
-  - title: Castilla-La Mancha Honours
-    awarder: Region of Castilla-La Mancha
-    date: "2016-06-01"
-    summary: €3,000 for excellence of records.
-    icon: hero/academic-cap
 
 skills:
   - name: Programming & Tooling

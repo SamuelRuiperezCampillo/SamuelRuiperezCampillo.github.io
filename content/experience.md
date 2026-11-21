@@ -1,5 +1,6 @@
 ---
 title: 'Experience'
+summary: 'Education, research positions, service, professional memberships, and research grants of Samuel Ruipérez-Campillo.'
 date: 2026-05-13
 type: landing
 
@@ -7,6 +8,13 @@ design:
   spacing: '5rem'
 
 sections:
+  - block: markdown
+    id: page-title
+    content:
+      title: ''
+      text: |
+        <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Experience</h1>
+
   - block: resume-experience
     content:
       username: me

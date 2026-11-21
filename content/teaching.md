@@ -1,5 +1,6 @@
 ---
 title: 'Teaching'
+summary: 'Teaching assistantships at the ETH Zurich Department of Computer Science and supervised student theses and research projects.'
 date: 2026-06-08
 type: landing
 
@@ -7,6 +8,13 @@ design:
   spacing: '5rem'
 
 sections:
+  - block: markdown
+    id: page-title
+    content:
+      title: ''
+      text: |
+        <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Teaching</h1>
+
   - block: markdown
     content:
       title: 'Teaching Assistant — ETH Zurich, Department of Computer Science'
