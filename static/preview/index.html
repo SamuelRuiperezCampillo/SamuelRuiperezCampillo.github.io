@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Typography previews</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 4rem 1.5rem;
+      background: #ffffff;
+      color: #1a1a1a;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+    }
+    main { max-width: 560px; margin: 0 auto; }
+    h1 { font-size: 1.5rem; font-weight: 600; margin: 0 0 0.5rem; }
+    p.lede { margin: 0 0 2rem; color: #555; }
+    ul { list-style: none; margin: 0; padding: 0; }
+    li { margin: 0 0 1rem; }
+    a.card {
+      display: block;
+      padding: 1rem 1.25rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+    a.card:hover { border-color: #999; }
+    a.card strong { display: block; font-weight: 600; margin-bottom: 0.15rem; }
+    a.card span { color: #555; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Typography previews</h1>
+    <p class="lede">Three versions of the site, identical except for the typeface. Open each and compare.</p>
+    <ul>
+      <li>
+        <a class="card" href="/preview/inter/">
+          <strong>Inter (modern sans)</strong>
+          <span>A contemporary sans-serif designed for screens.</span>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="/preview/system/">
+          <strong>System native (SF Pro)</strong>
+          <span>Your device&rsquo;s default typeface; no webfont loaded.</span>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="/preview/refined-serif/">
+          <strong>Refined serif (Newsreader)</strong>
+          <span>An editorial serif with a classic, literary feel.</span>
+        </a>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>

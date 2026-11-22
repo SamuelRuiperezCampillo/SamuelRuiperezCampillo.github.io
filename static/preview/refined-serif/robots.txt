@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://samuelruiperezcampillo.github.io/preview/refined-serif/sitemap.xml
