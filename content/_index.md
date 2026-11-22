@@ -14,7 +14,7 @@ sections:
         text: Download CV
         url: uploads/resume.pdf
       headings:
-        about: 'About'
+        about: 'About — 🚧 Website in Progress'
         education: ''
         interests: ''
     design:
