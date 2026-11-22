@@ -83,14 +83,16 @@
 {{ end }}
 
 <div class="resume-biography pt-10 pb-3 sm:pt-12 sm:pb-4 lg:pt-14 lg:pb-4 relative overflow-hidden">
-  {{/* One flush left edge: below xl the hero stacks on the same 48rem rail as
-       the sections beneath it; at xl+ a 1fr/48rem/1fr grid keeps the content
-       column exactly on that rail with the avatar column in the left gutter.
-       Rail CSS lives in assets/css/custom.css (.hb-hero-rail). */}}
+  {{/* One flush left edge: the hero sits on the same shared content rail as
+       every section beneath it (48rem, widening to 56rem at >=1440px via
+       --container-3xl). Classic horizontal header: avatar left, identity
+       (name / roles / social / CV) right; About / Education / Interests
+       follow below at full rail width. Rail CSS lives in
+       assets/css/custom.css (.hb-hero-rail / .hb-hero-header). */}}
   <div class="hb-hero-rail">
 
-      {{/* Aside: avatar, name, roles, social icons */}}
-      <div class="hb-hero-aside flex flex-col items-center text-center space-y-6">
+      {{/* Hero header: avatar left, identity column right */}}
+      <div class="hb-hero-header">
         
         {{/* Banner Image */}}
         {{ $img := "" }}
@@ -182,7 +184,7 @@
         {{ end }}
 
         {{ if $avatar }}
-        <div class="avatar-wrapper {{ if $img }}-mt-24{{else}}mb-4{{end}}" style="width: {{$display_size}}px; height: {{$display_size}}px;">
+        <div class="avatar-wrapper {{ if $img }}-mt-24{{end}}" style="width: {{$display_size}}px; height: {{$display_size}}px;">
           {{ $avatar_image := $avatar.Fill (printf "%sx%s Center" $generation_size $generation_size) }}
           <img class="avatar {{$shape_class}} ring-1 ring-slate-200 dark:ring-slate-700 shadow-sm"
                src="{{ $avatar_image.RelPermalink }}" 
@@ -194,7 +196,8 @@
         </div>
         {{ end }}
 
-        {{/* Name and Role - Centered */}}
+        {{/* Identity column: name, roles, social icons, CV chip */}}
+        <div class="hb-hero-id">
         <div class="space-y-3">
           {{/* Extract pronunciation for ruby annotation */}}
           {{ $name_pronunciation := "" }}
@@ -210,8 +213,13 @@
               <ruby class="hb-ruby-name">{{ $profile.title }}<rt>{{ $name_pronunciation }}</rt></ruby>
             </h1>
           {{ else }}
+            {{/* Each word is its own nowrap span: mobile wraps BETWEEN words
+                 only, never inside the hyphenated surname; at lg+ the whole
+                 h1 is nowrap (custom.css) so the name sits on one line. */}}
             <h1 class="{{ $name_class }} hb-hero-name font-semibold text-slate-900 dark:text-slate-100 leading-tight">
-              {{ $profile.title }}
+              {{- $name_words := split (strings.TrimSpace (printf "%v" $profile.title)) " " -}}
+              {{- $first_word := true -}}
+              {{- range $name_words }}{{ if . }}{{ if not $first_word }} {{ end }}<span class="whitespace-nowrap">{{ . }}</span>{{ $first_word = false }}{{ end }}{{ end -}}
             </h1>
           {{ end }}
           
@@ -291,7 +299,7 @@
           {{ $links = slice $links_raw }}
         {{ end }}
         {{ if gt (len $links) 0 }}
-        <div class="hb-social-row flex flex-nowrap justify-center gap-2">
+        <div class="hb-social-row flex flex-nowrap justify-center sm:justify-start gap-2">
           {{ range $links }}
           {{ $linkUrl := "" }}
           {{ $iconName := "hero/link" }}
@@ -346,9 +354,41 @@
           {{ end }}
         </div>
         {{ end }}
+
+        {{/* CV Download chip */}}
+        {{ $button_raw := index $content "button" }}
+        {{ if and $button_raw (reflect.IsMap $button_raw) }}
+          {{ $button_text := "" }}
+          {{ $button_url := "" }}
+          {{ with index $button_raw "text" }}{{ $button_text = printf "%v" . }}{{ end }}
+          {{ with index $button_raw "url" }}{{ $button_url = printf "%v" . }}{{ end }}
+          {{ $button_text = strings.TrimSpace $button_text }}
+          {{ $button_url = strings.TrimSpace $button_url }}
+          {{ if and $button_text $button_url }}
+            {{ $button_link := $button_url }}
+            {{ $scheme := (urls.Parse $button_link).Scheme }}
+            {{ $target := "" }}
+            {{ if not $scheme }}
+              {{ if not (hasPrefix $button_link "#") }}
+                {{ $button_link = $button_link | relLangURL }}
+              {{ end }}
+              {{ if eq (path.Ext $button_link) ".pdf" }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
+            {{ else if in (slice "http" "https") $scheme }}
+              {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+            {{ end }}
+            <div>
+              <a href="{{ $button_link | safeURL }}" {{ $target | safeHTMLAttr }}
+                 class="hb-cv-button inline-flex items-center gap-2 px-4 py-2 rounded-md border border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-100 text-sm font-medium hover:border-primary-600 hover:text-primary-700 dark:hover:border-primary-400 dark:hover:text-primary-300 transition-colors">
+                {{ partial "functions/get_icon" (dict "name" "document-arrow-down" "attributes" "class='w-4 h-4'") }}
+                {{ $button_text }}
+              </a>
+            </div>
+          {{ end }}
+        {{ end }}
+        </div>
       </div>
 
-      {{/* Main column: bio, CV, education, interests — on the 48rem rail */}}
+      {{/* Below the header: About, Education, Interests — full rail width */}}
       <div class="hb-hero-main">
         
         {{/* Bio Section */}}
@@ -379,37 +419,6 @@
             </div>
           </div>
         </div>
-        {{ end }}
-
-        {{/* CV Download Button */}}
-        {{ $button_raw := index $content "button" }}
-        {{ if and $button_raw (reflect.IsMap $button_raw) }}
-          {{ $button_text := "" }}
-          {{ $button_url := "" }}
-          {{ with index $button_raw "text" }}{{ $button_text = printf "%v" . }}{{ end }}
-          {{ with index $button_raw "url" }}{{ $button_url = printf "%v" . }}{{ end }}
-          {{ $button_text = strings.TrimSpace $button_text }}
-          {{ $button_url = strings.TrimSpace $button_url }}
-          {{ if and $button_text $button_url }}
-            {{ $button_link := $button_url }}
-            {{ $scheme := (urls.Parse $button_link).Scheme }}
-            {{ $target := "" }}
-            {{ if not $scheme }}
-              {{ if not (hasPrefix $button_link "#") }}
-                {{ $button_link = $button_link | relLangURL }}
-              {{ end }}
-              {{ if eq (path.Ext $button_link) ".pdf" }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
-            {{ else if in (slice "http" "https") $scheme }}
-              {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
-            {{ end }}
-            <div class="mb-12">
-              <a href="{{ $button_link | safeURL }}" {{ $target | safeHTMLAttr }}
-                 class="hb-cv-button inline-flex items-center gap-2 px-4 py-2 rounded-md border border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-100 text-sm font-medium hover:border-primary-600 hover:text-primary-700 dark:hover:border-primary-400 dark:hover:text-primary-300 transition-colors">
-                {{ partial "functions/get_icon" (dict "name" "document-arrow-down" "attributes" "class='w-4 h-4'") }}
-                {{ $button_text }}
-              </a>
-            </div>
-          {{ end }}
         {{ end }}
 
         {{/* Education Section */}}

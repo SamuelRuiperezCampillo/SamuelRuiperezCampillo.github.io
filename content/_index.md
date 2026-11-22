@@ -24,7 +24,7 @@ sections:
       name:
         size: sm
       avatar:
-        size: medium
+        size: small
         shape: circle
       date_format: '2006'
 
