@@ -536,62 +536,111 @@ a[href*="/authors/me/"],
    year-gutter hairline lists as the home-page Education section, so it
    needs no module-internal selectors here. */
 
-/* ---- Research theme cards (homepage #research) ---------------------- */
-/* Three minimal cards on the content rail: hairline border, small
-   radius, a thin line-art icon in the accent blue, semibold title,
-   muted body. Hover shifts the border toward the accent — nothing
-   moves. Stacks to one column below 1024px. */
-.hb-research-grid {
+/* ---- Research pillars (homepage #research) --------------------------- */
+/* Three color-coded pillar columns on the content rail: a tiny
+   uppercase category label in the pillar color above a stack of
+   compact boxes. Each box carries a hairline border, a 2px left
+   accent in the pillar color and a very soft matching tint; hover
+   only shifts the hairline toward the accent — nothing moves.
+   Pillars stack to one column below 1024px. */
+.hb-pillars {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  gap: 1.4rem;
+  margin-top: 1.4rem;
 }
 @media (min-width: 1024px) {
-  .hb-research-grid {
+  .hb-pillars {
     grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
   }
 }
-.hb-research-card {
+/* Pillar palettes: muted blue / teal / rose, tuned per scheme. */
+.hb-pillar--ml {
+  --hbp-label: rgb(29 78 216);            /* blue-700, matches prose links */
+  --hbp-accent: rgb(37 99 235 / 0.45);
+  --hbp-accent-hover: rgb(37 99 235 / 0.4);
+  --hbp-tint: rgb(37 99 235 / 0.03);
+}
+.hb-pillar--sp {
+  --hbp-label: rgb(15 118 110);           /* teal-700 */
+  --hbp-accent: rgb(13 148 136 / 0.5);
+  --hbp-accent-hover: rgb(13 148 136 / 0.45);
+  --hbp-tint: rgb(13 148 136 / 0.03);
+}
+.hb-pillar--ct {
+  --hbp-label: rgb(190 18 60);            /* rose-700 */
+  --hbp-accent: rgb(225 29 72 / 0.4);
+  --hbp-accent-hover: rgb(225 29 72 / 0.35);
+  --hbp-tint: rgb(225 29 72 / 0.025);
+}
+.dark .hb-pillar--ml {
+  --hbp-label: rgb(147 197 253);          /* blue-300 */
+  --hbp-accent: rgb(96 165 250 / 0.5);
+  --hbp-accent-hover: rgb(96 165 250 / 0.45);
+  --hbp-tint: rgb(96 165 250 / 0.05);
+}
+.dark .hb-pillar--sp {
+  --hbp-label: rgb(94 234 212);           /* teal-300 */
+  --hbp-accent: rgb(45 212 191 / 0.45);
+  --hbp-accent-hover: rgb(45 212 191 / 0.4);
+  --hbp-tint: rgb(45 212 191 / 0.05);
+}
+.dark .hb-pillar--ct {
+  --hbp-label: rgb(253 164 175);          /* rose-300 */
+  --hbp-accent: rgb(251 113 133 / 0.45);
+  --hbp-accent-hover: rgb(251 113 133 / 0.4);
+  --hbp-tint: rgb(251 113 133 / 0.05);
+}
+.prose .hb-pillar-label {
+  font-size: 0.6875rem;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--hbp-label);
+  margin: 0 0 0.6rem 0.15rem;
+}
+.hb-pillar-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.hb-pillar-box {
   border: 1px solid rgb(226 232 240);
+  border-left: 2px solid var(--hbp-accent);
   border-radius: 0.25rem;
-  padding: 1.4rem 1.3rem 1.25rem;
+  padding: 0.75rem 0.85rem 0.7rem;
+  background: var(--hbp-tint);
   transition: border-color 0.18s ease;
 }
-.hb-research-card:hover {
-  border-color: rgb(37 99 235 / 0.5);     /* blue-600 @ 50% */
+.hb-pillar-box:hover {
+  border-top-color: var(--hbp-accent-hover);
+  border-right-color: var(--hbp-accent-hover);
+  border-bottom-color: var(--hbp-accent-hover);
 }
-.dark .hb-research-card {
+.dark .hb-pillar-box {
   border-color: rgb(51 65 85 / 0.6);
-}
-.dark .hb-research-card:hover {
-  border-color: oklch(0.64 0.11 252 / 0.65);  /* desaturated primary-500 */
+  border-left-color: var(--hbp-accent);
 }
 @media (prefers-reduced-motion: reduce) {
-  .hb-research-card {
+  .hb-pillar-box {
     transition: none;
   }
 }
-.hb-research-icon {
-  display: block;
-  color: rgb(29 78 216);                  /* blue-700, matches prose links */
-}
-.dark .hb-research-icon {
-  color: var(--color-primary-300);
-}
-.prose .hb-research-card h3 {
-  font-size: 0.95rem;
+.prose .hb-pillar-box h4 {
+  font-size: 0.875rem;
   line-height: 1.35;
   font-weight: 600;
   letter-spacing: -0.01em;
-  margin: 0.95rem 0 0.4rem;
-}
-.prose .hb-research-card p {
-  font-size: 0.875rem;
-  line-height: 1.6;
-  color: rgb(71 85 105);                  /* slate-600 */
   margin: 0;
 }
-.dark .prose .hb-research-card p {
+.prose .hb-pillar-box p {
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: rgb(100 116 139);                /* slate-500 */
+  margin: 0.2rem 0 0;
+}
+.dark .prose .hb-pillar-box p {
   color: rgb(148 163 184);                /* slate-400 */
 }

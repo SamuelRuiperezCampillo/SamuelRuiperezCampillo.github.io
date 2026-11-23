@@ -86,33 +86,57 @@ sections:
         <div class="container px-4 sm:px-6 mx-auto max-w-3xl py-2">
           <p class="mt-2 leading-relaxed">As a PhD candidate at the Institute of Machine Learning at
           ETH Zurich, I apply machine learning and signal processing to cardiology.</p>
-          <div class="hb-research-grid">
-            <div class="hb-research-card">
-              <svg class="hb-research-icon" width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M2 18h5.5l2.4-5 3.4 11 3.6-16 2.6 10h2.3l1.6-3.2 1.6 3.2H30"/>
-              </svg>
-              <h3>Generative &amp; representation learning</h3>
-              <p>Generative and representation-learning models for cardiac signals such as the ECG and intracardiac electrograms.</p>
+          <div class="hb-pillars">
+            <div class="hb-pillar hb-pillar--ml">
+              <h3 class="hb-pillar-label">Machine Learning</h3>
+              <div class="hb-pillar-boxes">
+                <div class="hb-pillar-box">
+                  <h4>Generative models</h4>
+                  <p>VAEs &amp; diffusion for cardiac signals</p>
+                </div>
+                <div class="hb-pillar-box">
+                  <h4>Representation learning</h4>
+                  <p>Contrastive, equivariant, masked</p>
+                </div>
+                <div class="hb-pillar-box">
+                  <h4>Multimodal learning &amp; explainability</h4>
+                  <p>Vision–language models, LLMs, XAI</p>
+                </div>
+              </div>
             </div>
-            <div class="hb-research-card">
-              <svg class="hb-research-icon" width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M16 27.2C9 21.9 5 17.5 5 12.8 5 9.4 7.5 6.8 10.7 6.8c2.1 0 4.1 1.2 5.3 3.2 1.2-2 3.2-3.2 5.3-3.2C24.5 6.8 27 9.4 27 12.8c0 4.7-4 9.1-11 14.4Z"/>
-                <path d="M16 11.5A3 3 0 0 1 13 14.5"/>
-                <path d="M18.5 11.5A5.5 5.5 0 0 1 13 17"/>
-                <circle cx="13" cy="11.5" r="0.6"/>
-              </svg>
-              <h3>Electrophysiology mapping</h3>
-              <p>Mapping arrhythmogenic substrates and characterizing cardiac activation from multi-electrode recordings.</p>
+            <div class="hb-pillar hb-pillar--sp">
+              <h3 class="hb-pillar-label">Signal &amp; Image Processing</h3>
+              <div class="hb-pillar-boxes">
+                <div class="hb-pillar-box">
+                  <h4>Cardiac electrograms &amp; ECG</h4>
+                  <p>Denoising, vectorcardiography</p>
+                </div>
+                <div class="hb-pillar-box">
+                  <h4>Electrophysiology mapping</h4>
+                  <p>Omnipolar EGMs, substrate heterogeneity</p>
+                </div>
+                <div class="hb-pillar-box">
+                  <h4>Biomedical time series &amp; imaging</h4>
+                  <p>EEG, echocardiography, MRI, radiology</p>
+                </div>
+              </div>
             </div>
-            <div class="hb-research-card">
-              <svg class="hb-research-icon" width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M2 17h3l2.2-4.6 3 8.6 2.2-5.4h6.2"/>
-                <path d="M16.6 14.9 18.7 17l-2.1 2.1"/>
-                <circle cx="25.9" cy="17" r="4.4"/>
-                <path d="M25.9 15v4M23.9 17h4"/>
-              </svg>
-              <h3>Clinical translation</h3>
-              <p>Translating these methods into clinical practice, currently as a visiting research fellow at MIT and Harvard Medical School.</p>
+            <div class="hb-pillar hb-pillar--ct">
+              <h3 class="hb-pillar-label">Clinical Translation</h3>
+              <div class="hb-pillar-boxes">
+                <div class="hb-pillar-box">
+                  <h4>Arrhythmia phenotyping &amp; risk</h4>
+                  <p>Ablation targets, sudden-death prediction</p>
+                </div>
+                <div class="hb-pillar-box">
+                  <h4>Beyond electrophysiology</h4>
+                  <p>Pulmonary hypertension in newborns</p>
+                </div>
+                <div class="hb-pillar-box">
+                  <h4>Bench to bedside</h4>
+                  <p>Clinical studies across ETH, MIT &amp; Harvard</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
