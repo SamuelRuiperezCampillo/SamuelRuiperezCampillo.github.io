@@ -37,9 +37,14 @@ on push to `main`. For update recipes (new paper/talk/award/news/CV), follow
   ~6 items, newest first) and Selected Awards (a curated copy of `awards.md`,
   not a feed).
 
-## Design system — "Refined Scholar"
+## Design system — "Refined Scholar, Inter edition"
 
-Lora headings / Source Serif 4 body; one blue accent + slate neutrals; flat
+Inter site-wide (typography.pack "modern", self-hosted variable font; headings
+semibold with tracking tightened in proportion to size — see custom.css); light
+mode is the default (`theme.mode: light`, toggle kept — the owner explicitly
+rejected dark-on-first-load); content rail 48rem, widening to 56rem at ≥1440px
+via the `--container-3xl` override; horizontal hero with the name forced to one
+line at ≥1024px; one blue accent + slate neutrals; flat
 surfaces, hairline rules, year gutters on all lists; `whitespace-nowrap` on year
 cells; no emoji in headings. Custom layouts live in `layouts/` (publications
 list/single, events list/page, citation view, author bolding) and `blox/`
