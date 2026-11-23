@@ -1,0 +1,11 @@
+---
+title: "Using Generative AI to Reduce Noise in EP Signals: Outperforming State-of-the-Art Filters"
+date: "2024-05-01T00:00:00Z"
+event_name: "Heart Rhythm Society (HRS)"
+location: "Boston, USA"
+summary: "Generative AI for reducing noise in electrophysiology signals, outperforming state-of-the-art filters."
+authors:
+  - me
+talk_type: conference
+featured: true
+---

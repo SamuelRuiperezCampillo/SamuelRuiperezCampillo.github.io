@@ -1,11 +1,13 @@
 ---
-title: "ECG-Derived Features Enable Prediction of Sudden Death in Ischemic Cardiomyopathy"
-date: "2022-11-01T00:00:00Z"
-event_name: "American Heart Association Scientific Sessions (AHA)"
-location: "Chicago, USA"
-summary: "ECG-derived features for predicting sudden death in ischemic cardiomyopathy."
+title: ECG-Derived Features Enable Prediction of Sudden Death in Ischemic Cardiomyopathy
+date: 2022-11-01T00:00:00Z
+event_name: American Heart Association Scientific Sessions (AHA)
+location: Chicago, USA
+summary: ECG-derived features for predicting sudden death in ischemic cardiomyopathy.
 authors:
   - me
 talk_type: conference
 featured: true
+event_start: 2022-11-01T00:00:00Z
 ---
+

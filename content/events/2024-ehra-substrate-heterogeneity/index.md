@@ -1,10 +1,12 @@
 ---
-title: "Quantifying Local Cardiac Substrate Heterogeneity from High-Density Recordings"
-date: "2024-04-01T00:00:00Z"
-event_name: "European Heart Rhythm Association (EHRA)"
-location: "Berlin, Germany"
+title: Quantifying Local Cardiac Substrate Heterogeneity from High-Density Recordings
+date: 2024-04-01T00:00:00Z
+event_name: European Heart Rhythm Association (EHRA)
+location: Berlin, Germany
 authors:
   - me
 talk_type: conference
 featured: false
+event_start: 2024-04-01T00:00:00Z
 ---
+
