@@ -1,10 +1,15 @@
 /* ════════════════════════════════════════════════════════════════════
-   Refined Scholar — quiet academic restyle.
+   Refined Scholar — quiet academic restyle, Inter edition.
    Palette: one blue (primary), slate neutrals. Fonts come from the
-   "academic" typography pack (Lora headings / Source Serif 4 body);
+   "modern" typography pack (Inter headings + body, variable weights);
    no font-family overrides for content here so all platforms render
    identically. Accent color comes from theme.colors (blue/slate) in
    config/_default/params.yaml; hardcoded values below are slate only.
+
+   Inter register: a grotesque reads looser than Lora at the same size,
+   so headings run semibold/bold with tighter tracking (-0.01 to
+   -0.025em, scaled to size) and body copy sits at a slightly tighter
+   leading. Swiss/ETH-clean: hierarchy from weight + tracking, not size.
 
    WCAG contrast (checked 2026-11, on their actual backgrounds):
      light: blue-700 links 6.7:1, slate-600 body 7.6:1, slate-500 muted 4.8:1
@@ -24,8 +29,8 @@
 }
 
 /* ---- Header: flat bar with a hairline rule, set in the body face ---- */
-/* Keeps the chrome quieter than the content: Lora stays reserved for
-   headings, the nav uses Source Serif 4 via the module's body-font var. */
+/* Nav uses Inter via the module's body-font var — same face as content,
+   kept quiet with regular/medium weights. */
 :root {
   --hb-color-header-bg: #ffffff;
 }
@@ -42,12 +47,13 @@
 }
 
 /* ---- Base typography ------------------------------------------------ */
-/* Headings: modest weight, gently tightened; typeface from the pack. */
+/* Headings: Inter semibold, tracking tightened in proportion to size
+   (larger = tighter); optical features on. */
 h1, h2, h3, h4,
 .bbloxh1, .bbloxh2, .bbloxh3 {
   font-weight: 600;
-  letter-spacing: -0.01em;
-  font-feature-settings: 'kern' 1, 'liga' 1;
+  letter-spacing: -0.015em;
+  font-feature-settings: 'kern' 1, 'liga' 1, 'cv05' 1;
 }
 
 /* Page-level h1s (Publications, Talks, article titles): calm, not giant.
@@ -56,7 +62,8 @@ h1, h2, h3, h4,
 h1.text-4xl, h1.text-3xl, h1.lg\:text-6xl {
   font-size: 1.75rem;           /* ~28px */
   line-height: 1.25;
-  font-weight: 600;
+  font-weight: 650;
+  letter-spacing: -0.022em;
 }
 
 /* Section headings (block titles + list-page h2s). */
@@ -64,6 +71,7 @@ h1.text-4xl, h1.text-3xl, h1.lg\:text-6xl {
   font-size: 1.375rem;          /* ~22px */
   line-height: 1.3;
   font-weight: 600;
+  letter-spacing: -0.018em;
 }
 
 /* Sub-section headings. */
@@ -71,6 +79,7 @@ h3.text-xl, h3.text-2xl {
   font-size: 1.1rem;
   line-height: 1.35;
   font-weight: 600;
+  letter-spacing: -0.012em;
 }
 
 /* ---- Shared content rail: wide-screen width ------------------------- */
@@ -148,12 +157,14 @@ h3.text-xl, h3.text-2xl {
   padding-bottom: 0;
 }
 
-/* Name: the largest thing on the page, but only just. */
+/* Name: the largest thing on the page, but only just. Inter bold with
+   firmly tightened tracking so the long hyphenated name sets as one
+   crisp wordmark-like line. */
 .resume-biography h1.hb-hero-name {
   font-size: 1.9rem;
   line-height: 1.2;
-  font-weight: 600;
-  letter-spacing: -0.015em;
+  font-weight: 700;
+  letter-spacing: -0.025em;
 }
 @media (min-width: 640px) {
   .resume-biography h1.hb-hero-name { font-size: 2.1rem; }
@@ -165,11 +176,13 @@ h3.text-xl, h3.text-2xl {
   .resume-biography h1.hb-hero-name { white-space: nowrap; }
 }
 
-/* Role lines under the name: subtitle weight, not display size. */
+/* Role lines under the name: subtitle weight, not display size. Inter
+   needs no positive tracking at this size; a hair negative keeps it
+   matching the name above. */
 .resume-biography .hb-hero-role {
   font-size: 1.05rem;
   font-weight: 500;
-  letter-spacing: 0;
+  letter-spacing: -0.008em;
   line-height: 1.45;
   font-family: inherit;
 }
@@ -207,10 +220,11 @@ h3.text-xl, h3.text-2xl {
   height: 1rem;
 }
 
-/* Bio prose: drop the lg bump so hero text matches list typography. */
+/* Bio prose: drop the lg bump so hero text matches list typography.
+   Inter wants slightly tighter leading than the serif did. */
 .resume-biography .prose.prose-lg {
   font-size: 1rem;
-  line-height: 1.75;
+  line-height: 1.65;
 }
 
 /* ---- Homepage/section rhythm ---------------------------------------- */
@@ -437,7 +451,7 @@ a[href*="/authors/me/"],
   font-size: 1.375rem;
   line-height: 1.3;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.018em;
   width: 100%;
   text-align: left;
   padding-bottom: 0.6rem;
@@ -451,7 +465,7 @@ a[href*="/authors/me/"],
 /* Markdown-block prose: body size, not lg:prose-xl. */
 .hbb-section .prose.lg\:prose-xl {
   font-size: 1rem;
-  line-height: 1.75;
+  line-height: 1.65;
 }
 
 /* Resume-experience (Experience page) is a local block override
