@@ -295,6 +295,66 @@ h3.text-xl, h3.text-2xl {
   color: rgb(148 163 184);
 }
 
+/* ---- ECG divider (blox/ecg-divider) --------------------------------- */
+/* One quiet signature flourish: a hairline denoising-ECG trace between
+   the Research heading and the research cards. Noise decays left → right until a clean P-QRS-T
+   rhythm resolves; QRS complexes carry the accent blue via a masked
+   duplicate of the same path. Draw-on (stroke-dash on the <use> pair)
+   runs once when scrolled into view; without JS or with reduced motion
+   the final static trace shows. Mobile (<640px) swaps in a shorter
+   2-beat version of the same trace. */
+#research-heading.hbb-section {
+  padding-bottom: 0;
+}
+#ecg.hbb-section {
+  padding-top: 0.5rem;
+  padding-bottom: 0;
+}
+#research.hbb-section {
+  padding-top: 0;
+}
+.hb-ecg-wrap {
+  line-height: 0;
+}
+.hb-ecg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hb-ecg-desktop { display: none; }
+.hb-ecg-mobile { display: block; }
+@media (min-width: 640px) {
+  .hb-ecg-desktop { display: block; }
+  .hb-ecg-mobile { display: none; }
+}
+.hb-ecg use {
+  fill: none;
+  stroke-width: 1.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.hb-ecg-base { stroke: rgb(148 163 184); }        /* slate-400 */
+.dark .hb-ecg-base { stroke: rgb(100 116 139); }  /* slate-500 */
+.hb-ecg-qrs { stroke: rgb(37 99 235); }           /* blue-600, the accent */
+.dark .hb-ecg-qrs { stroke: var(--color-primary-400); }
+/* Draw-on: hb-ecg-ready (set by JS pre-draw) hides the trace; is-drawn
+   sweeps it in left → right once. ease-out so the sweep decelerates as
+   the signal resolves. */
+.hb-ecg-ready .hb-ecg use {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+.hb-ecg-ready.is-drawn .hb-ecg use {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 2.5s ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hb-ecg-ready .hb-ecg use {
+    stroke-dashoffset: 0 !important;
+    transition: none !important;
+  }
+}
+
 /* ---- Links: one blue, subtle hover underline ------------------------ */
 .prose a,
 .pub-list-item a,
@@ -388,6 +448,7 @@ a[href*="/authors/me/"],
    the talks collection block. Neutralize it; the inner HTML carries its
    own 48rem rail containers so all sections share one left edge. */
 #news .max-w-prose,
+#research-heading .max-w-prose,
 #research .max-w-prose,
 #papers-heading .max-w-prose,
 #papers-link .max-w-prose,
@@ -396,6 +457,7 @@ a[href*="/authors/me/"],
   max-width: none !important;
 }
 #news .prose,
+#research-heading .prose,
 #research .prose,
 #papers-heading .prose,
 #papers-link .prose,
@@ -404,6 +466,7 @@ a[href*="/authors/me/"],
   max-width: none !important;
 }
 #news .container.max-w-3xl,
+#research-heading .container.max-w-3xl,
 #research .container.max-w-3xl,
 #papers-heading .container.max-w-3xl,
 #papers-link .container.max-w-3xl,
@@ -472,3 +535,63 @@ a[href*="/authors/me/"],
    (blox/resume-experience/block.html) rendering the same tabular
    year-gutter hairline lists as the home-page Education section, so it
    needs no module-internal selectors here. */
+
+/* ---- Research theme cards (homepage #research) ---------------------- */
+/* Three minimal cards on the content rail: hairline border, small
+   radius, a thin line-art icon in the accent blue, semibold title,
+   muted body. Hover shifts the border toward the accent — nothing
+   moves. Stacks to one column below 1024px. */
+.hb-research-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .hb-research-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.hb-research-card {
+  border: 1px solid rgb(226 232 240);
+  border-radius: 0.25rem;
+  padding: 1.4rem 1.3rem 1.25rem;
+  transition: border-color 0.18s ease;
+}
+.hb-research-card:hover {
+  border-color: rgb(37 99 235 / 0.5);     /* blue-600 @ 50% */
+}
+.dark .hb-research-card {
+  border-color: rgb(51 65 85 / 0.6);
+}
+.dark .hb-research-card:hover {
+  border-color: oklch(0.64 0.11 252 / 0.65);  /* desaturated primary-500 */
+}
+@media (prefers-reduced-motion: reduce) {
+  .hb-research-card {
+    transition: none;
+  }
+}
+.hb-research-icon {
+  display: block;
+  color: rgb(29 78 216);                  /* blue-700, matches prose links */
+}
+.dark .hb-research-icon {
+  color: var(--color-primary-300);
+}
+.prose .hb-research-card h3 {
+  font-size: 0.95rem;
+  line-height: 1.35;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0.95rem 0 0.4rem;
+}
+.prose .hb-research-card p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: rgb(71 85 105);                  /* slate-600 */
+  margin: 0;
+}
+.dark .prose .hb-research-card p {
+  color: rgb(148 163 184);                /* slate-400 */
+}

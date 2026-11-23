@@ -66,22 +66,55 @@ sections:
       columns: '1'
 
   - block: markdown
+    id: research-heading
+    content:
+      title: ''
+      text: |
+        <div class="container px-4 sm:px-6 mx-auto max-w-3xl"><h2 class="bbloxh2 hb-section-title text-3xl font-bold tracking-tight">Research</h2></div>
+    design:
+      columns: '1'
+
+  - block: ecg-divider
+    id: ecg
+
+  - block: markdown
     id: research
     content:
       title: ''
       subtitle: ''
       text: |-
-        <div class="container px-4 sm:px-6 mx-auto max-w-3xl"><h2 class="bbloxh2 hb-section-title text-3xl font-bold tracking-tight">Research</h2></div>
         <div class="container px-4 sm:px-6 mx-auto max-w-3xl py-2">
-          <p class="mt-2 leading-relaxed">My research applies machine learning and signal processing to
-          cardiology, developing generative and representation-learning models
-          for cardiac signals such as the ECG and intracardiac electrograms. A
-          central focus is cardiac electrophysiology — mapping arrhythmogenic
-          substrates and characterizing cardiac activation from multi-electrode
-          recordings. As a PhD candidate at the Institute of Machine Learning at
-          ETH Zurich, currently a visiting research fellow at MIT and Harvard
-          Medical School, I work on translating these methods into clinical
-          practice.</p>
+          <p class="mt-2 leading-relaxed">As a PhD candidate at the Institute of Machine Learning at
+          ETH Zurich, I apply machine learning and signal processing to cardiology.</p>
+          <div class="hb-research-grid">
+            <div class="hb-research-card">
+              <svg class="hb-research-icon" width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 18h5.5l2.4-5 3.4 11 3.6-16 2.6 10h2.3l1.6-3.2 1.6 3.2H30"/>
+              </svg>
+              <h3>Generative &amp; representation learning</h3>
+              <p>Generative and representation-learning models for cardiac signals such as the ECG and intracardiac electrograms.</p>
+            </div>
+            <div class="hb-research-card">
+              <svg class="hb-research-icon" width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 27.2C9 21.9 5 17.5 5 12.8 5 9.4 7.5 6.8 10.7 6.8c2.1 0 4.1 1.2 5.3 3.2 1.2-2 3.2-3.2 5.3-3.2C24.5 6.8 27 9.4 27 12.8c0 4.7-4 9.1-11 14.4Z"/>
+                <path d="M16 11.5A3 3 0 0 1 13 14.5"/>
+                <path d="M18.5 11.5A5.5 5.5 0 0 1 13 17"/>
+                <circle cx="13" cy="11.5" r="0.6"/>
+              </svg>
+              <h3>Electrophysiology mapping</h3>
+              <p>Mapping arrhythmogenic substrates and characterizing cardiac activation from multi-electrode recordings.</p>
+            </div>
+            <div class="hb-research-card">
+              <svg class="hb-research-icon" width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 17h3l2.2-4.6 3 8.6 2.2-5.4h6.2"/>
+                <path d="M16.6 14.9 18.7 17l-2.1 2.1"/>
+                <circle cx="25.9" cy="17" r="4.4"/>
+                <path d="M25.9 15v4M23.9 17h4"/>
+              </svg>
+              <h3>Clinical translation</h3>
+              <p>Translating these methods into clinical practice, currently as a visiting research fellow at MIT and Harvard Medical School.</p>
+            </div>
+          </div>
         </div>
     design:
       columns: '1'

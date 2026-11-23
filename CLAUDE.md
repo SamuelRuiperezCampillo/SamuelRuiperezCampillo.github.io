@@ -44,7 +44,11 @@ semibold with tracking tightened in proportion to size — see custom.css); ligh
 mode is the default (`theme.mode: light`, toggle kept — the owner explicitly
 rejected dark-on-first-load); content rail 48rem, widening to 56rem at ≥1440px
 via the `--container-3xl` override; horizontal hero with the name forced to one
-line at ≥1024px; one blue accent + slate neutrals; flat
+line at ≥1024px; one blue accent + slate neutrals; two signature flourishes on
+the homepage Research section: an animated "denoising ECG" trace (blox/ecg-divider,
+path data from scripts/gen_ecg.py, draw-once on scroll, reduced-motion fallback)
+between the Research heading and three hairline research-theme cards with inline
+line-art SVG icons (in content/_index.md + custom.css); flat
 surfaces, hairline rules, year gutters on all lists; `whitespace-nowrap` on year
 cells; no emoji in headings. Custom layouts live in `layouts/` (publications
 list/single, events list/page, citation view, author bolding) and `blox/`

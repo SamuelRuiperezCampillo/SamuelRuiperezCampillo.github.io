@@ -1,3 +1,0 @@
-User-agent: *
-
-Sitemap: https://samuelruiperezcampillo.github.io/preview/animated-ecg/sitemap.xml

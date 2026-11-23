@@ -1,0 +1,10 @@
+{
+  "id": "ecg-divider",
+  "name": "ECG Divider",
+  "version": "1.0.0",
+  "license": "MIT",
+  "category": "content",
+  "tags": ["divider", "svg", "decoration"],
+  "description": "Hairline denoising-ECG trace divider with a draw-on animation",
+  "author": "Samuel Ruipérez-Campillo"
+}
